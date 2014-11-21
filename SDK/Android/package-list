@@ -1,0 +1,11 @@
+com.parrot.arsdk.arcommands
+com.parrot.arsdk.ardatatransfer
+com.parrot.arsdk.ardiscovery
+com.parrot.arsdk.ardiscovery.receivers
+com.parrot.arsdk.armedia
+com.parrot.arsdk.arnetwork
+com.parrot.arsdk.arnetworkal
+com.parrot.arsdk.arsal
+com.parrot.arsdk.arstream
+com.parrot.arsdk.arupdater
+com.parrot.arsdk.arutils

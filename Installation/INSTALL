@@ -1,0 +1,96 @@
+####################################################
+#       ____ _____                                 #
+#      / _  |  __ \        ______  _____   _   _   #
+#     / / | | |  \ \      / _____||  __ \ | | / /  #
+#    / /__| | |__| |      | |____ | |  \ || |/ /   #
+#   / ____  |  __  /      \____  \| |  | ||   |    #
+#  / /    | | |  \ \  _   _____| || |__/ || |\ \   #
+# /_/     |_|_|   \_\|_|  |______/|____ / |_| \_\  #
+#                                                  #
+####################################################
+#    Installation guide                            #
+####################################################
+
+The root folder where all the source code will be downloaded will be noted <SDK>
+To be sure that your config can build the SDK, you can run the <SDK>/ARBuildUtils/CheckEnv.py script
+
+####################################################
+#               HOST (UNIX) BUILDS                 #
+####################################################
+# Linux (Tested on Ubuntu 12.10, 13.04 and 13.10   #
+####################################################
+# OSX (Tested on 10.9.2 with brew package manager  #
+#      http://brew.sh/)                            #
+####################################################
+
+# Required external tools.
+#  - On linux, install these tools using your favorite package manager
+#  - On OSX, we used brew to install these tools
+git, wget, automake, autoconf, libtool, yasm, nasm, zlib1g-dev
+
+# Installation guide
+- Download the ARBuildUtils source code (cd <SDK>; git clone https://github.com/ARDroneSDK/ARBuildUtils.git)
+- Go in the ARBuildUtils directory
+- Run ./SDK3Build.py --help and pick your options
+--> A typical command line for HOST build would be : 
+     ./SDK3Build.py -t Unix
+- The output will be in <SDK>/ARBuildUtils/Targets/Unix/Install/.
+
+####################################################
+#                 IOS BUILDS                       #
+####################################################
+# OSX Only ! Tested on 10.9.2 with the same setup  #
+#            as the host builds                    #
+####################################################
+
+# Required external tools
+#  - Installed using brew
+git, wget, automake, autoconf, libtool
+
+# Installation guide
+- Download the ARBuildUtils source code (cd <SDK>; git clone https://github.com/ARDroneSDK/ARBuildUtils.git)
+- Go in the ARBuildUtils directory
+- Run ./SDK3Build.py --help and pick your options
+--> A typical command line for HOST build would be : 
+     ./SDK3Build.py -t iOS
+- The output will be in <SDK>/ARBuildUtils/Targets/iOS/Install/.
+- The frameworks will be in <SDK>/ARBuildUtils/Targets/iOS/Install/Frameworks
+
+
+####################################################
+#                 ANDROID BUILDS                   #
+####################################################
+# Tested on Linux (Ubuntu 13.10 and variants)      #
+# And OSX (10.9.2 and above)                       #
+####################################################
+
+# Required external tools.
+#  - On linux, install these tools using your favorite package manager
+#  - On OSX, we used brew to install these tools
+git, wget, automake, autoconf, libtool, rpl
+
+You also need a working jdk with java 6 (1.6) support
+
+# Required configuration
+You must download and install the latest Android SDK and NDK (The SDK is built against Android-19 and requires
+Android-14 runtime).
+You must declare environment variables named ANDROID_SDK_PATH and ANDROID_NDK_PATH, each poiting to the root of
+the corresponding developemnt kit.
+You must have the android native toolchains for android-14 in your path. To generate a standalone toolchain,
+use the following command :
+$ANDROID_NDK_PATH/build/tools/make-standalone-toolchain.sh --platform=android-14 --arch=<arch> --install-dir=<your/installation/dir>.
+For the three archs `arm', `mips' and `x86'
+
+# Installation guide
+- Download the ARBuildUtils source code (cd <SDK>; git clone https://github.com/ARDroneSDK/ARBuildUtils.git)
+- Go in the ARBuildUtils directory
+- Run ./SDK3Build.py --help and pick your options
+--> A typical command line for HOST build would be : 
+     ./SDK3Build.py -t Android
+- The output will be in <SDK>/ARBuildUtils/Targets/Android/Install/.
+- The jar files will be in <SDK>/ARBuildUtils/Targets/Android/Install/jars/release
+
+
+
+
+
