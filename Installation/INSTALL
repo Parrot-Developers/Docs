@@ -69,6 +69,8 @@ git, wget, automake, autoconf, libtool
 #  - On OSX, we used brew to install these tools
 git, wget, automake, autoconf, libtool, rpl
 
+On iOS you will need to install rpl in version 1.5.5 from sourceforge (http://sourceforge.net/projects/rpl/files/rpl/rpl-1.5.5/), and add it to your PATH
+
 You also need a working jdk with java 6 (1.6) support
 
 # Required configuration
