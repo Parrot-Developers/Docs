@@ -166,6 +166,7 @@ var ARCOMMANDS__Filter_8h =
     [ "ARCOMMANDS_Filter_SetCommonMavlinkStartBehavior", "ARCOMMANDS__Filter_8h.html#ae7ab65fe67eae03cc1e5da964408658f", null ],
     [ "ARCOMMANDS_Filter_SetCommonMavlinkStateBehavior", "ARCOMMANDS__Filter_8h.html#a2ee5e16b5d71d2bf0adb5a24ab93c5a2", null ],
     [ "ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkFilePlayingStateChangedBehavior", "ARCOMMANDS__Filter_8h.html#a7271da4ebde6d4ad0651169b78537042", null ],
+    [ "ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkPlayErrorStateChangedBehavior", "ARCOMMANDS__Filter_8h.html#a353c646105cb46ad10d89e99baebb23d", null ],
     [ "ARCOMMANDS_Filter_SetCommonMavlinkStopBehavior", "ARCOMMANDS__Filter_8h.html#a6202cab8338327c5ee6d83b2b73e5961", null ],
     [ "ARCOMMANDS_Filter_SetCommonNetworkBehavior", "ARCOMMANDS__Filter_8h.html#a55259e73ccd7e64d00d2b1a252fd9bca", null ],
     [ "ARCOMMANDS_Filter_SetCommonNetworkDisconnectBehavior", "ARCOMMANDS__Filter_8h.html#af5f2acef2f12d8345f73cb37f6a8b33d", null ],

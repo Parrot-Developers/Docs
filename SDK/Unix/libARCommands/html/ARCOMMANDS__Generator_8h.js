@@ -109,6 +109,7 @@ var ARCOMMANDS__Generator_8h =
     [ "ARCOMMANDS_Generator_GenerateCommonMavlinkPause", "ARCOMMANDS__Generator_8h.html#a5ce64b3599f3b2c798e0dd534437b11a", null ],
     [ "ARCOMMANDS_Generator_GenerateCommonMavlinkStart", "ARCOMMANDS__Generator_8h.html#ae4eff6a8fb7c005a038e70e499939ef9", null ],
     [ "ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkFilePlayingStateChanged", "ARCOMMANDS__Generator_8h.html#af3f8f791b11d97819cc4100975718d96", null ],
+    [ "ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkPlayErrorStateChanged", "ARCOMMANDS__Generator_8h.html#a9b353c4336d7894feaae9b9ef37aa949", null ],
     [ "ARCOMMANDS_Generator_GenerateCommonMavlinkStop", "ARCOMMANDS__Generator_8h.html#a1423baf51a4c0d70466e436fc031c1db", null ],
     [ "ARCOMMANDS_Generator_GenerateCommonNetworkDisconnect", "ARCOMMANDS__Generator_8h.html#a1c9bc17baaf0578cdef6f1f1c172be3e", null ],
     [ "ARCOMMANDS_Generator_GenerateCommonOverHeatStateOverHeatChanged", "ARCOMMANDS__Generator_8h.html#aaaaaf532ba90816a5c30f12c11d48da6", null ],

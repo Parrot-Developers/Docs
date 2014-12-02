@@ -105,9 +105,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ae44ac93e3a0f1f249b3656eed8dc1dcc"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> )(void *arg, float percent)</td></tr>
 <tr class="memdesc:ae44ac93e3a0f1f249b3656eed8dc1dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Progress callback of the Ftp download.  <a href="#ae44ac93e3a0f1f249b3656eed8dc1dcc">More...</a><br/></td></tr>
 <tr class="separator:ae44ac93e3a0f1f249b3656eed8dc1dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462bde8287dc97ecf0a885847df176f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a462bde8287dc97ecf0a885847df176f9"></a>
-typedef struct <br class="typebreak"/>
-ARUTILS_WifiFtp_Connection_t&#160;</td><td class="memItemRight" valign="bottom"><b>ARUTILS_WifiFtp_Connection_t</b></td></tr>
+<tr class="memitem:a462bde8287dc97ecf0a885847df176f9"><td class="memItemLeft" align="right" valign="top">typedef struct <br class="typebreak"/>
+<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a></td></tr>
+<tr class="memdesc:a462bde8287dc97ecf0a885847df176f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public Ftp Connection struct.  <a href="#a462bde8287dc97ecf0a885847df176f9">More...</a><br/></td></tr>
 <tr class="separator:a462bde8287dc97ecf0a885847df176f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -120,52 +120,52 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a915f1b96dccd0934afef9e056914627e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a915f1b96dccd0934afef9e056914627e">ARUTILS_Ftp_List_GetNextItem</a> (const char *list, const char **nextItem, const char *prefix, int isDirectory, const char **indexItem, int *itemLen)</td></tr>
-<tr class="memdesc:a915f1b96dccd0934afef9e056914627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">File list iterator function.  <a href="#a915f1b96dccd0934afef9e056914627e">More...</a><br/></td></tr>
-<tr class="separator:a915f1b96dccd0934afef9e056914627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54db5ea5988ecc816a653daa376cae0f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a54db5ea5988ecc816a653daa376cae0f">ARUTILS_Ftp_List_GetNextItem</a> (const char *list, const char **nextItem, const char *prefix, int isDirectory, const char **indexItem, int *itemLen, char *lineData, int lineDataLen)</td></tr>
+<tr class="memdesc:a54db5ea5988ecc816a653daa376cae0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">File list iterator function.  <a href="#a54db5ea5988ecc816a653daa376cae0f">More...</a><br/></td></tr>
+<tr class="separator:a54db5ea5988ecc816a653daa376cae0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33afb6483e0dcf5d96eb7b4fd141e733"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a33afb6483e0dcf5d96eb7b4fd141e733">ARUTILS_Ftp_List_GetItemSize</a> (const char *line, int lineSize, double *size)</td></tr>
 <tr class="memdesc:a33afb6483e0dcf5d96eb7b4fd141e733"><td class="mdescLeft">&#160;</td><td class="mdescRight">File size accessor function from a file of a File list.  <a href="#a33afb6483e0dcf5d96eb7b4fd141e733">More...</a><br/></td></tr>
 <tr class="separator:a33afb6483e0dcf5d96eb7b4fd141e733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdc298a7817ad4a85e8994023addf78"><td class="memItemLeft" align="right" valign="top">ARUTILS_WifiFtp_Connection_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a8bdc298a7817ad4a85e8994023addf78">ARUTILS_WifiFtp_Connection_New</a> (ARSAL_Sem_t *cancelSem, const char *server, int port, const char *username, const char *password, <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> *error)</td></tr>
+<tr class="memitem:a8bdc298a7817ad4a85e8994023addf78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a8bdc298a7817ad4a85e8994023addf78">ARUTILS_WifiFtp_Connection_New</a> (ARSAL_Sem_t *cancelSem, const char *server, int port, const char *username, const char *password, <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> *error)</td></tr>
 <tr class="memdesc:a8bdc298a7817ad4a85e8994023addf78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Ftp Connection.  <a href="#a8bdc298a7817ad4a85e8994023addf78">More...</a><br/></td></tr>
 <tr class="separator:a8bdc298a7817ad4a85e8994023addf78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56a1f37895b4d9af9bed66cdcc231764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a56a1f37895b4d9af9bed66cdcc231764">ARUTILS_WifiFtp_Connection_Delete</a> (ARUTILS_WifiFtp_Connection_t **connection)</td></tr>
+<tr class="memitem:a56a1f37895b4d9af9bed66cdcc231764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a56a1f37895b4d9af9bed66cdcc231764">ARUTILS_WifiFtp_Connection_Delete</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> **connection)</td></tr>
 <tr class="memdesc:a56a1f37895b4d9af9bed66cdcc231764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an Ftp Connection.  <a href="#a56a1f37895b4d9af9bed66cdcc231764">More...</a><br/></td></tr>
 <tr class="separator:a56a1f37895b4d9af9bed66cdcc231764"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a8080558d6ff839ac2c4ef571a8677d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a2a8080558d6ff839ac2c4ef571a8677d">ARUTILS_WifiFtp_Connection_Disconnect</a> (ARUTILS_WifiFtp_Connection_t *connection)</td></tr>
+<tr class="memitem:a2a8080558d6ff839ac2c4ef571a8677d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a2a8080558d6ff839ac2c4ef571a8677d">ARUTILS_WifiFtp_Connection_Disconnect</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection)</td></tr>
 <tr class="memdesc:a2a8080558d6ff839ac2c4ef571a8677d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect an remote Ftp server connection.  <a href="#a2a8080558d6ff839ac2c4ef571a8677d">More...</a><br/></td></tr>
 <tr class="separator:a2a8080558d6ff839ac2c4ef571a8677d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae751c6b3f5cd574ed5a63fd7682ca8c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ae751c6b3f5cd574ed5a63fd7682ca8c0">ARUTILS_WifiFtp_Connection_Reconnect</a> (ARUTILS_WifiFtp_Connection_t *connection)</td></tr>
+<tr class="memitem:ae751c6b3f5cd574ed5a63fd7682ca8c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ae751c6b3f5cd574ed5a63fd7682ca8c0">ARUTILS_WifiFtp_Connection_Reconnect</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection)</td></tr>
 <tr class="memdesc:ae751c6b3f5cd574ed5a63fd7682ca8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconnect an remote Ftp server connection.  <a href="#ae751c6b3f5cd574ed5a63fd7682ca8c0">More...</a><br/></td></tr>
 <tr class="separator:ae751c6b3f5cd574ed5a63fd7682ca8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6853acec9bdcddc0ee72699a6b5d237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ac6853acec9bdcddc0ee72699a6b5d237">ARUTILS_WifiFtp_Connection_Cancel</a> (ARUTILS_WifiFtp_Connection_t *connection)</td></tr>
+<tr class="memitem:ac6853acec9bdcddc0ee72699a6b5d237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ac6853acec9bdcddc0ee72699a6b5d237">ARUTILS_WifiFtp_Connection_Cancel</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection)</td></tr>
 <tr class="memdesc:ac6853acec9bdcddc0ee72699a6b5d237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancel an Ftp Connection command in progress (get, put, list etc)  <a href="#ac6853acec9bdcddc0ee72699a6b5d237">More...</a><br/></td></tr>
 <tr class="separator:ac6853acec9bdcddc0ee72699a6b5d237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54684cc45541f7c38d53179c302f4018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a54684cc45541f7c38d53179c302f4018">ARUTILS_WifiFtp_IsCanceled</a> (ARUTILS_WifiFtp_Connection_t *connection)</td></tr>
+<tr class="memitem:a54684cc45541f7c38d53179c302f4018"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a54684cc45541f7c38d53179c302f4018">ARUTILS_WifiFtp_IsCanceled</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection)</td></tr>
 <tr class="memdesc:a54684cc45541f7c38d53179c302f4018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the connection has received a cancel to it's semaphore.  <a href="#a54684cc45541f7c38d53179c302f4018">More...</a><br/></td></tr>
 <tr class="separator:a54684cc45541f7c38d53179c302f4018"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4068dd50eada4770a04f793a6003316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ab4068dd50eada4770a04f793a6003316">ARUTILS_WifiFtp_Connection_Reset</a> (ARUTILS_WifiFtp_Connection_t *connection)</td></tr>
+<tr class="memitem:ab4068dd50eada4770a04f793a6003316"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ab4068dd50eada4770a04f793a6003316">ARUTILS_WifiFtp_Connection_Reset</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection)</td></tr>
 <tr class="memdesc:ab4068dd50eada4770a04f793a6003316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset an Ftp Connection command in progress (get, put, list etc)  <a href="#ab4068dd50eada4770a04f793a6003316">More...</a><br/></td></tr>
 <tr class="separator:ab4068dd50eada4770a04f793a6003316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa18e4ae5719c49ac2d50793b55062eea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#aa18e4ae5719c49ac2d50793b55062eea">ARUTILS_WifiFtp_List</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *namePath, char **resultList, uint32_t *resultListLen)</td></tr>
+<tr class="memitem:aa18e4ae5719c49ac2d50793b55062eea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#aa18e4ae5719c49ac2d50793b55062eea">ARUTILS_WifiFtp_List</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *namePath, char **resultList, uint32_t *resultListLen)</td></tr>
 <tr class="memdesc:aa18e4ae5719c49ac2d50793b55062eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute Ftp List command to retrieve directory content.  <a href="#aa18e4ae5719c49ac2d50793b55062eea">More...</a><br/></td></tr>
 <tr class="separator:aa18e4ae5719c49ac2d50793b55062eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65d12e65a098dac388eca67fd23e7e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ae65d12e65a098dac388eca67fd23e7e7">ARUTILS_WifiFtp_Rename</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *oldNamePath, const char *newNamePath)</td></tr>
+<tr class="memitem:ae65d12e65a098dac388eca67fd23e7e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ae65d12e65a098dac388eca67fd23e7e7">ARUTILS_WifiFtp_Rename</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *oldNamePath, const char *newNamePath)</td></tr>
 <tr class="memdesc:ae65d12e65a098dac388eca67fd23e7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an remote Ftp server file.  <a href="#ae65d12e65a098dac388eca67fd23e7e7">More...</a><br/></td></tr>
 <tr class="separator:ae65d12e65a098dac388eca67fd23e7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84dd48781c39e28a942cf6ed72490aa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a84dd48781c39e28a942cf6ed72490aa7">ARUTILS_WifiFtp_Size</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *namePath, double *size)</td></tr>
+<tr class="memitem:a84dd48781c39e28a942cf6ed72490aa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a84dd48781c39e28a942cf6ed72490aa7">ARUTILS_WifiFtp_Size</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *namePath, double *size)</td></tr>
 <tr class="memdesc:a84dd48781c39e28a942cf6ed72490aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of an remote Ftp server file.  <a href="#a84dd48781c39e28a942cf6ed72490aa7">More...</a><br/></td></tr>
 <tr class="separator:a84dd48781c39e28a942cf6ed72490aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2099e301e85ab99e9bb1ef42603b474b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a2099e301e85ab99e9bb1ef42603b474b">ARUTILS_WifiFtp_Delete</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *namePath)</td></tr>
+<tr class="memitem:a2099e301e85ab99e9bb1ef42603b474b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a2099e301e85ab99e9bb1ef42603b474b">ARUTILS_WifiFtp_Delete</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *namePath)</td></tr>
 <tr class="memdesc:a2099e301e85ab99e9bb1ef42603b474b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an remote Ftp server file.  <a href="#a2099e301e85ab99e9bb1ef42603b474b">More...</a><br/></td></tr>
 <tr class="separator:a2099e301e85ab99e9bb1ef42603b474b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79415e8302c487bee8d9e3b73c14f549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a79415e8302c487bee8d9e3b73c14f549">ARUTILS_WifiFtp_Get</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *namePath, const char *dstFile, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg, <a class="el" href="ARUTILS__Ftp_8h.html#a361fd5b465ba3a2102a18f191da3a404">eARUTILS_FTP_RESUME</a> resume)</td></tr>
+<tr class="memitem:a79415e8302c487bee8d9e3b73c14f549"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a79415e8302c487bee8d9e3b73c14f549">ARUTILS_WifiFtp_Get</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *namePath, const char *dstFile, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg, <a class="el" href="ARUTILS__Ftp_8h.html#a361fd5b465ba3a2102a18f191da3a404">eARUTILS_FTP_RESUME</a> resume)</td></tr>
 <tr class="memdesc:a79415e8302c487bee8d9e3b73c14f549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an remote Ftp server file.  <a href="#a79415e8302c487bee8d9e3b73c14f549">More...</a><br/></td></tr>
 <tr class="separator:a79415e8302c487bee8d9e3b73c14f549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64ca0c34e9f67a7a90e116069ba7f2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a64ca0c34e9f67a7a90e116069ba7f2ac">ARUTILS_WifiFtp_Get_WithBuffer</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *namePath, uint8_t **data, uint32_t *dataLen, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg)</td></tr>
+<tr class="memitem:a64ca0c34e9f67a7a90e116069ba7f2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#a64ca0c34e9f67a7a90e116069ba7f2ac">ARUTILS_WifiFtp_Get_WithBuffer</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *namePath, uint8_t **data, uint32_t *dataLen, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg)</td></tr>
 <tr class="memdesc:a64ca0c34e9f67a7a90e116069ba7f2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an remote Ftp server file.  <a href="#a64ca0c34e9f67a7a90e116069ba7f2ac">More...</a><br/></td></tr>
 <tr class="separator:a64ca0c34e9f67a7a90e116069ba7f2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad32c544611c4fff67b41255a31f65b13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ad32c544611c4fff67b41255a31f65b13">ARUTILS_WifiFtp_Put</a> (ARUTILS_WifiFtp_Connection_t *connection, const char *namePath, const char *srcFile, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg, <a class="el" href="ARUTILS__Ftp_8h.html#a361fd5b465ba3a2102a18f191da3a404">eARUTILS_FTP_RESUME</a> resume)</td></tr>
+<tr class="memitem:ad32c544611c4fff67b41255a31f65b13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Ftp_8h.html#ad32c544611c4fff67b41255a31f65b13">ARUTILS_WifiFtp_Put</a> (<a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *connection, const char *namePath, const char *srcFile, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg, <a class="el" href="ARUTILS__Ftp_8h.html#a361fd5b465ba3a2102a18f191da3a404">eARUTILS_FTP_RESUME</a> resume)</td></tr>
 <tr class="memdesc:ad32c544611c4fff67b41255a31f65b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put an remote Ftp server file.  <a href="#ad32c544611c4fff67b41255a31f65b13">More...</a><br/></td></tr>
 <tr class="separator:ad32c544611c4fff67b41255a31f65b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -193,6 +193,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd>ARUTILS_Ftp_Get () </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a462bde8287dc97ecf0a885847df176f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> <a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Public Ftp Connection struct. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Ftp_8h.html#a8bdc298a7817ad4a85e8994023addf78" title="Create a new Ftp Connection. ">ARUTILS_WifiFtp_Connection_New</a>, ARUTILS_WifiFtp_DeleteConnection () </dd></dl>
 
 </div>
 </div>
@@ -258,11 +273,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Ftp_8h.html#a915f1b96dccd0934afef9e056914627e" title="File list iterator function. ">ARUTILS_Ftp_List_GetNextItem</a> () </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Ftp_8h.html#a54db5ea5988ecc816a653daa376cae0f" title="File list iterator function. ">ARUTILS_Ftp_List_GetNextItem</a> () </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a915f1b96dccd0934afef9e056914627e"></a>
+<a class="anchor" id="a54db5ea5988ecc816a653daa376cae0f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -300,7 +315,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>itemLen</em>&#160;</td>
+          <td class="paramname"><em>itemLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>lineData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lineDataLen</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -319,6 +346,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">isDirectory</td><td>The file type requested: 1 directory or 0 file </td></tr>
     <tr><td class="paramname">indexItem</td><td>The beginning of the line item if address is not null </td></tr>
     <tr><td class="paramname">itemLen</td><td>The length of the line item if address is not null </td></tr>
+    <tr><td class="paramname">lineData</td><td>The buffer that will receive the result </td></tr>
+    <tr><td class="paramname">lineDataLen</td><td>The size of the buffer that will receive the result </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +368,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Connection_Cancel </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -370,7 +399,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void ARUTILS_WifiFtp_Connection_Delete </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t **&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> **&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -396,7 +425,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Connection_Disconnect </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -425,7 +454,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ARUTILS_WifiFtp_Connection_t* ARUTILS_WifiFtp_Connection_New </td>
+          <td class="memname"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a>* ARUTILS_WifiFtp_Connection_New </td>
           <td>(</td>
           <td class="paramtype">ARSAL_Sem_t *&#160;</td>
           <td class="paramname"><em>cancelSem</em>, </td>
@@ -498,7 +527,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Connection_Reconnect </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -529,7 +558,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Connection_Reset </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -560,7 +589,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Delete </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -602,7 +631,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Get </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -672,7 +701,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Get_WithBuffer </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -743,7 +772,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_IsCanceled </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em></td><td>)</td>
           <td></td>
         </tr>
@@ -774,7 +803,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_List </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -831,7 +860,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Put </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -901,7 +930,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Rename </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -950,7 +979,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_WifiFtp_Size </td>
           <td>(</td>
-          <td class="paramtype">ARUTILS_WifiFtp_Connection_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="ARUTILS__Ftp_8h.html#a462bde8287dc97ecf0a885847df176f9">ARUTILS_WifiFtp_Connection_t</a> *&#160;</td>
           <td class="paramname"><em>connection</em>, </td>
         </tr>
         <tr>
@@ -997,7 +1026,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_54ad19b610ffd2eeb7cde73613fa1bb6.html">libARUtils</a></li><li class="navelem"><a class="el" href="dir_2551b9a3f9cccc430adf69ec43225b0f.html">Includes</a></li><li class="navelem"><a class="el" href="dir_6aee8488e1c78dff00c51bd7b238b48f.html">libARUtils</a></li><li class="navelem"><a class="el" href="ARUTILS__Ftp_8h.html">ARUTILS_Ftp.h</a></li>
-    <li class="footer">Generated on Fri Nov 21 2014 10:57:01 for libARUtils by
+    <li class="footer">Generated on Tue Dec 2 2014 11:40:45 for libARUtils by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

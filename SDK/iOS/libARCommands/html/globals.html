@@ -412,6 +412,15 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKFILEPLAYINGSTATECHANGED_TYPE_MAPMYHOUSE
 : <a class="el" href="ARCOMMANDS__Types_8h.html#a15e3631ed7240eb2e3cd413005be3b31ab4d84ed6dceeeb357bebf681740fb8c2">ARCOMMANDS_Types.h</a>
 </li>
+<li>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_GPSNOTFIXED
+: <a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601ac962df8da0bfb43e5f4117b618568e1d">ARCOMMANDS_Types.h</a>
+</li>
+<li>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_NONE
+: <a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601a19006252841d503d2b3d24a01432cbab">ARCOMMANDS_Types.h</a>
+</li>
+<li>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_NOTINOUTDOORMODE
+: <a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601a7885e04e553d22328b43067c7c86f12f">ARCOMMANDS_Types.h</a>
+</li>
 <li>ARCOMMANDS_Decoder_ARDrone3AnimationsFlipCallback_t
 : <a class="el" href="ARCOMMANDS__Decoder_8h.html#a1db3f2a42eeb82f47959f84df9860843">ARCOMMANDS_Decoder.h</a>
 </li>
@@ -720,6 +729,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </li>
 <li>ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkFilePlayingStateChangedCallback_t
 : <a class="el" href="ARCOMMANDS__Decoder_8h.html#a3369a42ccbc42acea842fca9da8da577">ARCOMMANDS_Decoder.h</a>
+</li>
+<li>ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkPlayErrorStateChangedCallback_t
+: <a class="el" href="ARCOMMANDS__Decoder_8h.html#a03e979833edebbe3823a18907356138a">ARCOMMANDS_Decoder.h</a>
 </li>
 <li>ARCOMMANDS_Decoder_CommonMavlinkStopCallback_t
 : <a class="el" href="ARCOMMANDS__Decoder_8h.html#aff226707f106037cf0b4efbfa537b7dd">ARCOMMANDS_Decoder.h</a>
@@ -1362,6 +1374,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </li>
 <li>ARCOMMANDS_Decoder_SetCommonMavlinkStateMavlinkFilePlayingStateChangedCallback()
 : <a class="el" href="ARCOMMANDS__Decoder_8h.html#a2c133cb6b92a3a04ea5dddaf4d81ba0f">ARCOMMANDS_Decoder.h</a>
+</li>
+<li>ARCOMMANDS_Decoder_SetCommonMavlinkStateMavlinkPlayErrorStateChangedCallback()
+: <a class="el" href="ARCOMMANDS__Decoder_8h.html#ab35e7ab67a0292b24fb53d6b4d625648">ARCOMMANDS_Decoder.h</a>
 </li>
 <li>ARCOMMANDS_Decoder_SetCommonMavlinkStopCallback()
 : <a class="el" href="ARCOMMANDS__Decoder_8h.html#aae4295de33cc9545f598cc7ec4962995">ARCOMMANDS_Decoder.h</a>
@@ -2299,6 +2314,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkFilePlayingStateChangedBehavior()
 : <a class="el" href="ARCOMMANDS__Filter_8h.html#a7271da4ebde6d4ad0651169b78537042">ARCOMMANDS_Filter.h</a>
 </li>
+<li>ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkPlayErrorStateChangedBehavior()
+: <a class="el" href="ARCOMMANDS__Filter_8h.html#a353c646105cb46ad10d89e99baebb23d">ARCOMMANDS_Filter.h</a>
+</li>
 <li>ARCOMMANDS_Filter_SetCommonMavlinkStopBehavior()
 : <a class="el" href="ARCOMMANDS__Filter_8h.html#a6202cab8338327c5ee6d83b2b73e5961">ARCOMMANDS_Filter.h</a>
 </li>
@@ -3217,6 +3235,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkFilePlayingStateChanged()
 : <a class="el" href="ARCOMMANDS__Generator_8h.html#af3f8f791b11d97819cc4100975718d96">ARCOMMANDS_Generator.h</a>
 </li>
+<li>ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkPlayErrorStateChanged()
+: <a class="el" href="ARCOMMANDS__Generator_8h.html#a9b353c4336d7894feaae9b9ef37aa949">ARCOMMANDS_Generator.h</a>
+</li>
 <li>ARCOMMANDS_Generator_GenerateCommonMavlinkStop()
 : <a class="el" href="ARCOMMANDS__Generator_8h.html#a1423baf51a4c0d70466e436fc031c1db">ARCOMMANDS_Generator.h</a>
 </li>
@@ -3949,7 +3970,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Nov 21 2014 10:57:00 for libARCommands by
+    <li class="footer">Generated on Tue Dec 2 2014 11:40:44 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

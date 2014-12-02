@@ -325,6 +325,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a15e3631ed7240eb2e3cd413005be3b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">type of the played mavlink file  <a href="ARCOMMANDS__Types_8h.html#a15e3631ed7240eb2e3cd413005be3b31">More...</a><br/></td></tr>
 <tr class="separator:a15e3631ed7240eb2e3cd413005be3b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d1527809fe0b5cb445c4a7dae87601"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR</a> { <a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601a19006252841d503d2b3d24a01432cbab">ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_NONE</a> = 0, 
+<a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601a7885e04e553d22328b43067c7c86f12f">ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_NOTINOUTDOORMODE</a>, 
+<a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601ac962df8da0bfb43e5f4117b618568e1d">ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_GPSNOTFIXED</a>, 
+<b>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_MAX</b>
+ }</td></tr>
+<tr class="memdesc:aa8d1527809fe0b5cb445c4a7dae87601"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of play error.  <a href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601">More...</a><br/></td></tr>
+<tr class="separator:aa8d1527809fe0b5cb445c4a7dae87601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91dee6a7caddbb6fd7ad02d04052d239"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Types_8h.html#a91dee6a7caddbb6fd7ad02d04052d239">eARCOMMANDS_COMMON_CALIBRATIONSTATE_MAGNETOCALIBRATIONAXISTOCALIBRATECHANGED_AXIS</a> { <br/>
 &#160;&#160;<a class="el" href="ARCOMMANDS__Types_8h.html#a91dee6a7caddbb6fd7ad02d04052d239a0d5999326a2c19b313099987c6f2add6">ARCOMMANDS_COMMON_CALIBRATIONSTATE_MAGNETOCALIBRATIONAXISTOCALIBRATECHANGED_AXIS_XAXIS</a> = 0, 
 <a class="el" href="ARCOMMANDS__Types_8h.html#a91dee6a7caddbb6fd7ad02d04052d239a9cfda4fcad8fe8e51e6fd098160fac45">ARCOMMANDS_COMMON_CALIBRATIONSTATE_MAGNETOCALIBRATIONAXISTOCALIBRATECHANGED_AXIS_YAXIS</a>, 
@@ -1360,6 +1367,31 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa8d1527809fe0b5cb445c4a7dae87601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>State of play error. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="aa8d1527809fe0b5cb445c4a7dae87601a19006252841d503d2b3d24a01432cbab"></a>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_NONE</em>&#160;</td><td class="fielddoc">
+<p>There is no error. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa8d1527809fe0b5cb445c4a7dae87601a7885e04e553d22328b43067c7c86f12f"></a>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_NOTINOUTDOORMODE</em>&#160;</td><td class="fielddoc">
+<p>The drone is not in outdoor mode. </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="aa8d1527809fe0b5cb445c4a7dae87601ac962df8da0bfb43e5f4117b618568e1d"></a>ARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR_GPSNOTFIXED</em>&#160;</td><td class="fielddoc">
+<p>The gps is not fixed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="aa774b91b7c2acc8ad75b6e16e57e3556"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2128,7 +2160,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_ca27a71cd02a4621726d91b44aef999d.html">libARCommands</a></li><li class="navelem"><a class="el" href="dir_85b40e3b0d5185d8123de194465f5096.html">Includes</a></li><li class="navelem"><a class="el" href="dir_22ede77139ba202e6eee02a87cce666f.html">libARCommands</a></li><li class="navelem"><a class="el" href="ARCOMMANDS__Types_8h.html">ARCOMMANDS_Types.h</a></li>
-    <li class="footer">Generated on Fri Nov 21 2014 10:57:00 for libARCommands by
+    <li class="footer">Generated on Tue Dec 2 2014 11:40:44 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

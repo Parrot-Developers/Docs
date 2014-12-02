@@ -432,6 +432,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af3f8f791b11d97819cc4100975718d96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#af3f8f791b11d97819cc4100975718d96">ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkFilePlayingStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#a23f48cebb5cdc74c0958b27cde15e43d">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKFILEPLAYINGSTATECHANGED_STATE</a> _state, const char *_filepath, <a class="el" href="ARCOMMANDS__Types_8h.html#a15e3631ed7240eb2e3cd413005be3b31">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKFILEPLAYINGSTATECHANGED_TYPE</a> _type)</td></tr>
 <tr class="memdesc:af3f8f791b11d97819cc4100975718d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Playing state of a mavlink flight plan.  <a href="#af3f8f791b11d97819cc4100975718d96">More...</a><br/></td></tr>
 <tr class="separator:af3f8f791b11d97819cc4100975718d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b353c4336d7894feaae9b9ef37aa949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a9b353c4336d7894feaae9b9ef37aa949">ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkPlayErrorStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR</a> _error)</td></tr>
+<tr class="memdesc:a9b353c4336d7894feaae9b9ef37aa949"><td class="mdescLeft">&#160;</td><td class="mdescRight">FlightPlan play state error.  <a href="#a9b353c4336d7894feaae9b9ef37aa949">More...</a><br/></td></tr>
+<tr class="separator:a9b353c4336d7894feaae9b9ef37aa949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66aaddc668191d4e6bc35c7b054727d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a66aaddc668191d4e6bc35c7b054727d5">ARCOMMANDS_Generator_GenerateCommonCalibrationMagnetoCalibration</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _calibrate)</td></tr>
 <tr class="memdesc:a66aaddc668191d4e6bc35c7b054727d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sent when a calibration of the magnetometer is asked or is aborted.  <a href="#a66aaddc668191d4e6bc35c7b054727d5">More...</a><br/></td></tr>
 <tr class="separator:a66aaddc668191d4e6bc35c7b054727d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6511,6 +6514,57 @@ Functions</h2></td></tr>
     <tr><td class="paramname">_state</td><td>State of the mavlink </td></tr>
     <tr><td class="paramname">_filepath</td><td>flight plan file path from the mavlink ftp root </td></tr>
     <tr><td class="paramname">_type</td><td>type of the played mavlink file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b353c4336d7894feaae9b9ef37aa949"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateCommonMavlinkStateMavlinkPlayErrorStateChanged </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR</a>&#160;</td>
+          <td class="paramname"><em>_error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FlightPlan play state error. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_error</td><td>State of play error </td></tr>
   </table>
   </dd>
 </dl>
@@ -13208,7 +13262,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_ca27a71cd02a4621726d91b44aef999d.html">libARCommands</a></li><li class="navelem"><a class="el" href="dir_85b40e3b0d5185d8123de194465f5096.html">Includes</a></li><li class="navelem"><a class="el" href="dir_22ede77139ba202e6eee02a87cce666f.html">libARCommands</a></li><li class="navelem"><a class="el" href="ARCOMMANDS__Generator_8h.html">ARCOMMANDS_Generator.h</a></li>
-    <li class="footer">Generated on Fri Nov 21 2014 10:57:00 for libARCommands by
+    <li class="footer">Generated on Tue Dec 2 2014 11:40:44 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

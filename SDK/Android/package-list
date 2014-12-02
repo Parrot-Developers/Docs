@@ -2,6 +2,7 @@ com.parrot.arsdk.arcommands
 com.parrot.arsdk.ardatatransfer
 com.parrot.arsdk.ardiscovery
 com.parrot.arsdk.ardiscovery.receivers
+com.parrot.arsdk.armavlink
 com.parrot.arsdk.armedia
 com.parrot.arsdk.arnetwork
 com.parrot.arsdk.arnetworkal

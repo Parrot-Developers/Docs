@@ -79,21 +79,24 @@ $(document).ready(function(){initNavTree('ARDATATRANSFER__DataDownloader_8h.html
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa8ac37411df1205ecbbec3fb805f9702"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aa8ac37411df1205ecbbec3fb805f9702">ARDATATRANSFER_DataDownloader_DataCompletionCallback_t</a> )(void *arg, const char *fileName, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td></tr>
-<tr class="memdesc:aa8ac37411df1205ecbbec3fb805f9702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion callback of the Media download.  <a href="#aa8ac37411df1205ecbbec3fb805f9702">More...</a><br/></td></tr>
-<tr class="separator:aa8ac37411df1205ecbbec3fb805f9702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefde1b030a7fb25b47d87743dbd7d833"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aefde1b030a7fb25b47d87743dbd7d833">ARDATATRANSFER_DataDownloader_FileCompletionCallback_t</a> )(void *arg, const char *fileName, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td></tr>
+<tr class="memdesc:aefde1b030a7fb25b47d87743dbd7d833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion callback of the Media download.  <a href="#aefde1b030a7fb25b47d87743dbd7d833">More...</a><br/></td></tr>
+<tr class="separator:aefde1b030a7fb25b47d87743dbd7d833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1b282a5b9600bd1e2e7f5d1f4eb60a9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#a1b282a5b9600bd1e2e7f5d1f4eb60a9e">ARDATATRANSFER_DataDownloader_New</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, ARUTILS_Manager_t *ftpListManager, ARUTILS_Manager_t *ftpDataManager, const char *remoteDirectory, const char *localDirectory, <a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aa8ac37411df1205ecbbec3fb805f9702">ARDATATRANSFER_DataDownloader_DataCompletionCallback_t</a> dataCompletionCallback, void *dataCompletionArg)</td></tr>
-<tr class="memdesc:a1b282a5b9600bd1e2e7f5d1f4eb60a9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new ARDataTransfer DataDownloader.  <a href="#a1b282a5b9600bd1e2e7f5d1f4eb60a9e">More...</a><br/></td></tr>
-<tr class="separator:a1b282a5b9600bd1e2e7f5d1f4eb60a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89461ddaa8b64e736663f079f9f8c74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aa89461ddaa8b64e736663f079f9f8c74">ARDATATRANSFER_DataDownloader_New</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, ARUTILS_Manager_t *ftpListManager, ARUTILS_Manager_t *ftpDataManager, const char *remoteDirectory, const char *localDirectory, <a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aefde1b030a7fb25b47d87743dbd7d833">ARDATATRANSFER_DataDownloader_FileCompletionCallback_t</a> fileCompletionCallback, void *fileCompletionArg)</td></tr>
+<tr class="memdesc:aa89461ddaa8b64e736663f079f9f8c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new ARDataTransfer DataDownloader.  <a href="#aa89461ddaa8b64e736663f079f9f8c74">More...</a><br/></td></tr>
+<tr class="separator:aa89461ddaa8b64e736663f079f9f8c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a5770439a5ec5ea6f9966185b79727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#a77a5770439a5ec5ea6f9966185b79727">ARDATATRANSFER_DataDownloader_Delete</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager)</td></tr>
 <tr class="memdesc:a77a5770439a5ec5ea6f9966185b79727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an ARDataTransfer DataDownloader.  <a href="#a77a5770439a5ec5ea6f9966185b79727">More...</a><br/></td></tr>
 <tr class="separator:a77a5770439a5ec5ea6f9966185b79727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad879377f6a22c272d07de6f38e4ab4e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#ad879377f6a22c272d07de6f38e4ab4e0">ARDATATRANSFER_DataDownloader_GetAvailableFiles</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, long *filesNumber)</td></tr>
 <tr class="memdesc:ad879377f6a22c272d07de6f38e4ab4e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Available Files of ARDataTransfer DataDownloader.  <a href="#ad879377f6a22c272d07de6f38e4ab4e0">More...</a><br/></td></tr>
 <tr class="separator:ad879377f6a22c272d07de6f38e4ab4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e3c6365f4a1ba81572e8c585cc9f458"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#a5e3c6365f4a1ba81572e8c585cc9f458">ARDATATRANSFER_DataDownloader_CancelAvailableFiles</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager)</td></tr>
+<tr class="memdesc:a5e3c6365f4a1ba81572e8c585cc9f458"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a cancel to the device data downloader get available files.  <a href="#a5e3c6365f4a1ba81572e8c585cc9f458">More...</a><br/></td></tr>
+<tr class="separator:a5e3c6365f4a1ba81572e8c585cc9f458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af600f925f2199147c36c6697d7ec061c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#af600f925f2199147c36c6697d7ec061c">ARDATATRANSFER_DataDownloader_ThreadRun</a> (void *manager)</td></tr>
 <tr class="memdesc:af600f925f2199147c36c6697d7ec061c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process of the device data download (flights data or ride data)  <a href="#af600f925f2199147c36c6697d7ec061c">More...</a><br/></td></tr>
 <tr class="separator:af600f925f2199147c36c6697d7ec061c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,12 +109,12 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>19/12/2013 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'dav'+'id'+'.fl'+'at'+'tin'+'.e'+'xt@'+'pa'+'rro'+'t.'+'com'; return false;">david<span style="display: none;">.nosp@m.</span>.fla<span style="display: none;">.nosp@m.</span>ttin.<span style="display: none;">.nosp@m.</span>ext@<span style="display: none;">.nosp@m.</span>parro<span style="display: none;">.nosp@m.</span>t.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="aa8ac37411df1205ecbbec3fb805f9702"></a>
+<a class="anchor" id="aefde1b030a7fb25b47d87743dbd7d833"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ARDATATRANSFER_DataDownloader_DataCompletionCallback_t)(void *arg, const char *fileName, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td>
+          <td class="memname">typedef void(* ARDATATRANSFER_DataDownloader_FileCompletionCallback_t)(void *arg, const char *fileName, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -130,6 +133,37 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5e3c6365f4a1ba81572e8c585cc9f458"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> ARDATATRANSFER_DataDownloader_CancelAvailableFiles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a cancel to the device data downloader get available files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The pointer of the ARDataTransfer Manager </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARDATATRANSFER_OK. Otherwise, it returns an error number of eARDATATRANSFER_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#ad879377f6a22c272d07de6f38e4ab4e0" title="Get Available Files of ARDataTransfer DataDownloader. ">ARDATATRANSFER_DataDownloader_GetAvailableFiles</a> () </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a7ca8f3a744d1fdfb5cef783db9749c5a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +223,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#a1b282a5b9600bd1e2e7f5d1f4eb60a9e" title="Create a new ARDataTransfer DataDownloader. ">ARDATATRANSFER_DataDownloader_New</a> () </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aa89461ddaa8b64e736663f079f9f8c74" title="Create a new ARDataTransfer DataDownloader. ">ARDATATRANSFER_DataDownloader_New</a> () </dd></dl>
 
 </div>
 </div>
@@ -231,11 +265,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#a1b282a5b9600bd1e2e7f5d1f4eb60a9e" title="Create a new ARDataTransfer DataDownloader. ">ARDATATRANSFER_DataDownloader_New</a> () </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aa89461ddaa8b64e736663f079f9f8c74" title="Create a new ARDataTransfer DataDownloader. ">ARDATATRANSFER_DataDownloader_New</a> () </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a1b282a5b9600bd1e2e7f5d1f4eb60a9e"></a>
+<a class="anchor" id="aa89461ddaa8b64e736663f079f9f8c74"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -272,14 +306,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aa8ac37411df1205ecbbec3fb805f9702">ARDATATRANSFER_DataDownloader_DataCompletionCallback_t</a>&#160;</td>
-          <td class="paramname"><em>dataCompletionCallback</em>, </td>
+          <td class="paramtype"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html#aefde1b030a7fb25b47d87743dbd7d833">ARDATATRANSFER_DataDownloader_FileCompletionCallback_t</a>&#160;</td>
+          <td class="paramname"><em>fileCompletionCallback</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>dataCompletionArg</em>&#160;</td>
+          <td class="paramname"><em>fileCompletionArg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -348,7 +382,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_49d2c554729fcb1068799c53759f0caa.html">libARDataTransfer</a></li><li class="navelem"><a class="el" href="dir_9c1a37b948d4bb566f8c3921dbcc8b33.html">Includes</a></li><li class="navelem"><a class="el" href="dir_0f92e55b9add51c19f4a6ea268bdc6c7.html">libARDataTransfer</a></li><li class="navelem"><a class="el" href="ARDATATRANSFER__DataDownloader_8h.html">ARDATATRANSFER_DataDownloader.h</a></li>
-    <li class="footer">Generated on Fri Nov 21 2014 10:57:01 for libARDataTransfer by
+    <li class="footer">Generated on Tue Dec 2 2014 11:40:45 for libARDataTransfer by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

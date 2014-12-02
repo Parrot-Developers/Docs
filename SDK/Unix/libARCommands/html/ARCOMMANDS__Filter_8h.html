@@ -599,6 +599,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7271da4ebde6d4ad0651169b78537042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Filter_8h.html#a6ba605d0affbe4258cc455b7363bc466">eARCOMMANDS_FILTER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Filter_8h.html#a7271da4ebde6d4ad0651169b78537042">ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkFilePlayingStateChangedBehavior</a> (<a class="el" href="ARCOMMANDS__Filter_8h.html#a15200d788fd15575b4c6fb748a196993">ARCOMMANDS_Filter_t</a> *filter, <a class="el" href="ARCOMMANDS__Filter_8h.html#a17edf66670fdbe534a11ce4831c2106c">eARCOMMANDS_FILTER_STATUS</a> behavior)</td></tr>
 <tr class="memdesc:a7271da4ebde6d4ad0651169b78537042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the filter behavior for the command common.MavlinkState.MavlinkFilePlayingStateChanged.  <a href="#a7271da4ebde6d4ad0651169b78537042">More...</a><br/></td></tr>
 <tr class="separator:a7271da4ebde6d4ad0651169b78537042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353c646105cb46ad10d89e99baebb23d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Filter_8h.html#a6ba605d0affbe4258cc455b7363bc466">eARCOMMANDS_FILTER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Filter_8h.html#a353c646105cb46ad10d89e99baebb23d">ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkPlayErrorStateChangedBehavior</a> (<a class="el" href="ARCOMMANDS__Filter_8h.html#a15200d788fd15575b4c6fb748a196993">ARCOMMANDS_Filter_t</a> *filter, <a class="el" href="ARCOMMANDS__Filter_8h.html#a17edf66670fdbe534a11ce4831c2106c">eARCOMMANDS_FILTER_STATUS</a> behavior)</td></tr>
+<tr class="memdesc:a353c646105cb46ad10d89e99baebb23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the filter behavior for the command common.MavlinkState.MavlinkPlayErrorStateChanged.  <a href="#a353c646105cb46ad10d89e99baebb23d">More...</a><br/></td></tr>
+<tr class="separator:a353c646105cb46ad10d89e99baebb23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a294954e94581e52763af1ba531bf5133"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Filter_8h.html#a6ba605d0affbe4258cc455b7363bc466">eARCOMMANDS_FILTER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Filter_8h.html#a294954e94581e52763af1ba531bf5133">ARCOMMANDS_Filter_SetCommonCalibrationBehavior</a> (<a class="el" href="ARCOMMANDS__Filter_8h.html#a15200d788fd15575b4c6fb748a196993">ARCOMMANDS_Filter_t</a> *filter, <a class="el" href="ARCOMMANDS__Filter_8h.html#a17edf66670fdbe534a11ce4831c2106c">eARCOMMANDS_FILTER_STATUS</a> behavior)</td></tr>
 <tr class="memdesc:a294954e94581e52763af1ba531bf5133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the filter behavior for all commands common.Calibration.XXX.  <a href="#a294954e94581e52763af1ba531bf5133">More...</a><br/></td></tr>
 <tr class="separator:a294954e94581e52763af1ba531bf5133"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6645,6 +6648,42 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the filter behavior for the command common.MavlinkState.MavlinkFilePlayingStateChanged. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>The filter to be modified. </td></tr>
+    <tr><td class="paramname">behavior</td><td>The behavior to use for the command (must be either ARCOMMANDS_FILTER_STATUS_BLOCKED or ARCOMMANDS_FILTER_STATUS_ALLOWED). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An eARCOMMANDS_FILTER_ERROR enum. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a353c646105cb46ad10d89e99baebb23d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Filter_8h.html#a6ba605d0affbe4258cc455b7363bc466">eARCOMMANDS_FILTER_ERROR</a> ARCOMMANDS_Filter_SetCommonMavlinkStateMavlinkPlayErrorStateChangedBehavior </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Filter_8h.html#a15200d788fd15575b4c6fb748a196993">ARCOMMANDS_Filter_t</a> *&#160;</td>
+          <td class="paramname"><em>filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Filter_8h.html#a17edf66670fdbe534a11ce4831c2106c">eARCOMMANDS_FILTER_STATUS</a>&#160;</td>
+          <td class="paramname"><em>behavior</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the filter behavior for the command common.MavlinkState.MavlinkPlayErrorStateChanged. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filter</td><td>The filter to be modified. </td></tr>
@@ -13682,7 +13721,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_ca27a71cd02a4621726d91b44aef999d.html">libARCommands</a></li><li class="navelem"><a class="el" href="dir_85b40e3b0d5185d8123de194465f5096.html">Includes</a></li><li class="navelem"><a class="el" href="dir_22ede77139ba202e6eee02a87cce666f.html">libARCommands</a></li><li class="navelem"><a class="el" href="ARCOMMANDS__Filter_8h.html">ARCOMMANDS_Filter.h</a></li>
-    <li class="footer">Generated on Fri Nov 21 2014 10:56:28 for libARCommands by
+    <li class="footer">Generated on Tue Dec 2 2014 11:37:49 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

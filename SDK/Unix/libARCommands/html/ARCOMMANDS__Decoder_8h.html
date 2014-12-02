@@ -537,6 +537,10 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3369a42ccbc42acea842fca9da8da577">ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkFilePlayingStateChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#a23f48cebb5cdc74c0958b27cde15e43d">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKFILEPLAYINGSTATECHANGED_STATE</a> state, char *filepath, <a class="el" href="ARCOMMANDS__Types_8h.html#a15e3631ed7240eb2e3cd413005be3b31">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKFILEPLAYINGSTATECHANGED_TYPE</a> type, void *custom)</td></tr>
 <tr class="memdesc:a3369a42ccbc42acea842fca9da8da577"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command common.MavlinkState.MavlinkFilePlayingStateChanged <br/></td></tr>
 <tr class="separator:a3369a42ccbc42acea842fca9da8da577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e979833edebbe3823a18907356138a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03e979833edebbe3823a18907356138a"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a03e979833edebbe3823a18907356138a">ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkPlayErrorStateChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#aa8d1527809fe0b5cb445c4a7dae87601">eARCOMMANDS_COMMON_MAVLINKSTATE_MAVLINKPLAYERRORSTATECHANGED_ERROR</a> error, void *custom)</td></tr>
+<tr class="memdesc:a03e979833edebbe3823a18907356138a"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command common.MavlinkState.MavlinkPlayErrorStateChanged <br/></td></tr>
+<tr class="separator:a03e979833edebbe3823a18907356138a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15048a4c51c46d96e8015b082bbcfd79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15048a4c51c46d96e8015b082bbcfd79"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a15048a4c51c46d96e8015b082bbcfd79">ARCOMMANDS_Decoder_CommonCalibrationMagnetoCalibrationCallback_t</a> )(uint8_t calibrate, void *custom)</td></tr>
 <tr class="memdesc:a15048a4c51c46d96e8015b082bbcfd79"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command common.Calibration.MagnetoCalibration <br/></td></tr>
@@ -1375,6 +1379,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2c133cb6b92a3a04ea5dddaf4d81ba0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a2c133cb6b92a3a04ea5dddaf4d81ba0f">ARCOMMANDS_Decoder_SetCommonMavlinkStateMavlinkFilePlayingStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a3369a42ccbc42acea842fca9da8da577">ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkFilePlayingStateChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a2c133cb6b92a3a04ea5dddaf4d81ba0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command common.MavlinkState.MavlinkFilePlayingStateChanged  <a href="#a2c133cb6b92a3a04ea5dddaf4d81ba0f">More...</a><br/></td></tr>
 <tr class="separator:a2c133cb6b92a3a04ea5dddaf4d81ba0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35e7ab67a0292b24fb53d6b4d625648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab35e7ab67a0292b24fb53d6b4d625648">ARCOMMANDS_Decoder_SetCommonMavlinkStateMavlinkPlayErrorStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a03e979833edebbe3823a18907356138a">ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkPlayErrorStateChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ab35e7ab67a0292b24fb53d6b4d625648"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command common.MavlinkState.MavlinkPlayErrorStateChanged  <a href="#ab35e7ab67a0292b24fb53d6b4d625648">More...</a><br/></td></tr>
+<tr class="separator:ab35e7ab67a0292b24fb53d6b4d625648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06915a8b3714769086a8d88bd89edb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac06915a8b3714769086a8d88bd89edb9">ARCOMMANDS_Decoder_SetCommonCalibrationMagnetoCalibrationCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a15048a4c51c46d96e8015b082bbcfd79">ARCOMMANDS_Decoder_CommonCalibrationMagnetoCalibrationCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:ac06915a8b3714769086a8d88bd89edb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command common.Calibration.MagnetoCalibration  <a href="#ac06915a8b3714769086a8d88bd89edb9">More...</a><br/></td></tr>
 <tr class="separator:ac06915a8b3714769086a8d88bd89edb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5453,6 +5460,41 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>new callback for the command common.MavlinkState.MavlinkFilePlayingStateChanged </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab35e7ab67a0292b24fb53d6b4d625648"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetCommonMavlinkStateMavlinkPlayErrorStateChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a03e979833edebbe3823a18907356138a">ARCOMMANDS_Decoder_CommonMavlinkStateMavlinkPlayErrorStateChangedCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command common.MavlinkState.MavlinkPlayErrorStateChanged </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command common.MavlinkState.MavlinkPlayErrorStateChanged </td></tr>
     <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
   </table>
   </dd>
@@ -9981,7 +10023,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_ca27a71cd02a4621726d91b44aef999d.html">libARCommands</a></li><li class="navelem"><a class="el" href="dir_85b40e3b0d5185d8123de194465f5096.html">Includes</a></li><li class="navelem"><a class="el" href="dir_22ede77139ba202e6eee02a87cce666f.html">libARCommands</a></li><li class="navelem"><a class="el" href="ARCOMMANDS__Decoder_8h.html">ARCOMMANDS_Decoder.h</a></li>
-    <li class="footer">Generated on Fri Nov 21 2014 10:56:28 for libARCommands by
+    <li class="footer">Generated on Tue Dec 2 2014 11:37:49 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
