@@ -14,9 +14,9 @@
 The root folder where all the source code will be downloaded will be noted <SDK>
 
 
-Important : 
+Important :
 
-Before building the SDK, please run <SDK>/ARSDKBuildUtils/CheckEnv.py script 
+Before building the SDK, please run <SDK>/ARSDKBuildUtils/CheckEnv.py script
 until it says that your target can be build.
 
 
@@ -40,7 +40,7 @@ git, wget, automake, autoconf, libtool, yasm, nasm
 - Download the ARBuildUtils source code (cd <SDK>; git clone https://github.com/ARDroneSDK3/ARSDKBuildUtils.git)
 - Go in the ARBuildUtils directory
 - Run ./SDK3Build.py --help and pick your options
---> A typical command line for HOST build would be : 
+--> A typical command line for HOST build would be :
      ./SDK3Build.py -t Unix
 - The output will be in <SDK>/ARBuildUtils/Targets/Unix/Install/.
 
@@ -61,7 +61,7 @@ git, wget, automake, autoconf, libtool
 - Download the ARBuildUtils source code (cd <SDK>; git clone https://github.com/ARDroneSDK3/ARSDKBuildUtils.git)
 - Go in the ARBuildUtils directory
 - Run ./SDK3Build.py --help and pick your options
---> A typical command line for HOST build would be : 
+--> A typical command line for HOST build would be :
      ./SDK3Build.py -t iOS
 - The output will be in <SDK>/ARSDKBuildUtils/Targets/iOS/Install/.
 - The frameworks will be in <SDK>/ARSDKBuildUtils/Targets/iOS/Install/Frameworks
@@ -93,17 +93,15 @@ You must have the android native toolchains for android-14 in your path. To gene
 use the following command :
 $ANDROID_NDK_PATH/build/tools/make-standalone-toolchain.sh --platform=android-14 --arch=<arch> --install-dir=<your/installation/dir>.
 For the three archs `arm', `mips' and `x86'
+--> Note that you must use three different installation directories (one for each architecture), and you need to add each install_dir/bin directory to your path.
+     A typical installation is to have an `~/android_toolchains/' folder, in which you will put the three `toolchain_<arch>' folders. This facilitates the updates
+     as you can just remove the root folder and generate new toolchains when upgrading the android NDK.
 
 # Installation guide
 - Download the ARBuildUtils source code (cd <SDK>; git clone https://github.com/ARDroneSDK3/ARSDKBuildUtils.git)
 - Go in the ARBuildUtils directory
 - Run ./SDK3Build.py --help and pick your options
---> A typical command line for HOST build would be : 
+--> A typical command line for HOST build would be :
      ./SDK3Build.py -t Android
 - The output will be in <SDK>/ARSDKBuildUtils/Targets/Android/Install/.
 - The jar files will be in <SDK>/ARSDKBuildUtils/Targets/Android/Install/jars/release
-
-
-
-
-
