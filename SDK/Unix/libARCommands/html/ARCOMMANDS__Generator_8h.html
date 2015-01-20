@@ -453,6 +453,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1057b21652735313d239224a6c9166f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1057b21652735313d239224a6c9166f1">ARCOMMANDS_Generator_GenerateCommonCameraSettingsStateCameraSettingsChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _fov, float _panMax, float _panMin, float _tiltMax, float _tiltMin)</td></tr>
 <tr class="memdesc:a1057b21652735313d239224a6c9166f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the camera settings.  <a href="#a1057b21652735313d239224a6c9166f1">More...</a><br/></td></tr>
 <tr class="separator:a1057b21652735313d239224a6c9166f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795fda4031a082c852c80b626518dacb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a795fda4031a082c852c80b626518dacb">ARCOMMANDS_Generator_GenerateCommonGPSControllerPositionForRun</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, double _latitude, double _longitude)</td></tr>
+<tr class="memdesc:a795fda4031a082c852c80b626518dacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller position for a run. This command is used by all non gps products. Watch out, this command cannot be used with BLE products.  <a href="#a795fda4031a082c852c80b626518dacb">More...</a><br/></td></tr>
+<tr class="separator:a795fda4031a082c852c80b626518dacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0496e35cdb9ec81035aee5e01114e6c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a0496e35cdb9ec81035aee5e01114e6c4">ARCOMMANDS_Generator_GenerateCommonDebugStatsSendPacket</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_packet)</td></tr>
 <tr class="memdesc:a0496e35cdb9ec81035aee5e01114e6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a packet to the drone.  <a href="#a0496e35cdb9ec81035aee5e01114e6c4">More...</a><br/></td></tr>
 <tr class="separator:a0496e35cdb9ec81035aee5e01114e6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -465,6 +468,108 @@ Functions</h2></td></tr>
 <tr class="memitem:a0b6c8c8673d01e56f15f2556e9b53cca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a0b6c8c8673d01e56f15f2556e9b53cca">ARCOMMANDS_Generator_GenerateCommonDebugStatsEventSendPacket</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_packet)</td></tr>
 <tr class="memdesc:a0b6c8c8673d01e56f15f2556e9b53cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a packet from drone.  <a href="#a0b6c8c8673d01e56f15f2556e9b53cca">More...</a><br/></td></tr>
 <tr class="separator:a0b6c8c8673d01e56f15f2556e9b53cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a200c01a4bf1232523050b1a5efdfbd90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a200c01a4bf1232523050b1a5efdfbd90">ARCOMMANDS_Generator_GenerateMiniDronePilotingFlatTrim</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a200c01a4bf1232523050b1a5efdfbd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a flat trim.  <a href="#a200c01a4bf1232523050b1a5efdfbd90">More...</a><br/></td></tr>
+<tr class="separator:a200c01a4bf1232523050b1a5efdfbd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a702ac60179085f433c1be7fcfdb65c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a702ac60179085f433c1be7fcfdb65c51">ARCOMMANDS_Generator_GenerateMiniDronePilotingTakeOff</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a702ac60179085f433c1be7fcfdb65c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the drone to take off.  <a href="#a702ac60179085f433c1be7fcfdb65c51">More...</a><br/></td></tr>
+<tr class="separator:a702ac60179085f433c1be7fcfdb65c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ecf6c0ac228ce38fbb7a820c282067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a09ecf6c0ac228ce38fbb7a820c282067">ARCOMMANDS_Generator_GenerateMiniDronePilotingPCMD</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _flag, int8_t _roll, int8_t _pitch, int8_t _yaw, int8_t _gaz, float _psi)</td></tr>
+<tr class="memdesc:a09ecf6c0ac228ce38fbb7a820c282067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the drone to move around.  <a href="#a09ecf6c0ac228ce38fbb7a820c282067">More...</a><br/></td></tr>
+<tr class="separator:a09ecf6c0ac228ce38fbb7a820c282067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed4c651db2498ff9fffdc3c5a164d2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a8ed4c651db2498ff9fffdc3c5a164d2a">ARCOMMANDS_Generator_GenerateMiniDronePilotingLanding</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a8ed4c651db2498ff9fffdc3c5a164d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the MiniDrone to land.  <a href="#a8ed4c651db2498ff9fffdc3c5a164d2a">More...</a><br/></td></tr>
+<tr class="separator:a8ed4c651db2498ff9fffdc3c5a164d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c228c1fc8c8ee7ae05a3ca0ea856b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a18c228c1fc8c8ee7ae05a3ca0ea856b1">ARCOMMANDS_Generator_GenerateMiniDronePilotingEmergency</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a18c228c1fc8c8ee7ae05a3ca0ea856b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put drone in emergency state.  <a href="#a18c228c1fc8c8ee7ae05a3ca0ea856b1">More...</a><br/></td></tr>
+<tr class="separator:a18c228c1fc8c8ee7ae05a3ca0ea856b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fae11746e6ee167243d151f16fda729"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1fae11746e6ee167243d151f16fda729">ARCOMMANDS_Generator_GenerateMiniDronePilotingAutoTakeOffMode</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _state)</td></tr>
+<tr class="memdesc:a1fae11746e6ee167243d151f16fda729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MiniDrone automatic take off mode.  <a href="#a1fae11746e6ee167243d151f16fda729">More...</a><br/></td></tr>
+<tr class="separator:a1fae11746e6ee167243d151f16fda729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b15e2e1ddad4a736afd01d47fba925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a33b15e2e1ddad4a736afd01d47fba925">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateFlatTrimChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a33b15e2e1ddad4a736afd01d47fba925"><td class="mdescLeft">&#160;</td><td class="mdescRight">MiniDrone send flat trim was correctly processed.  <a href="#a33b15e2e1ddad4a736afd01d47fba925">More...</a><br/></td></tr>
+<tr class="separator:a33b15e2e1ddad4a736afd01d47fba925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957191eae78f870cc2a984f478f35d84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a957191eae78f870cc2a984f478f35d84">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateFlyingStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#ac0adda8d373735e748d42a5e61b84077">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_FLYINGSTATECHANGED_STATE</a> _state)</td></tr>
+<tr class="memdesc:a957191eae78f870cc2a984f478f35d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drone flying state changed.  <a href="#a957191eae78f870cc2a984f478f35d84">More...</a><br/></td></tr>
+<tr class="separator:a957191eae78f870cc2a984f478f35d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c288b6e26a9e4d27056b8eb739af9ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a7c288b6e26a9e4d27056b8eb739af9ef">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateAlertStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#ae673d12730aa406c8a48e95e8a71129d">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_ALERTSTATECHANGED_STATE</a> _state)</td></tr>
+<tr class="memdesc:a7c288b6e26a9e4d27056b8eb739af9ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drone alert state changed.  <a href="#a7c288b6e26a9e4d27056b8eb739af9ef">More...</a><br/></td></tr>
+<tr class="separator:a7c288b6e26a9e4d27056b8eb739af9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad00e5ce9d7f97de3c4f8aa63c82b67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aaad00e5ce9d7f97de3c4f8aa63c82b67">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateAutoTakeOffModeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _state)</td></tr>
+<tr class="memdesc:aaad00e5ce9d7f97de3c4f8aa63c82b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MiniDrone automatic take off mode.  <a href="#aaad00e5ce9d7f97de3c4f8aa63c82b67">More...</a><br/></td></tr>
+<tr class="separator:aaad00e5ce9d7f97de3c4f8aa63c82b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48049586bda78db62da8fe390e657721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a48049586bda78db62da8fe390e657721">ARCOMMANDS_Generator_GenerateMiniDroneAnimationsFlip</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#a4c9138cfb815ffccb25bf3d222b40ae5">eARCOMMANDS_MINIDRONE_ANIMATIONS_FLIP_DIRECTION</a> _direction)</td></tr>
+<tr class="memdesc:a48049586bda78db62da8fe390e657721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a flip.  <a href="#a48049586bda78db62da8fe390e657721">More...</a><br/></td></tr>
+<tr class="separator:a48049586bda78db62da8fe390e657721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6719d3a038222b137e61abbcfb46df9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a6719d3a038222b137e61abbcfb46df9f">ARCOMMANDS_Generator_GenerateMiniDroneAnimationsCap</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int16_t _offset)</td></tr>
+<tr class="memdesc:a6719d3a038222b137e61abbcfb46df9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the product cap.  <a href="#a6719d3a038222b137e61abbcfb46df9f">More...</a><br/></td></tr>
+<tr class="separator:a6719d3a038222b137e61abbcfb46df9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4aa43fcfc51f64bbc3cca89c30fbca8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ac4aa43fcfc51f64bbc3cca89c30fbca8">ARCOMMANDS_Generator_GenerateMiniDroneMediaRecordPicture</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _mass_storage_id)</td></tr>
+<tr class="memdesc:ac4aa43fcfc51f64bbc3cca89c30fbca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take picture.  <a href="#ac4aa43fcfc51f64bbc3cca89c30fbca8">More...</a><br/></td></tr>
+<tr class="separator:ac4aa43fcfc51f64bbc3cca89c30fbca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6583d88955c5609a0fa6aa8e16faccc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#af6583d88955c5609a0fa6aa8e16faccc">ARCOMMANDS_Generator_GenerateMiniDroneMediaRecordStatePictureStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _state, uint8_t _mass_storage_id)</td></tr>
+<tr class="memdesc:af6583d88955c5609a0fa6aa8e16faccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of picture recording.  <a href="#af6583d88955c5609a0fa6aa8e16faccc">More...</a><br/></td></tr>
+<tr class="separator:af6583d88955c5609a0fa6aa8e16faccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401292c90564f8f0100fc935636a482f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a401292c90564f8f0100fc935636a482f">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxAltitude</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
+<tr class="memdesc:a401292c90564f8f0100fc935636a482f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Altitude.  <a href="#a401292c90564f8f0100fc935636a482f">More...</a><br/></td></tr>
+<tr class="separator:a401292c90564f8f0100fc935636a482f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80cc29118c339294ef195b4faea0cbac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a80cc29118c339294ef195b4faea0cbac">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxTilt</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
+<tr class="memdesc:a80cc29118c339294ef195b4faea0cbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Tilt.  <a href="#a80cc29118c339294ef195b4faea0cbac">More...</a><br/></td></tr>
+<tr class="separator:a80cc29118c339294ef195b4faea0cbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b228c25839ff970c19b2909d43a4609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a4b228c25839ff970c19b2909d43a4609">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsStateMaxAltitudeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
+<tr class="memdesc:a4b228c25839ff970c19b2909d43a4609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max Altitude sent by product.  <a href="#a4b228c25839ff970c19b2909d43a4609">More...</a><br/></td></tr>
+<tr class="separator:a4b228c25839ff970c19b2909d43a4609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fdbae0f4da5894e294f7632f9ee581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ad5fdbae0f4da5894e294f7632f9ee581">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsStateMaxTiltChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
+<tr class="memdesc:ad5fdbae0f4da5894e294f7632f9ee581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max tilt sent by product.  <a href="#ad5fdbae0f4da5894e294f7632f9ee581">More...</a><br/></td></tr>
+<tr class="separator:ad5fdbae0f4da5894e294f7632f9ee581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1559f54223db8a0aa5fcfb104a00dec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1559f54223db8a0aa5fcfb104a00dec4">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsMaxVerticalSpeed</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
+<tr class="memdesc:a1559f54223db8a0aa5fcfb104a00dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Vertical speed.  <a href="#a1559f54223db8a0aa5fcfb104a00dec4">More...</a><br/></td></tr>
+<tr class="separator:a1559f54223db8a0aa5fcfb104a00dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bca430e6efbe53316ce4e0ccf242300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5bca430e6efbe53316ce4e0ccf242300">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsMaxRotationSpeed</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
+<tr class="memdesc:a5bca430e6efbe53316ce4e0ccf242300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Rotation speed.  <a href="#a5bca430e6efbe53316ce4e0ccf242300">More...</a><br/></td></tr>
+<tr class="separator:a5bca430e6efbe53316ce4e0ccf242300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b109cfd8fc825fc97e7811f3c26d0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a67b109cfd8fc825fc97e7811f3c26d0d">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsWheels</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _present)</td></tr>
+<tr class="memdesc:a67b109cfd8fc825fc97e7811f3c26d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presence of wheels.  <a href="#a67b109cfd8fc825fc97e7811f3c26d0d">More...</a><br/></td></tr>
+<tr class="separator:a67b109cfd8fc825fc97e7811f3c26d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa137a956491d4df7cfe1110842e155d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aa137a956491d4df7cfe1110842e155d4">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsStateMaxVerticalSpeedChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
+<tr class="memdesc:aa137a956491d4df7cfe1110842e155d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max vertical speed sent by product.  <a href="#aa137a956491d4df7cfe1110842e155d4">More...</a><br/></td></tr>
+<tr class="separator:aa137a956491d4df7cfe1110842e155d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabf2a7898bd96bc24e41e5f3605f984"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#adabf2a7898bd96bc24e41e5f3605f984">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsStateMaxRotationSpeedChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
+<tr class="memdesc:adabf2a7898bd96bc24e41e5f3605f984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max rotation speed sent by product.  <a href="#adabf2a7898bd96bc24e41e5f3605f984">More...</a><br/></td></tr>
+<tr class="separator:adabf2a7898bd96bc24e41e5f3605f984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc343d6892d7f9dbb4527cdfbdc7cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a9fc343d6892d7f9dbb4527cdfbdc7cb5">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsStateWheelsChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _present)</td></tr>
+<tr class="memdesc:a9fc343d6892d7f9dbb4527cdfbdc7cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presence of wheels sent by product.  <a href="#a9fc343d6892d7f9dbb4527cdfbdc7cb5">More...</a><br/></td></tr>
+<tr class="separator:a9fc343d6892d7f9dbb4527cdfbdc7cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4814759c58013bd17c306ae0f74142"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#abc4814759c58013bd17c306ae0f74142">ARCOMMANDS_Generator_GenerateMiniDroneSettingsCutOutMode</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _enable)</td></tr>
+<tr class="memdesc:abc4814759c58013bd17c306ae0f74142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MiniDrone cut out mode.  <a href="#abc4814759c58013bd17c306ae0f74142">More...</a><br/></td></tr>
+<tr class="separator:abc4814759c58013bd17c306ae0f74142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2fa70a1aaadf83cd0f86652822cea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5e2fa70a1aaadf83cd0f86652822cea2">ARCOMMANDS_Generator_GenerateMiniDroneSettingsStateProductMotorsVersionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _motor, const char *_type, const char *_software, const char *_hardware)</td></tr>
+<tr class="memdesc:a5e2fa70a1aaadf83cd0f86652822cea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product Motors versions.  <a href="#a5e2fa70a1aaadf83cd0f86652822cea2">More...</a><br/></td></tr>
+<tr class="separator:a5e2fa70a1aaadf83cd0f86652822cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d1781a3eeb0e9db36f018d599772b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a34d1781a3eeb0e9db36f018d599772b1">ARCOMMANDS_Generator_GenerateMiniDroneSettingsStateProductInertialVersionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_software, const char *_hardware)</td></tr>
+<tr class="memdesc:a34d1781a3eeb0e9db36f018d599772b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product Inertial versions.  <a href="#a34d1781a3eeb0e9db36f018d599772b1">More...</a><br/></td></tr>
+<tr class="separator:a34d1781a3eeb0e9db36f018d599772b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac5c52b7231d6f7ddb976ceff49eeda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#afac5c52b7231d6f7ddb976ceff49eeda">ARCOMMANDS_Generator_GenerateMiniDroneSettingsStateCutOutModeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _enable)</td></tr>
+<tr class="memdesc:afac5c52b7231d6f7ddb976ceff49eeda"><td class="mdescLeft">&#160;</td><td class="mdescRight">MiniDrone cut out mode.  <a href="#afac5c52b7231d6f7ddb976ceff49eeda">More...</a><br/></td></tr>
+<tr class="separator:afac5c52b7231d6f7ddb976ceff49eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77fb225fd80e0d866f608d679418cd55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a77fb225fd80e0d866f608d679418cd55">ARCOMMANDS_Generator_GenerateMiniDroneFloodControlStateFloodControlChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint16_t _delay)</td></tr>
+<tr class="memdesc:a77fb225fd80e0d866f608d679418cd55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flood control regulation.  <a href="#a77fb225fd80e0d866f608d679418cd55">More...</a><br/></td></tr>
+<tr class="separator:a77fb225fd80e0d866f608d679418cd55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c31ad8dd911f11c0136cc5ce0a432e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ab5c31ad8dd911f11c0136cc5ce0a432e">ARCOMMANDS_Generator_GenerateMiniDroneGPSControllerLatitudeForRun</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, double _latitude)</td></tr>
+<tr class="memdesc:ab5c31ad8dd911f11c0136cc5ce0a432e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller latitude for a run.  <a href="#ab5c31ad8dd911f11c0136cc5ce0a432e">More...</a><br/></td></tr>
+<tr class="separator:ab5c31ad8dd911f11c0136cc5ce0a432e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa865c4d0c448f7195e9063e324cd9944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aa865c4d0c448f7195e9063e324cd9944">ARCOMMANDS_Generator_GenerateMiniDroneGPSControllerLongitudeForRun</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, double _longitude)</td></tr>
+<tr class="memdesc:aa865c4d0c448f7195e9063e324cd9944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the controller longitude for a run.  <a href="#aa865c4d0c448f7195e9063e324cd9944">More...</a><br/></td></tr>
+<tr class="separator:aa865c4d0c448f7195e9063e324cd9944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55556bfbc6b288796c320229e6a81a81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a55556bfbc6b288796c320229e6a81a81">ARCOMMANDS_Generator_GenerateMiniDroneDebugDebugTest1</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int8_t _t1Args)</td></tr>
+<tr class="memdesc:a55556bfbc6b288796c320229e6a81a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test 1 command.  <a href="#a55556bfbc6b288796c320229e6a81a81">More...</a><br/></td></tr>
+<tr class="separator:a55556bfbc6b288796c320229e6a81a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa120edaab23517a8aca091e6e87f3ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aa120edaab23517a8aca091e6e87f3ff8">ARCOMMANDS_Generator_GenerateMiniDroneDebugDebugTest2</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int8_t _t2Args)</td></tr>
+<tr class="memdesc:aa120edaab23517a8aca091e6e87f3ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test 2 command.  <a href="#aa120edaab23517a8aca091e6e87f3ff8">More...</a><br/></td></tr>
+<tr class="separator:aa120edaab23517a8aca091e6e87f3ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a1bb8c840429f2269cf28054b17b329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5a1bb8c840429f2269cf28054b17b329">ARCOMMANDS_Generator_GenerateMiniDroneDebugDebugTest3</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int8_t _t3Args)</td></tr>
+<tr class="memdesc:a5a1bb8c840429f2269cf28054b17b329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test 3 command.  <a href="#a5a1bb8c840429f2269cf28054b17b329">More...</a><br/></td></tr>
+<tr class="separator:a5a1bb8c840429f2269cf28054b17b329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9efa390346ccaaac768bc0db767c6168"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a9efa390346ccaaac768bc0db767c6168">ARCOMMANDS_Generator_GenerateJumpingSumoPilotingPCMD</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _flag, int8_t _speed, int8_t _turn)</td></tr>
 <tr class="memdesc:a9efa390346ccaaac768bc0db767c6168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the JS speed and turn ratio.  <a href="#a9efa390346ccaaac768bc0db767c6168">More...</a><br/></td></tr>
 <tr class="separator:a9efa390346ccaaac768bc0db767c6168"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -498,6 +603,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1879510686caa9c3f83d2673029a3242"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1879510686caa9c3f83d2673029a3242">ARCOMMANDS_Generator_GenerateJumpingSumoAnimationsStateJumpLoadChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#a217df574ea3609ce180f8d99efa47621">eARCOMMANDS_JUMPINGSUMO_ANIMATIONSSTATE_JUMPLOADCHANGED_STATE</a> _state)</td></tr>
 <tr class="memdesc:a1879510686caa9c3f83d2673029a3242"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of jump load changed.  <a href="#a1879510686caa9c3f83d2673029a3242">More...</a><br/></td></tr>
 <tr class="separator:a1879510686caa9c3f83d2673029a3242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1588406c5984e65fbc69e66d1304d253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1588406c5984e65fbc69e66d1304d253">ARCOMMANDS_Generator_GenerateJumpingSumoAnimationsStateJumpTypeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#a7ab2a02a0f745b871577c7b4817003d8">eARCOMMANDS_JUMPINGSUMO_ANIMATIONSSTATE_JUMPTYPECHANGED_STATE</a> _state)</td></tr>
+<tr class="memdesc:a1588406c5984e65fbc69e66d1304d253"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of jump type changed.  <a href="#a1588406c5984e65fbc69e66d1304d253">More...</a><br/></td></tr>
+<tr class="separator:a1588406c5984e65fbc69e66d1304d253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcab17e629998ace9fba26d2edf6fc6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#abcab17e629998ace9fba26d2edf6fc6e">ARCOMMANDS_Generator_GenerateJumpingSumoSettingsStateProductGPSVersionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_software, const char *_hardware)</td></tr>
 <tr class="memdesc:abcab17e629998ace9fba26d2edf6fc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product GPS versions.  <a href="#abcab17e629998ace9fba26d2edf6fc6e">More...</a><br/></td></tr>
 <tr class="separator:abcab17e629998ace9fba26d2edf6fc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -615,108 +723,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a084e1ba6fd7b55ed687419a76d25690e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a084e1ba6fd7b55ed687419a76d25690e">ARCOMMANDS_Generator_GenerateJumpingSumoDebugUserScriptStateUserScriptParsed</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _success, const char *_message)</td></tr>
 <tr class="memdesc:a084e1ba6fd7b55ed687419a76d25690e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification sent by the firmware after attempting to parse the user script.  <a href="#a084e1ba6fd7b55ed687419a76d25690e">More...</a><br/></td></tr>
 <tr class="separator:a084e1ba6fd7b55ed687419a76d25690e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a200c01a4bf1232523050b1a5efdfbd90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a200c01a4bf1232523050b1a5efdfbd90">ARCOMMANDS_Generator_GenerateMiniDronePilotingFlatTrim</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
-<tr class="memdesc:a200c01a4bf1232523050b1a5efdfbd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a flat trim.  <a href="#a200c01a4bf1232523050b1a5efdfbd90">More...</a><br/></td></tr>
-<tr class="separator:a200c01a4bf1232523050b1a5efdfbd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a702ac60179085f433c1be7fcfdb65c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a702ac60179085f433c1be7fcfdb65c51">ARCOMMANDS_Generator_GenerateMiniDronePilotingTakeOff</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
-<tr class="memdesc:a702ac60179085f433c1be7fcfdb65c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the drone to take off.  <a href="#a702ac60179085f433c1be7fcfdb65c51">More...</a><br/></td></tr>
-<tr class="separator:a702ac60179085f433c1be7fcfdb65c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09ecf6c0ac228ce38fbb7a820c282067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a09ecf6c0ac228ce38fbb7a820c282067">ARCOMMANDS_Generator_GenerateMiniDronePilotingPCMD</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _flag, int8_t _roll, int8_t _pitch, int8_t _yaw, int8_t _gaz, float _psi)</td></tr>
-<tr class="memdesc:a09ecf6c0ac228ce38fbb7a820c282067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the drone to move around.  <a href="#a09ecf6c0ac228ce38fbb7a820c282067">More...</a><br/></td></tr>
-<tr class="separator:a09ecf6c0ac228ce38fbb7a820c282067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed4c651db2498ff9fffdc3c5a164d2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a8ed4c651db2498ff9fffdc3c5a164d2a">ARCOMMANDS_Generator_GenerateMiniDronePilotingLanding</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
-<tr class="memdesc:a8ed4c651db2498ff9fffdc3c5a164d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask the MiniDrone to land.  <a href="#a8ed4c651db2498ff9fffdc3c5a164d2a">More...</a><br/></td></tr>
-<tr class="separator:a8ed4c651db2498ff9fffdc3c5a164d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18c228c1fc8c8ee7ae05a3ca0ea856b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a18c228c1fc8c8ee7ae05a3ca0ea856b1">ARCOMMANDS_Generator_GenerateMiniDronePilotingEmergency</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
-<tr class="memdesc:a18c228c1fc8c8ee7ae05a3ca0ea856b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put drone in emergency state.  <a href="#a18c228c1fc8c8ee7ae05a3ca0ea856b1">More...</a><br/></td></tr>
-<tr class="separator:a18c228c1fc8c8ee7ae05a3ca0ea856b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fae11746e6ee167243d151f16fda729"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1fae11746e6ee167243d151f16fda729">ARCOMMANDS_Generator_GenerateMiniDronePilotingAutoTakeOffMode</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _state)</td></tr>
-<tr class="memdesc:a1fae11746e6ee167243d151f16fda729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MiniDrone automatic take off mode.  <a href="#a1fae11746e6ee167243d151f16fda729">More...</a><br/></td></tr>
-<tr class="separator:a1fae11746e6ee167243d151f16fda729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33b15e2e1ddad4a736afd01d47fba925"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a33b15e2e1ddad4a736afd01d47fba925">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateFlatTrimChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
-<tr class="memdesc:a33b15e2e1ddad4a736afd01d47fba925"><td class="mdescLeft">&#160;</td><td class="mdescRight">MiniDrone send flat trim was correctly processed.  <a href="#a33b15e2e1ddad4a736afd01d47fba925">More...</a><br/></td></tr>
-<tr class="separator:a33b15e2e1ddad4a736afd01d47fba925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957191eae78f870cc2a984f478f35d84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a957191eae78f870cc2a984f478f35d84">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateFlyingStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#ac0adda8d373735e748d42a5e61b84077">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_FLYINGSTATECHANGED_STATE</a> _state)</td></tr>
-<tr class="memdesc:a957191eae78f870cc2a984f478f35d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drone flying state changed.  <a href="#a957191eae78f870cc2a984f478f35d84">More...</a><br/></td></tr>
-<tr class="separator:a957191eae78f870cc2a984f478f35d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c288b6e26a9e4d27056b8eb739af9ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a7c288b6e26a9e4d27056b8eb739af9ef">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateAlertStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#ae673d12730aa406c8a48e95e8a71129d">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_ALERTSTATECHANGED_STATE</a> _state)</td></tr>
-<tr class="memdesc:a7c288b6e26a9e4d27056b8eb739af9ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drone alert state changed.  <a href="#a7c288b6e26a9e4d27056b8eb739af9ef">More...</a><br/></td></tr>
-<tr class="separator:a7c288b6e26a9e4d27056b8eb739af9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaad00e5ce9d7f97de3c4f8aa63c82b67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aaad00e5ce9d7f97de3c4f8aa63c82b67">ARCOMMANDS_Generator_GenerateMiniDronePilotingStateAutoTakeOffModeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _state)</td></tr>
-<tr class="memdesc:aaad00e5ce9d7f97de3c4f8aa63c82b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MiniDrone automatic take off mode.  <a href="#aaad00e5ce9d7f97de3c4f8aa63c82b67">More...</a><br/></td></tr>
-<tr class="separator:aaad00e5ce9d7f97de3c4f8aa63c82b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48049586bda78db62da8fe390e657721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a48049586bda78db62da8fe390e657721">ARCOMMANDS_Generator_GenerateMiniDroneAnimationsFlip</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#a4c9138cfb815ffccb25bf3d222b40ae5">eARCOMMANDS_MINIDRONE_ANIMATIONS_FLIP_DIRECTION</a> _direction)</td></tr>
-<tr class="memdesc:a48049586bda78db62da8fe390e657721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a flip.  <a href="#a48049586bda78db62da8fe390e657721">More...</a><br/></td></tr>
-<tr class="separator:a48049586bda78db62da8fe390e657721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6719d3a038222b137e61abbcfb46df9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a6719d3a038222b137e61abbcfb46df9f">ARCOMMANDS_Generator_GenerateMiniDroneAnimationsCap</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int16_t _offset)</td></tr>
-<tr class="memdesc:a6719d3a038222b137e61abbcfb46df9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the product cap.  <a href="#a6719d3a038222b137e61abbcfb46df9f">More...</a><br/></td></tr>
-<tr class="separator:a6719d3a038222b137e61abbcfb46df9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4aa43fcfc51f64bbc3cca89c30fbca8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ac4aa43fcfc51f64bbc3cca89c30fbca8">ARCOMMANDS_Generator_GenerateMiniDroneMediaRecordPicture</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _mass_storage_id)</td></tr>
-<tr class="memdesc:ac4aa43fcfc51f64bbc3cca89c30fbca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take picture.  <a href="#ac4aa43fcfc51f64bbc3cca89c30fbca8">More...</a><br/></td></tr>
-<tr class="separator:ac4aa43fcfc51f64bbc3cca89c30fbca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6583d88955c5609a0fa6aa8e16faccc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#af6583d88955c5609a0fa6aa8e16faccc">ARCOMMANDS_Generator_GenerateMiniDroneMediaRecordStatePictureStateChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _state, uint8_t _mass_storage_id)</td></tr>
-<tr class="memdesc:af6583d88955c5609a0fa6aa8e16faccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of picture recording.  <a href="#af6583d88955c5609a0fa6aa8e16faccc">More...</a><br/></td></tr>
-<tr class="separator:af6583d88955c5609a0fa6aa8e16faccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a401292c90564f8f0100fc935636a482f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a401292c90564f8f0100fc935636a482f">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxAltitude</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
-<tr class="memdesc:a401292c90564f8f0100fc935636a482f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Altitude.  <a href="#a401292c90564f8f0100fc935636a482f">More...</a><br/></td></tr>
-<tr class="separator:a401292c90564f8f0100fc935636a482f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80cc29118c339294ef195b4faea0cbac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a80cc29118c339294ef195b4faea0cbac">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsMaxTilt</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
-<tr class="memdesc:a80cc29118c339294ef195b4faea0cbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Tilt.  <a href="#a80cc29118c339294ef195b4faea0cbac">More...</a><br/></td></tr>
-<tr class="separator:a80cc29118c339294ef195b4faea0cbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b228c25839ff970c19b2909d43a4609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a4b228c25839ff970c19b2909d43a4609">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsStateMaxAltitudeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
-<tr class="memdesc:a4b228c25839ff970c19b2909d43a4609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max Altitude sent by product.  <a href="#a4b228c25839ff970c19b2909d43a4609">More...</a><br/></td></tr>
-<tr class="separator:a4b228c25839ff970c19b2909d43a4609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5fdbae0f4da5894e294f7632f9ee581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ad5fdbae0f4da5894e294f7632f9ee581">ARCOMMANDS_Generator_GenerateMiniDronePilotingSettingsStateMaxTiltChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
-<tr class="memdesc:ad5fdbae0f4da5894e294f7632f9ee581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max tilt sent by product.  <a href="#ad5fdbae0f4da5894e294f7632f9ee581">More...</a><br/></td></tr>
-<tr class="separator:ad5fdbae0f4da5894e294f7632f9ee581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1559f54223db8a0aa5fcfb104a00dec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a1559f54223db8a0aa5fcfb104a00dec4">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsMaxVerticalSpeed</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
-<tr class="memdesc:a1559f54223db8a0aa5fcfb104a00dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Vertical speed.  <a href="#a1559f54223db8a0aa5fcfb104a00dec4">More...</a><br/></td></tr>
-<tr class="separator:a1559f54223db8a0aa5fcfb104a00dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bca430e6efbe53316ce4e0ccf242300"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5bca430e6efbe53316ce4e0ccf242300">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsMaxRotationSpeed</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current)</td></tr>
-<tr class="memdesc:a5bca430e6efbe53316ce4e0ccf242300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Max Rotation speed.  <a href="#a5bca430e6efbe53316ce4e0ccf242300">More...</a><br/></td></tr>
-<tr class="separator:a5bca430e6efbe53316ce4e0ccf242300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b109cfd8fc825fc97e7811f3c26d0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a67b109cfd8fc825fc97e7811f3c26d0d">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsWheels</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _present)</td></tr>
-<tr class="memdesc:a67b109cfd8fc825fc97e7811f3c26d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presence of wheels.  <a href="#a67b109cfd8fc825fc97e7811f3c26d0d">More...</a><br/></td></tr>
-<tr class="separator:a67b109cfd8fc825fc97e7811f3c26d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa137a956491d4df7cfe1110842e155d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aa137a956491d4df7cfe1110842e155d4">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsStateMaxVerticalSpeedChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
-<tr class="memdesc:aa137a956491d4df7cfe1110842e155d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max vertical speed sent by product.  <a href="#aa137a956491d4df7cfe1110842e155d4">More...</a><br/></td></tr>
-<tr class="separator:aa137a956491d4df7cfe1110842e155d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adabf2a7898bd96bc24e41e5f3605f984"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#adabf2a7898bd96bc24e41e5f3605f984">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsStateMaxRotationSpeedChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, float _current, float _min, float _max)</td></tr>
-<tr class="memdesc:adabf2a7898bd96bc24e41e5f3605f984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max rotation speed sent by product.  <a href="#adabf2a7898bd96bc24e41e5f3605f984">More...</a><br/></td></tr>
-<tr class="separator:adabf2a7898bd96bc24e41e5f3605f984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fc343d6892d7f9dbb4527cdfbdc7cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a9fc343d6892d7f9dbb4527cdfbdc7cb5">ARCOMMANDS_Generator_GenerateMiniDroneSpeedSettingsStateWheelsChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _present)</td></tr>
-<tr class="memdesc:a9fc343d6892d7f9dbb4527cdfbdc7cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Presence of wheels sent by product.  <a href="#a9fc343d6892d7f9dbb4527cdfbdc7cb5">More...</a><br/></td></tr>
-<tr class="separator:a9fc343d6892d7f9dbb4527cdfbdc7cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc4814759c58013bd17c306ae0f74142"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#abc4814759c58013bd17c306ae0f74142">ARCOMMANDS_Generator_GenerateMiniDroneSettingsCutOutMode</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _enable)</td></tr>
-<tr class="memdesc:abc4814759c58013bd17c306ae0f74142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set MiniDrone cut out mode.  <a href="#abc4814759c58013bd17c306ae0f74142">More...</a><br/></td></tr>
-<tr class="separator:abc4814759c58013bd17c306ae0f74142"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2fa70a1aaadf83cd0f86652822cea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5e2fa70a1aaadf83cd0f86652822cea2">ARCOMMANDS_Generator_GenerateMiniDroneSettingsStateProductMotorsVersionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _motor, const char *_type, const char *_software, const char *_hardware)</td></tr>
-<tr class="memdesc:a5e2fa70a1aaadf83cd0f86652822cea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product Motors versions.  <a href="#a5e2fa70a1aaadf83cd0f86652822cea2">More...</a><br/></td></tr>
-<tr class="separator:a5e2fa70a1aaadf83cd0f86652822cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34d1781a3eeb0e9db36f018d599772b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a34d1781a3eeb0e9db36f018d599772b1">ARCOMMANDS_Generator_GenerateMiniDroneSettingsStateProductInertialVersionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_software, const char *_hardware)</td></tr>
-<tr class="memdesc:a34d1781a3eeb0e9db36f018d599772b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product Inertial versions.  <a href="#a34d1781a3eeb0e9db36f018d599772b1">More...</a><br/></td></tr>
-<tr class="separator:a34d1781a3eeb0e9db36f018d599772b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afac5c52b7231d6f7ddb976ceff49eeda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#afac5c52b7231d6f7ddb976ceff49eeda">ARCOMMANDS_Generator_GenerateMiniDroneSettingsStateCutOutModeChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _enable)</td></tr>
-<tr class="memdesc:afac5c52b7231d6f7ddb976ceff49eeda"><td class="mdescLeft">&#160;</td><td class="mdescRight">MiniDrone cut out mode.  <a href="#afac5c52b7231d6f7ddb976ceff49eeda">More...</a><br/></td></tr>
-<tr class="separator:afac5c52b7231d6f7ddb976ceff49eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77fb225fd80e0d866f608d679418cd55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a77fb225fd80e0d866f608d679418cd55">ARCOMMANDS_Generator_GenerateMiniDroneFloodControlStateFloodControlChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint16_t _delay)</td></tr>
-<tr class="memdesc:a77fb225fd80e0d866f608d679418cd55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flood control regulation.  <a href="#a77fb225fd80e0d866f608d679418cd55">More...</a><br/></td></tr>
-<tr class="separator:a77fb225fd80e0d866f608d679418cd55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55556bfbc6b288796c320229e6a81a81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a55556bfbc6b288796c320229e6a81a81">ARCOMMANDS_Generator_GenerateMiniDroneDebugDebugTest1</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int8_t _t1Args)</td></tr>
-<tr class="memdesc:a55556bfbc6b288796c320229e6a81a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test 1 command.  <a href="#a55556bfbc6b288796c320229e6a81a81">More...</a><br/></td></tr>
-<tr class="separator:a55556bfbc6b288796c320229e6a81a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa120edaab23517a8aca091e6e87f3ff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aa120edaab23517a8aca091e6e87f3ff8">ARCOMMANDS_Generator_GenerateMiniDroneDebugDebugTest2</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int8_t _t2Args)</td></tr>
-<tr class="memdesc:aa120edaab23517a8aca091e6e87f3ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test 2 command.  <a href="#aa120edaab23517a8aca091e6e87f3ff8">More...</a><br/></td></tr>
-<tr class="separator:aa120edaab23517a8aca091e6e87f3ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a1bb8c840429f2269cf28054b17b329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5a1bb8c840429f2269cf28054b17b329">ARCOMMANDS_Generator_GenerateMiniDroneDebugDebugTest3</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, int8_t _t3Args)</td></tr>
-<tr class="memdesc:a5a1bb8c840429f2269cf28054b17b329"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test 3 command.  <a href="#a5a1bb8c840429f2269cf28054b17b329">More...</a><br/></td></tr>
-<tr class="separator:a5a1bb8c840429f2269cf28054b17b329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53bd20315d27205c4428d2cd9e119a21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a53bd20315d27205c4428d2cd9e119a21">ARCOMMANDS_Generator_GenerateSkyControllerWifiStateWifiList</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_bssid, const char *_ssid, uint8_t _secured, uint8_t _saved, int32_t _rssi, int32_t _frequency)</td></tr>
 <tr class="memdesc:a53bd20315d27205c4428d2cd9e119a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the available wifi list.  <a href="#a53bd20315d27205c4428d2cd9e119a21">More...</a><br/></td></tr>
 <tr class="separator:a53bd20315d27205c4428d2cd9e119a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb308c6ff9cbeeaea51472e3f8a935e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a3eb308c6ff9cbeeaea51472e3f8a935e">ARCOMMANDS_Generator_GenerateSkyControllerWifiStateConnexionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_ssid, <a class="el" href="ARCOMMANDS__Types_8h.html#aa91870c436752e0fce42afc0ea30c5a2">eARCOMMANDS_SKYCONTROLLER_WIFISTATE_CONNEXIONCHANGED_STATUS</a> _status)</td></tr>
 <tr class="memdesc:a3eb308c6ff9cbeeaea51472e3f8a935e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return connexion status.  <a href="#a3eb308c6ff9cbeeaea51472e3f8a935e">More...</a><br/></td></tr>
 <tr class="separator:a3eb308c6ff9cbeeaea51472e3f8a935e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4aeb29584df246e3cf08b9cfd2469c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a8e4aeb29584df246e3cf08b9cfd2469c">ARCOMMANDS_Generator_GenerateSkyControllerWifiStateWifiAuthChannelListChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#acf6717f3849c08dd13ad966917497442">eARCOMMANDS_SKYCONTROLLER_WIFISTATE_WIFIAUTHCHANNELLISTCHANGED_BAND</a> _band, uint8_t _channel, uint8_t _in_or_out)</td></tr>
+<tr class="memdesc:a8e4aeb29584df246e3cf08b9cfd2469c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify of an Authorized Channel.  <a href="#a8e4aeb29584df246e3cf08b9cfd2469c">More...</a><br/></td></tr>
+<tr class="separator:a8e4aeb29584df246e3cf08b9cfd2469c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a9d0f24e9c5e5f5bb6ec2d486f6b4c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a5a9d0f24e9c5e5f5bb6ec2d486f6b4c1">ARCOMMANDS_Generator_GenerateSkyControllerWifiStateAllWifiAuthChannelChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a5a9d0f24e9c5e5f5bb6ec2d486f6b4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the end of the list of Authorized wifi Channel.  <a href="#a5a9d0f24e9c5e5f5bb6ec2d486f6b4c1">More...</a><br/></td></tr>
+<tr class="separator:a5a9d0f24e9c5e5f5bb6ec2d486f6b4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764d1ac663765f73be5d0c3e1c0c6107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a764d1ac663765f73be5d0c3e1c0c6107">ARCOMMANDS_Generator_GenerateSkyControllerWifiRequestWifiList</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
 <tr class="memdesc:a764d1ac663765f73be5d0c3e1c0c6107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request wifi list.  <a href="#a764d1ac663765f73be5d0c3e1c0c6107">More...</a><br/></td></tr>
 <tr class="separator:a764d1ac663765f73be5d0c3e1c0c6107"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -729,6 +747,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d3e967f93cc361742ca72f73c86520b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a4d3e967f93cc361742ca72f73c86520b">ARCOMMANDS_Generator_GenerateSkyControllerWifiForgetWifi</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_ssid)</td></tr>
 <tr class="memdesc:a4d3e967f93cc361742ca72f73c86520b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forget wifi.  <a href="#a4d3e967f93cc361742ca72f73c86520b">More...</a><br/></td></tr>
 <tr class="separator:a4d3e967f93cc361742ca72f73c86520b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554d217af761343c5a0605561a7cf824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a554d217af761343c5a0605561a7cf824">ARCOMMANDS_Generator_GenerateSkyControllerWifiWifiAuthChannel</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
+<tr class="memdesc:a554d217af761343c5a0605561a7cf824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller inquire the list of authorized wifi channels.  <a href="#a554d217af761343c5a0605561a7cf824">More...</a><br/></td></tr>
+<tr class="separator:a554d217af761343c5a0605561a7cf824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae32aeaf1ed7b14800f0d1ac81c8c36d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#aae32aeaf1ed7b14800f0d1ac81c8c36d">ARCOMMANDS_Generator_GenerateSkyControllerDeviceRequestDeviceList</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
 <tr class="memdesc:aae32aeaf1ed7b14800f0d1ac81c8c36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request Device list.  <a href="#aae32aeaf1ed7b14800f0d1ac81c8c36d">More...</a><br/></td></tr>
 <tr class="separator:aae32aeaf1ed7b14800f0d1ac81c8c36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -777,12 +798,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ac81b3745ac479750957c85385e32dd21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ac81b3745ac479750957c85385e32dd21">ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsAccessPointChannel</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _channel)</td></tr>
 <tr class="memdesc:ac81b3745ac479750957c85385e32dd21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set AccessPoint Channel.  <a href="#ac81b3745ac479750957c85385e32dd21">More...</a><br/></td></tr>
 <tr class="separator:ac81b3745ac479750957c85385e32dd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f37d84451de5417ed2d83f92ac388d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ac2f37d84451de5417ed2d83f92ac388d">ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsWifiSelection</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#ad39beb237d107fc105671f20e8e6b78f">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGS_WIFISELECTION_TYPE</a> _type, <a class="el" href="ARCOMMANDS__Types_8h.html#a2d59cc63cb7d2fa7a9331d468ac69392">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGS_WIFISELECTION_BAND</a> _band, uint8_t _channel)</td></tr>
+<tr class="memdesc:ac2f37d84451de5417ed2d83f92ac388d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set AccessPoint Band and Channel.  <a href="#ac2f37d84451de5417ed2d83f92ac388d">More...</a><br/></td></tr>
+<tr class="separator:ac2f37d84451de5417ed2d83f92ac388d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae133e3f2f300c6bdb1ab23b8665c40bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ae133e3f2f300c6bdb1ab23b8665c40bb">ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsStateAccessPointSSIDChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, const char *_ssid)</td></tr>
 <tr class="memdesc:ae133e3f2f300c6bdb1ab23b8665c40bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">State sent when AccessPoint ssid has been sent.  <a href="#ae133e3f2f300c6bdb1ab23b8665c40bb">More...</a><br/></td></tr>
 <tr class="separator:ae133e3f2f300c6bdb1ab23b8665c40bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a719d284bcc40f262cac73d8697e78e03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#a719d284bcc40f262cac73d8697e78e03">ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsStateAccessPointChannelChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, uint8_t _channel)</td></tr>
 <tr class="memdesc:a719d284bcc40f262cac73d8697e78e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">State sent when AccessPoint channel has been sent.  <a href="#a719d284bcc40f262cac73d8697e78e03">More...</a><br/></td></tr>
 <tr class="separator:a719d284bcc40f262cac73d8697e78e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b362c6a785b9a74a7b0a0c64ae352f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#ab0b362c6a785b9a74a7b0a0c64ae352f">ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsStateWifiSelectionChanged</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen, <a class="el" href="ARCOMMANDS__Types_8h.html#a69732f4f2ff77b68aa82cc5a7013a454">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGSSTATE_WIFISELECTIONCHANGED_TYPE</a> _type, <a class="el" href="ARCOMMANDS__Types_8h.html#a162e26c9e928d5526488697965b60a4c">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGSSTATE_WIFISELECTIONCHANGED_BAND</a> _band, uint8_t _channel)</td></tr>
+<tr class="memdesc:ab0b362c6a785b9a74a7b0a0c64ae352f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wifi selection from product.  <a href="#ab0b362c6a785b9a74a7b0a0c64ae352f">More...</a><br/></td></tr>
+<tr class="separator:ab0b362c6a785b9a74a7b0a0c64ae352f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af52d5c44aef74171115ebbd449b1f6f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Generator_8h.html#af52d5c44aef74171115ebbd449b1f6f7">ARCOMMANDS_Generator_GenerateSkyControllerCameraResetOrientation</a> (uint8_t *buffer, int32_t buffLen, int32_t *cmdLen)</td></tr>
 <tr class="memdesc:af52d5c44aef74171115ebbd449b1f6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset pan and tilt to center.  <a href="#af52d5c44aef74171115ebbd449b1f6f7">More...</a><br/></td></tr>
 <tr class="separator:af52d5c44aef74171115ebbd449b1f6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6354,6 +6381,64 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a795fda4031a082c852c80b626518dacb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateCommonGPSControllerPositionForRun </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_longitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the controller position for a run. This command is used by all non gps products. Watch out, this command cannot be used with BLE products. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_latitude</td><td>Controller latitude in decimal degrees </td></tr>
+    <tr><td class="paramname">_longitude</td><td>Controller longitude in decimal degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5ce64b3599f3b2c798e0dd534437b11a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -7865,6 +7950,57 @@ Functions</h2></td></tr>
     <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
     <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
     <tr><td class="paramname">_state</td><td>State of jump load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1588406c5984e65fbc69e66d1304d253"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateJumpingSumoAnimationsStateJumpTypeChanged </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#a7ab2a02a0f745b871577c7b4817003d8">eARCOMMANDS_JUMPINGSUMO_ANIMATIONSSTATE_JUMPTYPECHANGED_STATE</a>&#160;</td>
+          <td class="paramname"><em>_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>State of jump type changed. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_state</td><td>State of jump type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -10520,6 +10656,108 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab5c31ad8dd911f11c0136cc5ce0a432e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateMiniDroneGPSControllerLatitudeForRun </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_latitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the controller latitude for a run. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_latitude</td><td>Controller latitude in decimal degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa865c4d0c448f7195e9063e324cd9944"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateMiniDroneGPSControllerLongitudeForRun </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_longitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the controller longitude for a run. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_longitude</td><td>Controller longitude in decimal degrees </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac4aa43fcfc51f64bbc3cca89c30fbca8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -12141,6 +12379,136 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab0b362c6a785b9a74a7b0a0c64ae352f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsStateWifiSelectionChanged </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#a69732f4f2ff77b68aa82cc5a7013a454">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGSSTATE_WIFISELECTIONCHANGED_TYPE</a>&#160;</td>
+          <td class="paramname"><em>_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#a162e26c9e928d5526488697965b60a4c">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGSSTATE_WIFISELECTIONCHANGED_BAND</a>&#160;</td>
+          <td class="paramname"><em>_band</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wifi selection from product. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_type</td><td>The type of wifi selection (only manual at the moment) </td></tr>
+    <tr><td class="paramname">_band</td><td>The allowed band : 2.4 Ghz or 5 Ghz </td></tr>
+    <tr><td class="paramname">_channel</td><td>The channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac2f37d84451de5417ed2d83f92ac388d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateSkyControllerAccessPointSettingsWifiSelection </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#ad39beb237d107fc105671f20e8e6b78f">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGS_WIFISELECTION_TYPE</a>&#160;</td>
+          <td class="paramname"><em>_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#a2d59cc63cb7d2fa7a9331d468ac69392">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGS_WIFISELECTION_BAND</a>&#160;</td>
+          <td class="paramname"><em>_band</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set AccessPoint Band and Channel. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_type</td><td>The type of wifi selection (only manual at the moment) </td></tr>
+    <tr><td class="paramname">_band</td><td>The allowed band : 2.4 Ghz or 5 Ghz </td></tr>
+    <tr><td class="paramname">_channel</td><td>The channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af52d5c44aef74171115ebbd449b1f6f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -13112,6 +13480,50 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5a9d0f24e9c5e5f5bb6ec2d486f6b4c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateSkyControllerWifiStateAllWifiAuthChannelChanged </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the end of the list of Authorized wifi Channel. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3eb308c6ff9cbeeaea51472e3f8a935e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -13163,6 +13575,71 @@ Functions</h2></td></tr>
     <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
     <tr><td class="paramname">_ssid</td><td>Wifi ssid </td></tr>
     <tr><td class="paramname">_status</td><td>Wifi status </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e4aeb29584df246e3cf08b9cfd2469c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateSkyControllerWifiStateWifiAuthChannelListChanged </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Types_8h.html#acf6717f3849c08dd13ad966917497442">eARCOMMANDS_SKYCONTROLLER_WIFISTATE_WIFIAUTHCHANNELLISTCHANGED_BAND</a>&#160;</td>
+          <td class="paramname"><em>_band</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_in_or_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify of an Authorized Channel. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+    <tr><td class="paramname">_band</td><td>The band of this channel : 2.4 GHz or 5 GHz </td></tr>
+    <tr><td class="paramname">_channel</td><td>The authorized channel. </td></tr>
+    <tr><td class="paramname">_in_or_out</td><td>Bit 0 is 1 if channel is authorized outside (0 otherwise) ; Bit 1 is 1 if channel is authorized inside (0 otherwise) </td></tr>
   </table>
   </dd>
 </dl>
@@ -13256,13 +13733,57 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a554d217af761343c5a0605561a7cf824"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARCOMMANDS__Generator_8h.html#a76833abd010a46f23cbf58184a0b739f">eARCOMMANDS_GENERATOR_ERROR</a> ARCOMMANDS_Generator_GenerateSkyControllerWifiWifiAuthChannel </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>buffLen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname"><em>cmdLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controller inquire the list of authorized wifi channels. </p>
+<dl class="section warning"><dt>Warning</dt><dd>A command is not NULL terminated and can contain NULL bytes. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Pointer to the buffer in which the library should store the command </td></tr>
+    <tr><td class="paramname">buffLen</td><td>Size of the buffer </td></tr>
+    <tr><td class="paramname">cmdLen</td><td>Pointer to an integer that will hold the actual size of the command </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code (see eARCOMMANDS_GENERATOR_ERROR) </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_ca27a71cd02a4621726d91b44aef999d.html">libARCommands</a></li><li class="navelem"><a class="el" href="dir_85b40e3b0d5185d8123de194465f5096.html">Includes</a></li><li class="navelem"><a class="el" href="dir_22ede77139ba202e6eee02a87cce666f.html">libARCommands</a></li><li class="navelem"><a class="el" href="ARCOMMANDS__Generator_8h.html">ARCOMMANDS_Generator.h</a></li>
-    <li class="footer">Generated on Tue Dec 2 2014 11:37:49 for libARCommands by
+    <li class="footer">Generated on Tue Jan 20 2015 15:34:17 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

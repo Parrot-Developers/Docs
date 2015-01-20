@@ -4,6 +4,7 @@ var interfaceARMediaObject =
     [ "updateThumbnailWithARDATATRANSFER_Media_t:", "interfaceARMediaObject.html#a6ab2d2c10c594d10df18dabd72cbbed2", null ],
     [ "updateThumbnailWithNSUrl:", "interfaceARMediaObject.html#aff149e306c6c40dbea8ccc7b22d6f084", null ],
     [ "assetUrl", "interfaceARMediaObject.html#aa8ffa8aeefa648c19ab53ad490de0314", null ],
+    [ "cloud", "interfaceARMediaObject.html#a8a827fe234d1bab46a41765236fa0602", null ],
     [ "date", "interfaceARMediaObject.html#acd62f00e5fba4838f27c2922b2b74d56", null ],
     [ "delegate", "interfaceARMediaObject.html#ae4a9f4779cd7e98bd69b30eb49543d47", null ],
     [ "filePath", "interfaceARMediaObject.html#ad2224b6a08590499ece57f65807d7cd6", null ],

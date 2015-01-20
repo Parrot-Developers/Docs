@@ -1,0 +1,9 @@
+<map id="ARSAL_BLEManager.h" name="ARSAL_BLEManager.h">
+<area shape="rect" id="node4" href="$ARSAL__Print_8h.html" title="This file contains headers about debug print abstraction layer. " alt="" coords="195,80,367,107"/>
+<area shape="rect" id="node12" href="$ARSAL__Mutex_8h.html" title="This file contains headers about mutex abstraction layer. " alt="" coords="443,80,624,107"/>
+<area shape="rect" id="node13" href="$ARSAL__Sem_8h.html" title="This file contains headers about semaphore abstraction layer. " alt="" coords="818,155,989,181"/>
+<area shape="rect" id="node14" href="$ARSAL__CentralManager_8h_source.html" title="libARSAL/ARSAL_CentralManager.h" alt="" coords="648,80,884,107"/>
+<area shape="rect" id="node15" href="$ARSAL__Error_8h_source.html" title="libARSAL/ARSAL_Error.h" alt="" coords="960,80,1133,107"/>
+<area shape="rect" id="node16" href="$ARSAL__Singleton_8h.html" title="headers to define singletons. " alt="" coords="1157,80,1296,107"/>
+<area shape="rect" id="node7" href="$ARSAL__Time_8h.html" title="This file contains headers about time abstraction layer. " alt="" coords="194,155,368,181"/>
+</map>

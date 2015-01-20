@@ -76,6 +76,20 @@ $(document).ready(function(){initNavTree('ARCOMMANDS__Decoder_8h.html','');});
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="ARCOMMANDS__Types_8h_source.html">libARCommands/ARCOMMANDS_Types.h</a>&gt;</code><br/>
 <code>#include &lt;inttypes.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for ARCOMMANDS_Decoder.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="ARCOMMANDS__Decoder_8h__incl.png" border="0" usemap="#ARCOMMANDS__Decoder_8h" alt=""/></div>
+<map name="ARCOMMANDS__Decoder_8h" id="ARCOMMANDS__Decoder_8h">
+<area shape="rect" id="node2" href="ARCOMMANDS__Types_8h.html" title="libARCommands types header. This file contains all types declarations needed to use commands ..." alt="" coords="5,81,228,122"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="ARCOMMANDS__Decoder_8h__dep__incl.png" border="0" usemap="#ARCOMMANDS__Decoder_8hdep" alt=""/></div>
+<map name="ARCOMMANDS__Decoder_8hdep" id="ARCOMMANDS__Decoder_8hdep">
+<area shape="rect" id="node2" href="ARCommands_8h.html" title="libARCommands global header. This file contains all headers of libARCommands " alt="" coords="39,80,157,107"/></map>
+</div>
 </div>
 <p><a href="ARCOMMANDS__Decoder_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -565,6 +579,10 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#af27973bcb162a4e3ef8c4a7432a6ea6c">ARCOMMANDS_Decoder_CommonCameraSettingsStateCameraSettingsChangedCallback_t</a> )(float fov, float panMax, float panMin, float tiltMax, float tiltMin, void *custom)</td></tr>
 <tr class="memdesc:af27973bcb162a4e3ef8c4a7432a6ea6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command common.CameraSettingsState.CameraSettingsChanged <br/></td></tr>
 <tr class="separator:af27973bcb162a4e3ef8c4a7432a6ea6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38df251490fadf126f4bf53f5f3c853"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac38df251490fadf126f4bf53f5f3c853"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac38df251490fadf126f4bf53f5f3c853">ARCOMMANDS_Decoder_CommonGPSControllerPositionForRunCallback_t</a> )(double latitude, double longitude, void *custom)</td></tr>
+<tr class="memdesc:ac38df251490fadf126f4bf53f5f3c853"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command common.GPS.ControllerPositionForRun <br/></td></tr>
+<tr class="separator:ac38df251490fadf126f4bf53f5f3c853"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab88d800beaaea4c0c8f85a740110dd5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab88d800beaaea4c0c8f85a740110dd5a"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab88d800beaaea4c0c8f85a740110dd5a">ARCOMMANDS_Decoder_CommonDebugStatsSendPacketCallback_t</a> )(char *packet, void *custom)</td></tr>
 <tr class="memdesc:ab88d800beaaea4c0c8f85a740110dd5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command commonDebug.Stats.SendPacket <br/></td></tr>
@@ -581,6 +599,142 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5112c6ccbb4965ea212370cd3e700b34">ARCOMMANDS_Decoder_CommonDebugStatsEventSendPacketCallback_t</a> )(char *packet, void *custom)</td></tr>
 <tr class="memdesc:a5112c6ccbb4965ea212370cd3e700b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command commonDebug.StatsEvent.SendPacket <br/></td></tr>
 <tr class="separator:a5112c6ccbb4965ea212370cd3e700b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62cfcc128e16a6a3ac6580b3a7265da8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62cfcc128e16a6a3ac6580b3a7265da8"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a62cfcc128e16a6a3ac6580b3a7265da8">ARCOMMANDS_Decoder_MiniDronePilotingFlatTrimCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a62cfcc128e16a6a3ac6580b3a7265da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.FlatTrim <br/></td></tr>
+<tr class="separator:a62cfcc128e16a6a3ac6580b3a7265da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ebbb3056395cc8911935c725ded290"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45ebbb3056395cc8911935c725ded290"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a45ebbb3056395cc8911935c725ded290">ARCOMMANDS_Decoder_MiniDronePilotingTakeOffCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a45ebbb3056395cc8911935c725ded290"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.TakeOff <br/></td></tr>
+<tr class="separator:a45ebbb3056395cc8911935c725ded290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e2112342f3ea91347da1271de9a853"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5e2112342f3ea91347da1271de9a853"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac5e2112342f3ea91347da1271de9a853">ARCOMMANDS_Decoder_MiniDronePilotingPCMDCallback_t</a> )(uint8_t flag, int8_t roll, int8_t pitch, int8_t yaw, int8_t gaz, float psi, void *custom)</td></tr>
+<tr class="memdesc:ac5e2112342f3ea91347da1271de9a853"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.PCMD <br/></td></tr>
+<tr class="separator:ac5e2112342f3ea91347da1271de9a853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b062f855853b9d2d5979495aeb98996"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b062f855853b9d2d5979495aeb98996"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6b062f855853b9d2d5979495aeb98996">ARCOMMANDS_Decoder_MiniDronePilotingLandingCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a6b062f855853b9d2d5979495aeb98996"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.Landing <br/></td></tr>
+<tr class="separator:a6b062f855853b9d2d5979495aeb98996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69bc145ea6e3350b2f15102b18f80052"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69bc145ea6e3350b2f15102b18f80052"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a69bc145ea6e3350b2f15102b18f80052">ARCOMMANDS_Decoder_MiniDronePilotingEmergencyCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a69bc145ea6e3350b2f15102b18f80052"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.Emergency <br/></td></tr>
+<tr class="separator:a69bc145ea6e3350b2f15102b18f80052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd36f9cc749b80c35628689606c6385"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bd36f9cc749b80c35628689606c6385"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3bd36f9cc749b80c35628689606c6385">ARCOMMANDS_Decoder_MiniDronePilotingAutoTakeOffModeCallback_t</a> )(uint8_t state, void *custom)</td></tr>
+<tr class="memdesc:a3bd36f9cc749b80c35628689606c6385"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.AutoTakeOffMode <br/></td></tr>
+<tr class="separator:a3bd36f9cc749b80c35628689606c6385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b91fb08e0c9c6fa05f078d7ae54a7e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b91fb08e0c9c6fa05f078d7ae54a7e4"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5b91fb08e0c9c6fa05f078d7ae54a7e4">ARCOMMANDS_Decoder_MiniDronePilotingStateFlatTrimChangedCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a5b91fb08e0c9c6fa05f078d7ae54a7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.FlatTrimChanged <br/></td></tr>
+<tr class="separator:a5b91fb08e0c9c6fa05f078d7ae54a7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13fbcca94d26e6357ecf13480df51b57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13fbcca94d26e6357ecf13480df51b57"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a13fbcca94d26e6357ecf13480df51b57">ARCOMMANDS_Decoder_MiniDronePilotingStateFlyingStateChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#ac0adda8d373735e748d42a5e61b84077">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_FLYINGSTATECHANGED_STATE</a> state, void *custom)</td></tr>
+<tr class="memdesc:a13fbcca94d26e6357ecf13480df51b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.FlyingStateChanged <br/></td></tr>
+<tr class="separator:a13fbcca94d26e6357ecf13480df51b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c91c1fe44cc8e0f7df443a5087a54a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9c91c1fe44cc8e0f7df443a5087a54a"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac9c91c1fe44cc8e0f7df443a5087a54a">ARCOMMANDS_Decoder_MiniDronePilotingStateAlertStateChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#ae673d12730aa406c8a48e95e8a71129d">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_ALERTSTATECHANGED_STATE</a> state, void *custom)</td></tr>
+<tr class="memdesc:ac9c91c1fe44cc8e0f7df443a5087a54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.AlertStateChanged <br/></td></tr>
+<tr class="separator:ac9c91c1fe44cc8e0f7df443a5087a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e1dec3fb0961139f57fa33c47b1571"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4e1dec3fb0961139f57fa33c47b1571"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac4e1dec3fb0961139f57fa33c47b1571">ARCOMMANDS_Decoder_MiniDronePilotingStateAutoTakeOffModeChangedCallback_t</a> )(uint8_t state, void *custom)</td></tr>
+<tr class="memdesc:ac4e1dec3fb0961139f57fa33c47b1571"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.AutoTakeOffModeChanged <br/></td></tr>
+<tr class="separator:ac4e1dec3fb0961139f57fa33c47b1571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985aaa30588cab3c9e3058c5fa92440b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985aaa30588cab3c9e3058c5fa92440b"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a985aaa30588cab3c9e3058c5fa92440b">ARCOMMANDS_Decoder_MiniDroneAnimationsFlipCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#a4c9138cfb815ffccb25bf3d222b40ae5">eARCOMMANDS_MINIDRONE_ANIMATIONS_FLIP_DIRECTION</a> direction, void *custom)</td></tr>
+<tr class="memdesc:a985aaa30588cab3c9e3058c5fa92440b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Animations.Flip <br/></td></tr>
+<tr class="separator:a985aaa30588cab3c9e3058c5fa92440b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade249da9e12eee45395b957a76a71b7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade249da9e12eee45395b957a76a71b7d"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ade249da9e12eee45395b957a76a71b7d">ARCOMMANDS_Decoder_MiniDroneAnimationsCapCallback_t</a> )(int16_t offset, void *custom)</td></tr>
+<tr class="memdesc:ade249da9e12eee45395b957a76a71b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Animations.Cap <br/></td></tr>
+<tr class="separator:ade249da9e12eee45395b957a76a71b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0102f08cf24f936e88e4bc16698cbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb0102f08cf24f936e88e4bc16698cbc"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#abb0102f08cf24f936e88e4bc16698cbc">ARCOMMANDS_Decoder_MiniDroneMediaRecordPictureCallback_t</a> )(uint8_t mass_storage_id, void *custom)</td></tr>
+<tr class="memdesc:abb0102f08cf24f936e88e4bc16698cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.MediaRecord.Picture <br/></td></tr>
+<tr class="separator:abb0102f08cf24f936e88e4bc16698cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a83a99be853855a4d49be782de8e425"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a83a99be853855a4d49be782de8e425"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a2a83a99be853855a4d49be782de8e425">ARCOMMANDS_Decoder_MiniDroneMediaRecordStatePictureStateChangedCallback_t</a> )(uint8_t state, uint8_t mass_storage_id, void *custom)</td></tr>
+<tr class="memdesc:a2a83a99be853855a4d49be782de8e425"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.MediaRecordState.PictureStateChanged <br/></td></tr>
+<tr class="separator:a2a83a99be853855a4d49be782de8e425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b763a412c042b4735b6fa9a97619be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b763a412c042b4735b6fa9a97619be"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a60b763a412c042b4735b6fa9a97619be">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxAltitudeCallback_t</a> )(float current, void *custom)</td></tr>
+<tr class="memdesc:a60b763a412c042b4735b6fa9a97619be"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettings.MaxAltitude <br/></td></tr>
+<tr class="separator:a60b763a412c042b4735b6fa9a97619be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb4c9ce993a8ffc165fae6ecbe7afca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cb4c9ce993a8ffc165fae6ecbe7afca"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5cb4c9ce993a8ffc165fae6ecbe7afca">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxTiltCallback_t</a> )(float current, void *custom)</td></tr>
+<tr class="memdesc:a5cb4c9ce993a8ffc165fae6ecbe7afca"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettings.MaxTilt <br/></td></tr>
+<tr class="separator:a5cb4c9ce993a8ffc165fae6ecbe7afca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eee7714376488c469e5ae87521e0bc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eee7714376488c469e5ae87521e0bc5"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1eee7714376488c469e5ae87521e0bc5">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxAltitudeChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
+<tr class="memdesc:a1eee7714376488c469e5ae87521e0bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettingsState.MaxAltitudeChanged <br/></td></tr>
+<tr class="separator:a1eee7714376488c469e5ae87521e0bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42db64a313808d78a5159832a9499bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42db64a313808d78a5159832a9499bd"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ad42db64a313808d78a5159832a9499bd">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxTiltChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
+<tr class="memdesc:ad42db64a313808d78a5159832a9499bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettingsState.MaxTiltChanged <br/></td></tr>
+<tr class="separator:ad42db64a313808d78a5159832a9499bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70fd6ebb1cc53b233e834a6fa0445711"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70fd6ebb1cc53b233e834a6fa0445711"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a70fd6ebb1cc53b233e834a6fa0445711">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxVerticalSpeedCallback_t</a> )(float current, void *custom)</td></tr>
+<tr class="memdesc:a70fd6ebb1cc53b233e834a6fa0445711"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettings.MaxVerticalSpeed <br/></td></tr>
+<tr class="separator:a70fd6ebb1cc53b233e834a6fa0445711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b3b1b1e89b0457a43f128750752d4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b3b1b1e89b0457a43f128750752d4f"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab4b3b1b1e89b0457a43f128750752d4f">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxRotationSpeedCallback_t</a> )(float current, void *custom)</td></tr>
+<tr class="memdesc:ab4b3b1b1e89b0457a43f128750752d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettings.MaxRotationSpeed <br/></td></tr>
+<tr class="separator:ab4b3b1b1e89b0457a43f128750752d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e93c3e237eed2936fb537e396163e54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e93c3e237eed2936fb537e396163e54"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6e93c3e237eed2936fb537e396163e54">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsWheelsCallback_t</a> )(uint8_t present, void *custom)</td></tr>
+<tr class="memdesc:a6e93c3e237eed2936fb537e396163e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettings.Wheels <br/></td></tr>
+<tr class="separator:a6e93c3e237eed2936fb537e396163e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8376a1fe890d933a8702cc2d1a8bbb47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8376a1fe890d933a8702cc2d1a8bbb47"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a8376a1fe890d933a8702cc2d1a8bbb47">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxVerticalSpeedChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
+<tr class="memdesc:a8376a1fe890d933a8702cc2d1a8bbb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettingsState.MaxVerticalSpeedChanged <br/></td></tr>
+<tr class="separator:a8376a1fe890d933a8702cc2d1a8bbb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730158253f4c5d5a596f9ee474e26b52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a730158253f4c5d5a596f9ee474e26b52"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a730158253f4c5d5a596f9ee474e26b52">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxRotationSpeedChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
+<tr class="memdesc:a730158253f4c5d5a596f9ee474e26b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettingsState.MaxRotationSpeedChanged <br/></td></tr>
+<tr class="separator:a730158253f4c5d5a596f9ee474e26b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434ee651ea48eec962e82d2f16aeb864"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a434ee651ea48eec962e82d2f16aeb864"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a434ee651ea48eec962e82d2f16aeb864">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateWheelsChangedCallback_t</a> )(uint8_t present, void *custom)</td></tr>
+<tr class="memdesc:a434ee651ea48eec962e82d2f16aeb864"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettingsState.WheelsChanged <br/></td></tr>
+<tr class="separator:a434ee651ea48eec962e82d2f16aeb864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221f1b14c1c7776e0644044f6d3927ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a221f1b14c1c7776e0644044f6d3927ed"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a221f1b14c1c7776e0644044f6d3927ed">ARCOMMANDS_Decoder_MiniDroneSettingsCutOutModeCallback_t</a> )(uint8_t enable, void *custom)</td></tr>
+<tr class="memdesc:a221f1b14c1c7776e0644044f6d3927ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Settings.CutOutMode <br/></td></tr>
+<tr class="separator:a221f1b14c1c7776e0644044f6d3927ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1e6d0489c3bbf165ad84af8b03484b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a1e6d0489c3bbf165ad84af8b03484b"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3a1e6d0489c3bbf165ad84af8b03484b">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductMotorsVersionChangedCallback_t</a> )(uint8_t motor, char *type, char *software, char *hardware, void *custom)</td></tr>
+<tr class="memdesc:a3a1e6d0489c3bbf165ad84af8b03484b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SettingsState.ProductMotorsVersionChanged <br/></td></tr>
+<tr class="separator:a3a1e6d0489c3bbf165ad84af8b03484b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62a370c703ad6611f662f6eddd2f3b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa62a370c703ad6611f662f6eddd2f3b2"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aa62a370c703ad6611f662f6eddd2f3b2">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductInertialVersionChangedCallback_t</a> )(char *software, char *hardware, void *custom)</td></tr>
+<tr class="memdesc:aa62a370c703ad6611f662f6eddd2f3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SettingsState.ProductInertialVersionChanged <br/></td></tr>
+<tr class="separator:aa62a370c703ad6611f662f6eddd2f3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23870d5ab76b119ede6136f48e8c3e96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23870d5ab76b119ede6136f48e8c3e96"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a23870d5ab76b119ede6136f48e8c3e96">ARCOMMANDS_Decoder_MiniDroneSettingsStateCutOutModeChangedCallback_t</a> )(uint8_t enable, void *custom)</td></tr>
+<tr class="memdesc:a23870d5ab76b119ede6136f48e8c3e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SettingsState.CutOutModeChanged <br/></td></tr>
+<tr class="separator:a23870d5ab76b119ede6136f48e8c3e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1747dbc2208f77bd273dea056d7184ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1747dbc2208f77bd273dea056d7184ce"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1747dbc2208f77bd273dea056d7184ce">ARCOMMANDS_Decoder_MiniDroneFloodControlStateFloodControlChangedCallback_t</a> )(uint16_t delay, void *custom)</td></tr>
+<tr class="memdesc:a1747dbc2208f77bd273dea056d7184ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.FloodControlState.FloodControlChanged <br/></td></tr>
+<tr class="separator:a1747dbc2208f77bd273dea056d7184ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d174ec905f2e0bcc497290708bcfa2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d174ec905f2e0bcc497290708bcfa2d"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6d174ec905f2e0bcc497290708bcfa2d">ARCOMMANDS_Decoder_MiniDroneGPSControllerLatitudeForRunCallback_t</a> )(double latitude, void *custom)</td></tr>
+<tr class="memdesc:a6d174ec905f2e0bcc497290708bcfa2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.GPS.ControllerLatitudeForRun <br/></td></tr>
+<tr class="separator:a6d174ec905f2e0bcc497290708bcfa2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded3aab27a00e2c2d9061200f7d904ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aded3aab27a00e2c2d9061200f7d904ea"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aded3aab27a00e2c2d9061200f7d904ea">ARCOMMANDS_Decoder_MiniDroneGPSControllerLongitudeForRunCallback_t</a> )(double longitude, void *custom)</td></tr>
+<tr class="memdesc:aded3aab27a00e2c2d9061200f7d904ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.GPS.ControllerLongitudeForRun <br/></td></tr>
+<tr class="separator:aded3aab27a00e2c2d9061200f7d904ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990df9e99a6a374da20904840ef2a138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a990df9e99a6a374da20904840ef2a138"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a990df9e99a6a374da20904840ef2a138">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest1Callback_t</a> )(int8_t t1Args, void *custom)</td></tr>
+<tr class="memdesc:a990df9e99a6a374da20904840ef2a138"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDroneDebug.Debug.Test1 <br/></td></tr>
+<tr class="separator:a990df9e99a6a374da20904840ef2a138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74211397605569ef56d3b8c538e8f80c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74211397605569ef56d3b8c538e8f80c"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a74211397605569ef56d3b8c538e8f80c">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest2Callback_t</a> )(int8_t t2Args, void *custom)</td></tr>
+<tr class="memdesc:a74211397605569ef56d3b8c538e8f80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDroneDebug.Debug.Test2 <br/></td></tr>
+<tr class="separator:a74211397605569ef56d3b8c538e8f80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed2ff34c0750017ca3a5e323ed6e6cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ed2ff34c0750017ca3a5e323ed6e6cb"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a0ed2ff34c0750017ca3a5e323ed6e6cb">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest3Callback_t</a> )(int8_t t3Args, void *custom)</td></tr>
+<tr class="memdesc:a0ed2ff34c0750017ca3a5e323ed6e6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDroneDebug.Debug.Test3 <br/></td></tr>
+<tr class="separator:a0ed2ff34c0750017ca3a5e323ed6e6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add911d0ff08386ede25268073c3182f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add911d0ff08386ede25268073c3182f7"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#add911d0ff08386ede25268073c3182f7">ARCOMMANDS_Decoder_JumpingSumoPilotingPCMDCallback_t</a> )(uint8_t flag, int8_t speed, int8_t turn, void *custom)</td></tr>
 <tr class="memdesc:add911d0ff08386ede25268073c3182f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command JumpingSumo.Piloting.PCMD <br/></td></tr>
@@ -625,6 +779,10 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#af6310ff9b9755103f6d40e88ed0fcb63">ARCOMMANDS_Decoder_JumpingSumoAnimationsStateJumpLoadChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#a217df574ea3609ce180f8d99efa47621">eARCOMMANDS_JUMPINGSUMO_ANIMATIONSSTATE_JUMPLOADCHANGED_STATE</a> state, void *custom)</td></tr>
 <tr class="memdesc:af6310ff9b9755103f6d40e88ed0fcb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command JumpingSumo.AnimationsState.JumpLoadChanged <br/></td></tr>
 <tr class="separator:af6310ff9b9755103f6d40e88ed0fcb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf897a77f5cb78c06557da8cb9c77e25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf897a77f5cb78c06557da8cb9c77e25"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#acf897a77f5cb78c06557da8cb9c77e25">ARCOMMANDS_Decoder_JumpingSumoAnimationsStateJumpTypeChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#a7ab2a02a0f745b871577c7b4817003d8">eARCOMMANDS_JUMPINGSUMO_ANIMATIONSSTATE_JUMPTYPECHANGED_STATE</a> state, void *custom)</td></tr>
+<tr class="memdesc:acf897a77f5cb78c06557da8cb9c77e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command JumpingSumo.AnimationsState.JumpTypeChanged <br/></td></tr>
+<tr class="separator:acf897a77f5cb78c06557da8cb9c77e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf31cbe480e4e98b986bd30db3cf1b92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf31cbe480e4e98b986bd30db3cf1b92"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aaf31cbe480e4e98b986bd30db3cf1b92">ARCOMMANDS_Decoder_JumpingSumoSettingsStateProductGPSVersionChangedCallback_t</a> )(char *software, char *hardware, void *custom)</td></tr>
 <tr class="memdesc:aaf31cbe480e4e98b986bd30db3cf1b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command JumpingSumo.SettingsState.ProductGPSVersionChanged <br/></td></tr>
@@ -781,134 +939,6 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#acbf0e86f862fc22a4522dda65b0eeee5">ARCOMMANDS_Decoder_JumpingSumoDebugUserScriptStateUserScriptParsedCallback_t</a> )(uint8_t success, char *message, void *custom)</td></tr>
 <tr class="memdesc:acbf0e86f862fc22a4522dda65b0eeee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command JumpingSumoDebug.UserScriptState.userScriptParsed <br/></td></tr>
 <tr class="separator:acbf0e86f862fc22a4522dda65b0eeee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62cfcc128e16a6a3ac6580b3a7265da8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62cfcc128e16a6a3ac6580b3a7265da8"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a62cfcc128e16a6a3ac6580b3a7265da8">ARCOMMANDS_Decoder_MiniDronePilotingFlatTrimCallback_t</a> )(void *custom)</td></tr>
-<tr class="memdesc:a62cfcc128e16a6a3ac6580b3a7265da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.FlatTrim <br/></td></tr>
-<tr class="separator:a62cfcc128e16a6a3ac6580b3a7265da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ebbb3056395cc8911935c725ded290"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45ebbb3056395cc8911935c725ded290"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a45ebbb3056395cc8911935c725ded290">ARCOMMANDS_Decoder_MiniDronePilotingTakeOffCallback_t</a> )(void *custom)</td></tr>
-<tr class="memdesc:a45ebbb3056395cc8911935c725ded290"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.TakeOff <br/></td></tr>
-<tr class="separator:a45ebbb3056395cc8911935c725ded290"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5e2112342f3ea91347da1271de9a853"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5e2112342f3ea91347da1271de9a853"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac5e2112342f3ea91347da1271de9a853">ARCOMMANDS_Decoder_MiniDronePilotingPCMDCallback_t</a> )(uint8_t flag, int8_t roll, int8_t pitch, int8_t yaw, int8_t gaz, float psi, void *custom)</td></tr>
-<tr class="memdesc:ac5e2112342f3ea91347da1271de9a853"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.PCMD <br/></td></tr>
-<tr class="separator:ac5e2112342f3ea91347da1271de9a853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b062f855853b9d2d5979495aeb98996"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b062f855853b9d2d5979495aeb98996"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6b062f855853b9d2d5979495aeb98996">ARCOMMANDS_Decoder_MiniDronePilotingLandingCallback_t</a> )(void *custom)</td></tr>
-<tr class="memdesc:a6b062f855853b9d2d5979495aeb98996"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.Landing <br/></td></tr>
-<tr class="separator:a6b062f855853b9d2d5979495aeb98996"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69bc145ea6e3350b2f15102b18f80052"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69bc145ea6e3350b2f15102b18f80052"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a69bc145ea6e3350b2f15102b18f80052">ARCOMMANDS_Decoder_MiniDronePilotingEmergencyCallback_t</a> )(void *custom)</td></tr>
-<tr class="memdesc:a69bc145ea6e3350b2f15102b18f80052"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.Emergency <br/></td></tr>
-<tr class="separator:a69bc145ea6e3350b2f15102b18f80052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd36f9cc749b80c35628689606c6385"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bd36f9cc749b80c35628689606c6385"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3bd36f9cc749b80c35628689606c6385">ARCOMMANDS_Decoder_MiniDronePilotingAutoTakeOffModeCallback_t</a> )(uint8_t state, void *custom)</td></tr>
-<tr class="memdesc:a3bd36f9cc749b80c35628689606c6385"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Piloting.AutoTakeOffMode <br/></td></tr>
-<tr class="separator:a3bd36f9cc749b80c35628689606c6385"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b91fb08e0c9c6fa05f078d7ae54a7e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b91fb08e0c9c6fa05f078d7ae54a7e4"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5b91fb08e0c9c6fa05f078d7ae54a7e4">ARCOMMANDS_Decoder_MiniDronePilotingStateFlatTrimChangedCallback_t</a> )(void *custom)</td></tr>
-<tr class="memdesc:a5b91fb08e0c9c6fa05f078d7ae54a7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.FlatTrimChanged <br/></td></tr>
-<tr class="separator:a5b91fb08e0c9c6fa05f078d7ae54a7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13fbcca94d26e6357ecf13480df51b57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13fbcca94d26e6357ecf13480df51b57"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a13fbcca94d26e6357ecf13480df51b57">ARCOMMANDS_Decoder_MiniDronePilotingStateFlyingStateChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#ac0adda8d373735e748d42a5e61b84077">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_FLYINGSTATECHANGED_STATE</a> state, void *custom)</td></tr>
-<tr class="memdesc:a13fbcca94d26e6357ecf13480df51b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.FlyingStateChanged <br/></td></tr>
-<tr class="separator:a13fbcca94d26e6357ecf13480df51b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9c91c1fe44cc8e0f7df443a5087a54a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9c91c1fe44cc8e0f7df443a5087a54a"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac9c91c1fe44cc8e0f7df443a5087a54a">ARCOMMANDS_Decoder_MiniDronePilotingStateAlertStateChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#ae673d12730aa406c8a48e95e8a71129d">eARCOMMANDS_MINIDRONE_PILOTINGSTATE_ALERTSTATECHANGED_STATE</a> state, void *custom)</td></tr>
-<tr class="memdesc:ac9c91c1fe44cc8e0f7df443a5087a54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.AlertStateChanged <br/></td></tr>
-<tr class="separator:ac9c91c1fe44cc8e0f7df443a5087a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4e1dec3fb0961139f57fa33c47b1571"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4e1dec3fb0961139f57fa33c47b1571"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac4e1dec3fb0961139f57fa33c47b1571">ARCOMMANDS_Decoder_MiniDronePilotingStateAutoTakeOffModeChangedCallback_t</a> )(uint8_t state, void *custom)</td></tr>
-<tr class="memdesc:ac4e1dec3fb0961139f57fa33c47b1571"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingState.AutoTakeOffModeChanged <br/></td></tr>
-<tr class="separator:ac4e1dec3fb0961139f57fa33c47b1571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a985aaa30588cab3c9e3058c5fa92440b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985aaa30588cab3c9e3058c5fa92440b"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a985aaa30588cab3c9e3058c5fa92440b">ARCOMMANDS_Decoder_MiniDroneAnimationsFlipCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#a4c9138cfb815ffccb25bf3d222b40ae5">eARCOMMANDS_MINIDRONE_ANIMATIONS_FLIP_DIRECTION</a> direction, void *custom)</td></tr>
-<tr class="memdesc:a985aaa30588cab3c9e3058c5fa92440b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Animations.Flip <br/></td></tr>
-<tr class="separator:a985aaa30588cab3c9e3058c5fa92440b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade249da9e12eee45395b957a76a71b7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade249da9e12eee45395b957a76a71b7d"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ade249da9e12eee45395b957a76a71b7d">ARCOMMANDS_Decoder_MiniDroneAnimationsCapCallback_t</a> )(int16_t offset, void *custom)</td></tr>
-<tr class="memdesc:ade249da9e12eee45395b957a76a71b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Animations.Cap <br/></td></tr>
-<tr class="separator:ade249da9e12eee45395b957a76a71b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb0102f08cf24f936e88e4bc16698cbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb0102f08cf24f936e88e4bc16698cbc"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#abb0102f08cf24f936e88e4bc16698cbc">ARCOMMANDS_Decoder_MiniDroneMediaRecordPictureCallback_t</a> )(uint8_t mass_storage_id, void *custom)</td></tr>
-<tr class="memdesc:abb0102f08cf24f936e88e4bc16698cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.MediaRecord.Picture <br/></td></tr>
-<tr class="separator:abb0102f08cf24f936e88e4bc16698cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a83a99be853855a4d49be782de8e425"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a83a99be853855a4d49be782de8e425"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a2a83a99be853855a4d49be782de8e425">ARCOMMANDS_Decoder_MiniDroneMediaRecordStatePictureStateChangedCallback_t</a> )(uint8_t state, uint8_t mass_storage_id, void *custom)</td></tr>
-<tr class="memdesc:a2a83a99be853855a4d49be782de8e425"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.MediaRecordState.PictureStateChanged <br/></td></tr>
-<tr class="separator:a2a83a99be853855a4d49be782de8e425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b763a412c042b4735b6fa9a97619be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b763a412c042b4735b6fa9a97619be"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a60b763a412c042b4735b6fa9a97619be">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxAltitudeCallback_t</a> )(float current, void *custom)</td></tr>
-<tr class="memdesc:a60b763a412c042b4735b6fa9a97619be"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettings.MaxAltitude <br/></td></tr>
-<tr class="separator:a60b763a412c042b4735b6fa9a97619be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb4c9ce993a8ffc165fae6ecbe7afca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cb4c9ce993a8ffc165fae6ecbe7afca"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5cb4c9ce993a8ffc165fae6ecbe7afca">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxTiltCallback_t</a> )(float current, void *custom)</td></tr>
-<tr class="memdesc:a5cb4c9ce993a8ffc165fae6ecbe7afca"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettings.MaxTilt <br/></td></tr>
-<tr class="separator:a5cb4c9ce993a8ffc165fae6ecbe7afca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eee7714376488c469e5ae87521e0bc5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eee7714376488c469e5ae87521e0bc5"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1eee7714376488c469e5ae87521e0bc5">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxAltitudeChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
-<tr class="memdesc:a1eee7714376488c469e5ae87521e0bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettingsState.MaxAltitudeChanged <br/></td></tr>
-<tr class="separator:a1eee7714376488c469e5ae87521e0bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42db64a313808d78a5159832a9499bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad42db64a313808d78a5159832a9499bd"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ad42db64a313808d78a5159832a9499bd">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxTiltChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
-<tr class="memdesc:ad42db64a313808d78a5159832a9499bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.PilotingSettingsState.MaxTiltChanged <br/></td></tr>
-<tr class="separator:ad42db64a313808d78a5159832a9499bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70fd6ebb1cc53b233e834a6fa0445711"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70fd6ebb1cc53b233e834a6fa0445711"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a70fd6ebb1cc53b233e834a6fa0445711">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxVerticalSpeedCallback_t</a> )(float current, void *custom)</td></tr>
-<tr class="memdesc:a70fd6ebb1cc53b233e834a6fa0445711"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettings.MaxVerticalSpeed <br/></td></tr>
-<tr class="separator:a70fd6ebb1cc53b233e834a6fa0445711"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4b3b1b1e89b0457a43f128750752d4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4b3b1b1e89b0457a43f128750752d4f"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab4b3b1b1e89b0457a43f128750752d4f">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxRotationSpeedCallback_t</a> )(float current, void *custom)</td></tr>
-<tr class="memdesc:ab4b3b1b1e89b0457a43f128750752d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettings.MaxRotationSpeed <br/></td></tr>
-<tr class="separator:ab4b3b1b1e89b0457a43f128750752d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e93c3e237eed2936fb537e396163e54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e93c3e237eed2936fb537e396163e54"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6e93c3e237eed2936fb537e396163e54">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsWheelsCallback_t</a> )(uint8_t present, void *custom)</td></tr>
-<tr class="memdesc:a6e93c3e237eed2936fb537e396163e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettings.Wheels <br/></td></tr>
-<tr class="separator:a6e93c3e237eed2936fb537e396163e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8376a1fe890d933a8702cc2d1a8bbb47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8376a1fe890d933a8702cc2d1a8bbb47"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a8376a1fe890d933a8702cc2d1a8bbb47">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxVerticalSpeedChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
-<tr class="memdesc:a8376a1fe890d933a8702cc2d1a8bbb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettingsState.MaxVerticalSpeedChanged <br/></td></tr>
-<tr class="separator:a8376a1fe890d933a8702cc2d1a8bbb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a730158253f4c5d5a596f9ee474e26b52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a730158253f4c5d5a596f9ee474e26b52"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a730158253f4c5d5a596f9ee474e26b52">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxRotationSpeedChangedCallback_t</a> )(float current, float min, float max, void *custom)</td></tr>
-<tr class="memdesc:a730158253f4c5d5a596f9ee474e26b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettingsState.MaxRotationSpeedChanged <br/></td></tr>
-<tr class="separator:a730158253f4c5d5a596f9ee474e26b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a434ee651ea48eec962e82d2f16aeb864"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a434ee651ea48eec962e82d2f16aeb864"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a434ee651ea48eec962e82d2f16aeb864">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateWheelsChangedCallback_t</a> )(uint8_t present, void *custom)</td></tr>
-<tr class="memdesc:a434ee651ea48eec962e82d2f16aeb864"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SpeedSettingsState.WheelsChanged <br/></td></tr>
-<tr class="separator:a434ee651ea48eec962e82d2f16aeb864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a221f1b14c1c7776e0644044f6d3927ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a221f1b14c1c7776e0644044f6d3927ed"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a221f1b14c1c7776e0644044f6d3927ed">ARCOMMANDS_Decoder_MiniDroneSettingsCutOutModeCallback_t</a> )(uint8_t enable, void *custom)</td></tr>
-<tr class="memdesc:a221f1b14c1c7776e0644044f6d3927ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.Settings.CutOutMode <br/></td></tr>
-<tr class="separator:a221f1b14c1c7776e0644044f6d3927ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a1e6d0489c3bbf165ad84af8b03484b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a1e6d0489c3bbf165ad84af8b03484b"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3a1e6d0489c3bbf165ad84af8b03484b">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductMotorsVersionChangedCallback_t</a> )(uint8_t motor, char *type, char *software, char *hardware, void *custom)</td></tr>
-<tr class="memdesc:a3a1e6d0489c3bbf165ad84af8b03484b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SettingsState.ProductMotorsVersionChanged <br/></td></tr>
-<tr class="separator:a3a1e6d0489c3bbf165ad84af8b03484b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62a370c703ad6611f662f6eddd2f3b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa62a370c703ad6611f662f6eddd2f3b2"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aa62a370c703ad6611f662f6eddd2f3b2">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductInertialVersionChangedCallback_t</a> )(char *software, char *hardware, void *custom)</td></tr>
-<tr class="memdesc:aa62a370c703ad6611f662f6eddd2f3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SettingsState.ProductInertialVersionChanged <br/></td></tr>
-<tr class="separator:aa62a370c703ad6611f662f6eddd2f3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23870d5ab76b119ede6136f48e8c3e96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23870d5ab76b119ede6136f48e8c3e96"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a23870d5ab76b119ede6136f48e8c3e96">ARCOMMANDS_Decoder_MiniDroneSettingsStateCutOutModeChangedCallback_t</a> )(uint8_t enable, void *custom)</td></tr>
-<tr class="memdesc:a23870d5ab76b119ede6136f48e8c3e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.SettingsState.CutOutModeChanged <br/></td></tr>
-<tr class="separator:a23870d5ab76b119ede6136f48e8c3e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1747dbc2208f77bd273dea056d7184ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1747dbc2208f77bd273dea056d7184ce"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1747dbc2208f77bd273dea056d7184ce">ARCOMMANDS_Decoder_MiniDroneFloodControlStateFloodControlChangedCallback_t</a> )(uint16_t delay, void *custom)</td></tr>
-<tr class="memdesc:a1747dbc2208f77bd273dea056d7184ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDrone.FloodControlState.FloodControlChanged <br/></td></tr>
-<tr class="separator:a1747dbc2208f77bd273dea056d7184ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a990df9e99a6a374da20904840ef2a138"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a990df9e99a6a374da20904840ef2a138"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a990df9e99a6a374da20904840ef2a138">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest1Callback_t</a> )(int8_t t1Args, void *custom)</td></tr>
-<tr class="memdesc:a990df9e99a6a374da20904840ef2a138"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDroneDebug.Debug.Test1 <br/></td></tr>
-<tr class="separator:a990df9e99a6a374da20904840ef2a138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74211397605569ef56d3b8c538e8f80c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74211397605569ef56d3b8c538e8f80c"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a74211397605569ef56d3b8c538e8f80c">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest2Callback_t</a> )(int8_t t2Args, void *custom)</td></tr>
-<tr class="memdesc:a74211397605569ef56d3b8c538e8f80c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDroneDebug.Debug.Test2 <br/></td></tr>
-<tr class="separator:a74211397605569ef56d3b8c538e8f80c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ed2ff34c0750017ca3a5e323ed6e6cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ed2ff34c0750017ca3a5e323ed6e6cb"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a0ed2ff34c0750017ca3a5e323ed6e6cb">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest3Callback_t</a> )(int8_t t3Args, void *custom)</td></tr>
-<tr class="memdesc:a0ed2ff34c0750017ca3a5e323ed6e6cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command MiniDroneDebug.Debug.Test3 <br/></td></tr>
-<tr class="separator:a0ed2ff34c0750017ca3a5e323ed6e6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63142b71dbb7be52d4db0a9f3a410f48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63142b71dbb7be52d4db0a9f3a410f48"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a63142b71dbb7be52d4db0a9f3a410f48">ARCOMMANDS_Decoder_SkyControllerWifiStateWifiListCallback_t</a> )(char *bssid, char *ssid, uint8_t secured, uint8_t saved, int32_t rssi, int32_t frequency, void *custom)</td></tr>
 <tr class="memdesc:a63142b71dbb7be52d4db0a9f3a410f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.WifiState.WifiList <br/></td></tr>
@@ -917,6 +947,14 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab366a5c73290ea37b3806716205ba424">ARCOMMANDS_Decoder_SkyControllerWifiStateConnexionChangedCallback_t</a> )(char *ssid, <a class="el" href="ARCOMMANDS__Types_8h.html#aa91870c436752e0fce42afc0ea30c5a2">eARCOMMANDS_SKYCONTROLLER_WIFISTATE_CONNEXIONCHANGED_STATUS</a> status, void *custom)</td></tr>
 <tr class="memdesc:ab366a5c73290ea37b3806716205ba424"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.WifiState.ConnexionChanged <br/></td></tr>
 <tr class="separator:ab366a5c73290ea37b3806716205ba424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef8b0cc4b81d59ca130452aff6ab47d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abef8b0cc4b81d59ca130452aff6ab47d"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#abef8b0cc4b81d59ca130452aff6ab47d">ARCOMMANDS_Decoder_SkyControllerWifiStateWifiAuthChannelListChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#acf6717f3849c08dd13ad966917497442">eARCOMMANDS_SKYCONTROLLER_WIFISTATE_WIFIAUTHCHANNELLISTCHANGED_BAND</a> band, uint8_t channel, uint8_t in_or_out, void *custom)</td></tr>
+<tr class="memdesc:abef8b0cc4b81d59ca130452aff6ab47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.WifiState.WifiAuthChannelListChanged <br/></td></tr>
+<tr class="separator:abef8b0cc4b81d59ca130452aff6ab47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5372c72ebfb0847f8d393de97daa8df3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5372c72ebfb0847f8d393de97daa8df3"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5372c72ebfb0847f8d393de97daa8df3">ARCOMMANDS_Decoder_SkyControllerWifiStateAllWifiAuthChannelChangedCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a5372c72ebfb0847f8d393de97daa8df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.WifiState.AllWifiAuthChannelChanged <br/></td></tr>
+<tr class="separator:a5372c72ebfb0847f8d393de97daa8df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ba4162d62c7c2e0d7caf6be3e6f73bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ba4162d62c7c2e0d7caf6be3e6f73bc"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a9ba4162d62c7c2e0d7caf6be3e6f73bc">ARCOMMANDS_Decoder_SkyControllerWifiRequestWifiListCallback_t</a> )(void *custom)</td></tr>
 <tr class="memdesc:a9ba4162d62c7c2e0d7caf6be3e6f73bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.Wifi.RequestWifiList <br/></td></tr>
@@ -933,6 +971,10 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a639ba85330a42d43e56ec4b9b32bf3ce">ARCOMMANDS_Decoder_SkyControllerWifiForgetWifiCallback_t</a> )(char *ssid, void *custom)</td></tr>
 <tr class="memdesc:a639ba85330a42d43e56ec4b9b32bf3ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.Wifi.ForgetWifi <br/></td></tr>
 <tr class="separator:a639ba85330a42d43e56ec4b9b32bf3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f41562e9907b4a754c2961c37250532"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f41562e9907b4a754c2961c37250532"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a7f41562e9907b4a754c2961c37250532">ARCOMMANDS_Decoder_SkyControllerWifiWifiAuthChannelCallback_t</a> )(void *custom)</td></tr>
+<tr class="memdesc:a7f41562e9907b4a754c2961c37250532"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.Wifi.WifiAuthChannel <br/></td></tr>
+<tr class="separator:a7f41562e9907b4a754c2961c37250532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3fb600131007639bb1d4bec45af342b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3fb600131007639bb1d4bec45af342b"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac3fb600131007639bb1d4bec45af342b">ARCOMMANDS_Decoder_SkyControllerDeviceRequestDeviceListCallback_t</a> )(void *custom)</td></tr>
 <tr class="memdesc:ac3fb600131007639bb1d4bec45af342b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.Device.RequestDeviceList <br/></td></tr>
@@ -997,6 +1039,10 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab7d876457215f41364a93b3f0627eb86">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsAccessPointChannelCallback_t</a> )(uint8_t channel, void *custom)</td></tr>
 <tr class="memdesc:ab7d876457215f41364a93b3f0627eb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.AccessPointSettings.AccessPointChannel <br/></td></tr>
 <tr class="separator:ab7d876457215f41364a93b3f0627eb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea606a2a83e2b002cbc473aafaf1829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ea606a2a83e2b002cbc473aafaf1829"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6ea606a2a83e2b002cbc473aafaf1829">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsWifiSelectionCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#ad39beb237d107fc105671f20e8e6b78f">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGS_WIFISELECTION_TYPE</a> type, <a class="el" href="ARCOMMANDS__Types_8h.html#a2d59cc63cb7d2fa7a9331d468ac69392">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGS_WIFISELECTION_BAND</a> band, uint8_t channel, void *custom)</td></tr>
+<tr class="memdesc:a6ea606a2a83e2b002cbc473aafaf1829"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.AccessPointSettings.WifiSelection <br/></td></tr>
+<tr class="separator:a6ea606a2a83e2b002cbc473aafaf1829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e0c106e6a578de63cf3f4291a4ef8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62e0c106e6a578de63cf3f4291a4ef8c"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a62e0c106e6a578de63cf3f4291a4ef8c">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateAccessPointSSIDChangedCallback_t</a> )(char *ssid, void *custom)</td></tr>
 <tr class="memdesc:a62e0c106e6a578de63cf3f4291a4ef8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.AccessPointSettingsState.AccessPointSSIDChanged <br/></td></tr>
@@ -1005,6 +1051,10 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a127b19852579fc0890dbe9368a9752f9">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateAccessPointChannelChangedCallback_t</a> )(uint8_t channel, void *custom)</td></tr>
 <tr class="memdesc:a127b19852579fc0890dbe9368a9752f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.AccessPointSettingsState.AccessPointChannelChanged <br/></td></tr>
 <tr class="separator:a127b19852579fc0890dbe9368a9752f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdcf1320cb2af96ab41a9db92324408f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdcf1320cb2af96ab41a9db92324408f"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#afdcf1320cb2af96ab41a9db92324408f">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateWifiSelectionChangedCallback_t</a> )(<a class="el" href="ARCOMMANDS__Types_8h.html#a69732f4f2ff77b68aa82cc5a7013a454">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGSSTATE_WIFISELECTIONCHANGED_TYPE</a> type, <a class="el" href="ARCOMMANDS__Types_8h.html#a162e26c9e928d5526488697965b60a4c">eARCOMMANDS_SKYCONTROLLER_ACCESSPOINTSETTINGSSTATE_WIFISELECTIONCHANGED_BAND</a> band, uint8_t channel, void *custom)</td></tr>
+<tr class="memdesc:afdcf1320cb2af96ab41a9db92324408f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.AccessPointSettingsState.WifiSelectionChanged <br/></td></tr>
+<tr class="separator:afdcf1320cb2af96ab41a9db92324408f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe21cf76d5ed3e180c999a958983e14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fe21cf76d5ed3e180c999a958983e14"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a4fe21cf76d5ed3e180c999a958983e14">ARCOMMANDS_Decoder_SkyControllerCameraResetOrientationCallback_t</a> )(void *custom)</td></tr>
 <tr class="memdesc:a4fe21cf76d5ed3e180c999a958983e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback type for the command SkyController.Camera.ResetOrientation <br/></td></tr>
@@ -1400,6 +1450,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aae0644cdacadcd899aa7d4f6dacc0791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aae0644cdacadcd899aa7d4f6dacc0791">ARCOMMANDS_Decoder_SetCommonCameraSettingsStateCameraSettingsChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#af27973bcb162a4e3ef8c4a7432a6ea6c">ARCOMMANDS_Decoder_CommonCameraSettingsStateCameraSettingsChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:aae0644cdacadcd899aa7d4f6dacc0791"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command common.CameraSettingsState.CameraSettingsChanged  <a href="#aae0644cdacadcd899aa7d4f6dacc0791">More...</a><br/></td></tr>
 <tr class="separator:aae0644cdacadcd899aa7d4f6dacc0791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39ba4eaf80070ab5179718e698c93d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a39ba4eaf80070ab5179718e698c93d0a">ARCOMMANDS_Decoder_SetCommonGPSControllerPositionForRunCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac38df251490fadf126f4bf53f5f3c853">ARCOMMANDS_Decoder_CommonGPSControllerPositionForRunCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a39ba4eaf80070ab5179718e698c93d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command common.GPS.ControllerPositionForRun  <a href="#a39ba4eaf80070ab5179718e698c93d0a">More...</a><br/></td></tr>
+<tr class="separator:a39ba4eaf80070ab5179718e698c93d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82956e4a228b460c09394b5bb1373fe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a82956e4a228b460c09394b5bb1373fe0">ARCOMMANDS_Decoder_SetCommonDebugStatsSendPacketCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ab88d800beaaea4c0c8f85a740110dd5a">ARCOMMANDS_Decoder_CommonDebugStatsSendPacketCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a82956e4a228b460c09394b5bb1373fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command commonDebug.Stats.SendPacket  <a href="#a82956e4a228b460c09394b5bb1373fe0">More...</a><br/></td></tr>
 <tr class="separator:a82956e4a228b460c09394b5bb1373fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1412,6 +1465,108 @@ Functions</h2></td></tr>
 <tr class="memitem:a2c05b0e0fe6d46abd668fe7488d74f78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a2c05b0e0fe6d46abd668fe7488d74f78">ARCOMMANDS_Decoder_SetCommonDebugStatsEventSendPacketCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a5112c6ccbb4965ea212370cd3e700b34">ARCOMMANDS_Decoder_CommonDebugStatsEventSendPacketCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a2c05b0e0fe6d46abd668fe7488d74f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command commonDebug.StatsEvent.SendPacket  <a href="#a2c05b0e0fe6d46abd668fe7488d74f78">More...</a><br/></td></tr>
 <tr class="separator:a2c05b0e0fe6d46abd668fe7488d74f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32682121966ef02c68174ac1e7ac7141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a32682121966ef02c68174ac1e7ac7141">ARCOMMANDS_Decoder_SetMiniDronePilotingFlatTrimCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a62cfcc128e16a6a3ac6580b3a7265da8">ARCOMMANDS_Decoder_MiniDronePilotingFlatTrimCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a32682121966ef02c68174ac1e7ac7141"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.FlatTrim  <a href="#a32682121966ef02c68174ac1e7ac7141">More...</a><br/></td></tr>
+<tr class="separator:a32682121966ef02c68174ac1e7ac7141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c21651e790928f4044e541fcbb9cfb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a2c21651e790928f4044e541fcbb9cfb0">ARCOMMANDS_Decoder_SetMiniDronePilotingTakeOffCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a45ebbb3056395cc8911935c725ded290">ARCOMMANDS_Decoder_MiniDronePilotingTakeOffCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a2c21651e790928f4044e541fcbb9cfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.TakeOff  <a href="#a2c21651e790928f4044e541fcbb9cfb0">More...</a><br/></td></tr>
+<tr class="separator:a2c21651e790928f4044e541fcbb9cfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e399991e6b87d86d00aa87a83b76696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5e399991e6b87d86d00aa87a83b76696">ARCOMMANDS_Decoder_SetMiniDronePilotingPCMDCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac5e2112342f3ea91347da1271de9a853">ARCOMMANDS_Decoder_MiniDronePilotingPCMDCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a5e399991e6b87d86d00aa87a83b76696"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.PCMD  <a href="#a5e399991e6b87d86d00aa87a83b76696">More...</a><br/></td></tr>
+<tr class="separator:a5e399991e6b87d86d00aa87a83b76696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a4bfb9bc3a5ec0c453294a966d0647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a55a4bfb9bc3a5ec0c453294a966d0647">ARCOMMANDS_Decoder_SetMiniDronePilotingLandingCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a6b062f855853b9d2d5979495aeb98996">ARCOMMANDS_Decoder_MiniDronePilotingLandingCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a55a4bfb9bc3a5ec0c453294a966d0647"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.Landing  <a href="#a55a4bfb9bc3a5ec0c453294a966d0647">More...</a><br/></td></tr>
+<tr class="separator:a55a4bfb9bc3a5ec0c453294a966d0647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20203d3fbfbead0eda618704a80c20e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a20203d3fbfbead0eda618704a80c20e0">ARCOMMANDS_Decoder_SetMiniDronePilotingEmergencyCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a69bc145ea6e3350b2f15102b18f80052">ARCOMMANDS_Decoder_MiniDronePilotingEmergencyCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a20203d3fbfbead0eda618704a80c20e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.Emergency  <a href="#a20203d3fbfbead0eda618704a80c20e0">More...</a><br/></td></tr>
+<tr class="separator:a20203d3fbfbead0eda618704a80c20e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b36b0c66bdbd7785d91ad1f9548d208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6b36b0c66bdbd7785d91ad1f9548d208">ARCOMMANDS_Decoder_SetMiniDronePilotingAutoTakeOffModeCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a3bd36f9cc749b80c35628689606c6385">ARCOMMANDS_Decoder_MiniDronePilotingAutoTakeOffModeCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a6b36b0c66bdbd7785d91ad1f9548d208"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.AutoTakeOffMode  <a href="#a6b36b0c66bdbd7785d91ad1f9548d208">More...</a><br/></td></tr>
+<tr class="separator:a6b36b0c66bdbd7785d91ad1f9548d208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88559436a9312c0291da24ebdd8b5065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a88559436a9312c0291da24ebdd8b5065">ARCOMMANDS_Decoder_SetMiniDronePilotingStateFlatTrimChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a5b91fb08e0c9c6fa05f078d7ae54a7e4">ARCOMMANDS_Decoder_MiniDronePilotingStateFlatTrimChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a88559436a9312c0291da24ebdd8b5065"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.FlatTrimChanged  <a href="#a88559436a9312c0291da24ebdd8b5065">More...</a><br/></td></tr>
+<tr class="separator:a88559436a9312c0291da24ebdd8b5065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3f6e0e5eb97fc9060f3b7182f4376b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3e3f6e0e5eb97fc9060f3b7182f4376b">ARCOMMANDS_Decoder_SetMiniDronePilotingStateFlyingStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a13fbcca94d26e6357ecf13480df51b57">ARCOMMANDS_Decoder_MiniDronePilotingStateFlyingStateChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a3e3f6e0e5eb97fc9060f3b7182f4376b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.FlyingStateChanged  <a href="#a3e3f6e0e5eb97fc9060f3b7182f4376b">More...</a><br/></td></tr>
+<tr class="separator:a3e3f6e0e5eb97fc9060f3b7182f4376b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af942c852f8c9039c962ca56a0ff77a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#af942c852f8c9039c962ca56a0ff77a71">ARCOMMANDS_Decoder_SetMiniDronePilotingStateAlertStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac9c91c1fe44cc8e0f7df443a5087a54a">ARCOMMANDS_Decoder_MiniDronePilotingStateAlertStateChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:af942c852f8c9039c962ca56a0ff77a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.AlertStateChanged  <a href="#af942c852f8c9039c962ca56a0ff77a71">More...</a><br/></td></tr>
+<tr class="separator:af942c852f8c9039c962ca56a0ff77a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8218b2f11458a5b7d135e5dfe9dd522c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a8218b2f11458a5b7d135e5dfe9dd522c">ARCOMMANDS_Decoder_SetMiniDronePilotingStateAutoTakeOffModeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac4e1dec3fb0961139f57fa33c47b1571">ARCOMMANDS_Decoder_MiniDronePilotingStateAutoTakeOffModeChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a8218b2f11458a5b7d135e5dfe9dd522c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.AutoTakeOffModeChanged  <a href="#a8218b2f11458a5b7d135e5dfe9dd522c">More...</a><br/></td></tr>
+<tr class="separator:a8218b2f11458a5b7d135e5dfe9dd522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f60d326c772970af9d2c2f1731b9d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a43f60d326c772970af9d2c2f1731b9d8">ARCOMMANDS_Decoder_SetMiniDroneAnimationsFlipCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a985aaa30588cab3c9e3058c5fa92440b">ARCOMMANDS_Decoder_MiniDroneAnimationsFlipCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a43f60d326c772970af9d2c2f1731b9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Animations.Flip  <a href="#a43f60d326c772970af9d2c2f1731b9d8">More...</a><br/></td></tr>
+<tr class="separator:a43f60d326c772970af9d2c2f1731b9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbb1d769540a5ca825c92640279d37e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6dbb1d769540a5ca825c92640279d37e">ARCOMMANDS_Decoder_SetMiniDroneAnimationsCapCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ade249da9e12eee45395b957a76a71b7d">ARCOMMANDS_Decoder_MiniDroneAnimationsCapCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a6dbb1d769540a5ca825c92640279d37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Animations.Cap  <a href="#a6dbb1d769540a5ca825c92640279d37e">More...</a><br/></td></tr>
+<tr class="separator:a6dbb1d769540a5ca825c92640279d37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f5adb55ee1e0f9d075b06572163569"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab1f5adb55ee1e0f9d075b06572163569">ARCOMMANDS_Decoder_SetMiniDroneMediaRecordPictureCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#abb0102f08cf24f936e88e4bc16698cbc">ARCOMMANDS_Decoder_MiniDroneMediaRecordPictureCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ab1f5adb55ee1e0f9d075b06572163569"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.MediaRecord.Picture  <a href="#ab1f5adb55ee1e0f9d075b06572163569">More...</a><br/></td></tr>
+<tr class="separator:ab1f5adb55ee1e0f9d075b06572163569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87292ab003c0a9fa3ebc23cd8a20101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ad87292ab003c0a9fa3ebc23cd8a20101">ARCOMMANDS_Decoder_SetMiniDroneMediaRecordStatePictureStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a2a83a99be853855a4d49be782de8e425">ARCOMMANDS_Decoder_MiniDroneMediaRecordStatePictureStateChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ad87292ab003c0a9fa3ebc23cd8a20101"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.MediaRecordState.PictureStateChanged  <a href="#ad87292ab003c0a9fa3ebc23cd8a20101">More...</a><br/></td></tr>
+<tr class="separator:ad87292ab003c0a9fa3ebc23cd8a20101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8608a18edc6a9986ed9c9e3b629b4ffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a8608a18edc6a9986ed9c9e3b629b4ffa">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsMaxAltitudeCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a60b763a412c042b4735b6fa9a97619be">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxAltitudeCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a8608a18edc6a9986ed9c9e3b629b4ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettings.MaxAltitude  <a href="#a8608a18edc6a9986ed9c9e3b629b4ffa">More...</a><br/></td></tr>
+<tr class="separator:a8608a18edc6a9986ed9c9e3b629b4ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94e48dc88ab5a88f943bbcd28ee2f80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac94e48dc88ab5a88f943bbcd28ee2f80">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsMaxTiltCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a5cb4c9ce993a8ffc165fae6ecbe7afca">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxTiltCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ac94e48dc88ab5a88f943bbcd28ee2f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettings.MaxTilt  <a href="#ac94e48dc88ab5a88f943bbcd28ee2f80">More...</a><br/></td></tr>
+<tr class="separator:ac94e48dc88ab5a88f943bbcd28ee2f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b2c7edad6b339433d9b97708d4c0f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac0b2c7edad6b339433d9b97708d4c0f2">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsStateMaxAltitudeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a1eee7714376488c469e5ae87521e0bc5">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxAltitudeChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ac0b2c7edad6b339433d9b97708d4c0f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettingsState.MaxAltitudeChanged  <a href="#ac0b2c7edad6b339433d9b97708d4c0f2">More...</a><br/></td></tr>
+<tr class="separator:ac0b2c7edad6b339433d9b97708d4c0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ce6489160d552b2d4102fe74ff58fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a78ce6489160d552b2d4102fe74ff58fa">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsStateMaxTiltChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ad42db64a313808d78a5159832a9499bd">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxTiltChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a78ce6489160d552b2d4102fe74ff58fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettingsState.MaxTiltChanged  <a href="#a78ce6489160d552b2d4102fe74ff58fa">More...</a><br/></td></tr>
+<tr class="separator:a78ce6489160d552b2d4102fe74ff58fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c09928562a4a36bd42eaeaae1cff22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a80c09928562a4a36bd42eaeaae1cff22">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsMaxVerticalSpeedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a70fd6ebb1cc53b233e834a6fa0445711">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxVerticalSpeedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a80c09928562a4a36bd42eaeaae1cff22"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettings.MaxVerticalSpeed  <a href="#a80c09928562a4a36bd42eaeaae1cff22">More...</a><br/></td></tr>
+<tr class="separator:a80c09928562a4a36bd42eaeaae1cff22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125b65ceaca839708d84ee4f2df6cbb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a125b65ceaca839708d84ee4f2df6cbb5">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsMaxRotationSpeedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ab4b3b1b1e89b0457a43f128750752d4f">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxRotationSpeedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a125b65ceaca839708d84ee4f2df6cbb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettings.MaxRotationSpeed  <a href="#a125b65ceaca839708d84ee4f2df6cbb5">More...</a><br/></td></tr>
+<tr class="separator:a125b65ceaca839708d84ee4f2df6cbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bf180f97b6544d18a75a5bf16919e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a16bf180f97b6544d18a75a5bf16919e0">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsWheelsCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a6e93c3e237eed2936fb537e396163e54">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsWheelsCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a16bf180f97b6544d18a75a5bf16919e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettings.Wheels  <a href="#a16bf180f97b6544d18a75a5bf16919e0">More...</a><br/></td></tr>
+<tr class="separator:a16bf180f97b6544d18a75a5bf16919e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52adfa4afefb1c0276e6c512903d63fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a52adfa4afefb1c0276e6c512903d63fd">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsStateMaxVerticalSpeedChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a8376a1fe890d933a8702cc2d1a8bbb47">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxVerticalSpeedChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a52adfa4afefb1c0276e6c512903d63fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettingsState.MaxVerticalSpeedChanged  <a href="#a52adfa4afefb1c0276e6c512903d63fd">More...</a><br/></td></tr>
+<tr class="separator:a52adfa4afefb1c0276e6c512903d63fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86003791469d92a72c127973aaec652d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a86003791469d92a72c127973aaec652d">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsStateMaxRotationSpeedChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a730158253f4c5d5a596f9ee474e26b52">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxRotationSpeedChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a86003791469d92a72c127973aaec652d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettingsState.MaxRotationSpeedChanged  <a href="#a86003791469d92a72c127973aaec652d">More...</a><br/></td></tr>
+<tr class="separator:a86003791469d92a72c127973aaec652d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7779f53d1776f2b5be887e809ca57c91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a7779f53d1776f2b5be887e809ca57c91">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsStateWheelsChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a434ee651ea48eec962e82d2f16aeb864">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateWheelsChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a7779f53d1776f2b5be887e809ca57c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettingsState.WheelsChanged  <a href="#a7779f53d1776f2b5be887e809ca57c91">More...</a><br/></td></tr>
+<tr class="separator:a7779f53d1776f2b5be887e809ca57c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1af16526007af43729e408202514613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac1af16526007af43729e408202514613">ARCOMMANDS_Decoder_SetMiniDroneSettingsCutOutModeCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a221f1b14c1c7776e0644044f6d3927ed">ARCOMMANDS_Decoder_MiniDroneSettingsCutOutModeCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ac1af16526007af43729e408202514613"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Settings.CutOutMode  <a href="#ac1af16526007af43729e408202514613">More...</a><br/></td></tr>
+<tr class="separator:ac1af16526007af43729e408202514613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca4cd2c7c5492091949ec3a7ef6e88d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1ca4cd2c7c5492091949ec3a7ef6e88d">ARCOMMANDS_Decoder_SetMiniDroneSettingsStateProductMotorsVersionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a3a1e6d0489c3bbf165ad84af8b03484b">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductMotorsVersionChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a1ca4cd2c7c5492091949ec3a7ef6e88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SettingsState.ProductMotorsVersionChanged  <a href="#a1ca4cd2c7c5492091949ec3a7ef6e88d">More...</a><br/></td></tr>
+<tr class="separator:a1ca4cd2c7c5492091949ec3a7ef6e88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ca80a6932a0c5e0f523cd6bfbd8b1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab8ca80a6932a0c5e0f523cd6bfbd8b1c">ARCOMMANDS_Decoder_SetMiniDroneSettingsStateProductInertialVersionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#aa62a370c703ad6611f662f6eddd2f3b2">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductInertialVersionChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ab8ca80a6932a0c5e0f523cd6bfbd8b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SettingsState.ProductInertialVersionChanged  <a href="#ab8ca80a6932a0c5e0f523cd6bfbd8b1c">More...</a><br/></td></tr>
+<tr class="separator:ab8ca80a6932a0c5e0f523cd6bfbd8b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3add743a54b2edf3ffd8362ef850196b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3add743a54b2edf3ffd8362ef850196b">ARCOMMANDS_Decoder_SetMiniDroneSettingsStateCutOutModeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a23870d5ab76b119ede6136f48e8c3e96">ARCOMMANDS_Decoder_MiniDroneSettingsStateCutOutModeChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a3add743a54b2edf3ffd8362ef850196b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SettingsState.CutOutModeChanged  <a href="#a3add743a54b2edf3ffd8362ef850196b">More...</a><br/></td></tr>
+<tr class="separator:a3add743a54b2edf3ffd8362ef850196b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef49311b524aa4b52b27f67adb9793dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aef49311b524aa4b52b27f67adb9793dd">ARCOMMANDS_Decoder_SetMiniDroneFloodControlStateFloodControlChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a1747dbc2208f77bd273dea056d7184ce">ARCOMMANDS_Decoder_MiniDroneFloodControlStateFloodControlChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:aef49311b524aa4b52b27f67adb9793dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.FloodControlState.FloodControlChanged  <a href="#aef49311b524aa4b52b27f67adb9793dd">More...</a><br/></td></tr>
+<tr class="separator:aef49311b524aa4b52b27f67adb9793dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263a1da016c3a93f9939cf577aa067fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a263a1da016c3a93f9939cf577aa067fc">ARCOMMANDS_Decoder_SetMiniDroneGPSControllerLatitudeForRunCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a6d174ec905f2e0bcc497290708bcfa2d">ARCOMMANDS_Decoder_MiniDroneGPSControllerLatitudeForRunCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a263a1da016c3a93f9939cf577aa067fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.GPS.ControllerLatitudeForRun  <a href="#a263a1da016c3a93f9939cf577aa067fc">More...</a><br/></td></tr>
+<tr class="separator:a263a1da016c3a93f9939cf577aa067fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ac171a42d25b9d708e878cee37bd4f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1ac171a42d25b9d708e878cee37bd4f4">ARCOMMANDS_Decoder_SetMiniDroneGPSControllerLongitudeForRunCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#aded3aab27a00e2c2d9061200f7d904ea">ARCOMMANDS_Decoder_MiniDroneGPSControllerLongitudeForRunCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a1ac171a42d25b9d708e878cee37bd4f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.GPS.ControllerLongitudeForRun  <a href="#a1ac171a42d25b9d708e878cee37bd4f4">More...</a><br/></td></tr>
+<tr class="separator:a1ac171a42d25b9d708e878cee37bd4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1482e7aac7780abba08af100a8397262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1482e7aac7780abba08af100a8397262">ARCOMMANDS_Decoder_SetMiniDroneDebugDebugTest1Callback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a990df9e99a6a374da20904840ef2a138">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest1Callback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a1482e7aac7780abba08af100a8397262"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDroneDebug.Debug.Test1  <a href="#a1482e7aac7780abba08af100a8397262">More...</a><br/></td></tr>
+<tr class="separator:a1482e7aac7780abba08af100a8397262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb921ff289f818529f2cc28568185af3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#adb921ff289f818529f2cc28568185af3">ARCOMMANDS_Decoder_SetMiniDroneDebugDebugTest2Callback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a74211397605569ef56d3b8c538e8f80c">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest2Callback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:adb921ff289f818529f2cc28568185af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDroneDebug.Debug.Test2  <a href="#adb921ff289f818529f2cc28568185af3">More...</a><br/></td></tr>
+<tr class="separator:adb921ff289f818529f2cc28568185af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13683c500ac1d3bebfb6288a46d8e6b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a13683c500ac1d3bebfb6288a46d8e6b2">ARCOMMANDS_Decoder_SetMiniDroneDebugDebugTest3Callback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a0ed2ff34c0750017ca3a5e323ed6e6cb">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest3Callback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a13683c500ac1d3bebfb6288a46d8e6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDroneDebug.Debug.Test3  <a href="#a13683c500ac1d3bebfb6288a46d8e6b2">More...</a><br/></td></tr>
+<tr class="separator:a13683c500ac1d3bebfb6288a46d8e6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e630c3641227294724f40c4de6a97ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a9e630c3641227294724f40c4de6a97ad">ARCOMMANDS_Decoder_SetJumpingSumoPilotingPCMDCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#add911d0ff08386ede25268073c3182f7">ARCOMMANDS_Decoder_JumpingSumoPilotingPCMDCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a9e630c3641227294724f40c4de6a97ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command JumpingSumo.Piloting.PCMD  <a href="#a9e630c3641227294724f40c4de6a97ad">More...</a><br/></td></tr>
 <tr class="separator:a9e630c3641227294724f40c4de6a97ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1445,6 +1600,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aacc0e8b34f1dac4595116f680356ef7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aacc0e8b34f1dac4595116f680356ef7e">ARCOMMANDS_Decoder_SetJumpingSumoAnimationsStateJumpLoadChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#af6310ff9b9755103f6d40e88ed0fcb63">ARCOMMANDS_Decoder_JumpingSumoAnimationsStateJumpLoadChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:aacc0e8b34f1dac4595116f680356ef7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command JumpingSumo.AnimationsState.JumpLoadChanged  <a href="#aacc0e8b34f1dac4595116f680356ef7e">More...</a><br/></td></tr>
 <tr class="separator:aacc0e8b34f1dac4595116f680356ef7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216e68e8695e68224a7aa347d70adab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a216e68e8695e68224a7aa347d70adab1">ARCOMMANDS_Decoder_SetJumpingSumoAnimationsStateJumpTypeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#acf897a77f5cb78c06557da8cb9c77e25">ARCOMMANDS_Decoder_JumpingSumoAnimationsStateJumpTypeChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a216e68e8695e68224a7aa347d70adab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command JumpingSumo.AnimationsState.JumpTypeChanged  <a href="#a216e68e8695e68224a7aa347d70adab1">More...</a><br/></td></tr>
+<tr class="separator:a216e68e8695e68224a7aa347d70adab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a988ae385ae7d703d01270a7508db643b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a988ae385ae7d703d01270a7508db643b">ARCOMMANDS_Decoder_SetJumpingSumoSettingsStateProductGPSVersionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#aaf31cbe480e4e98b986bd30db3cf1b92">ARCOMMANDS_Decoder_JumpingSumoSettingsStateProductGPSVersionChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a988ae385ae7d703d01270a7508db643b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command JumpingSumo.SettingsState.ProductGPSVersionChanged  <a href="#a988ae385ae7d703d01270a7508db643b">More...</a><br/></td></tr>
 <tr class="separator:a988ae385ae7d703d01270a7508db643b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1562,108 +1720,18 @@ Functions</h2></td></tr>
 <tr class="memitem:aef1db98b7bafb761c0d28da4007ae601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aef1db98b7bafb761c0d28da4007ae601">ARCOMMANDS_Decoder_SetJumpingSumoDebugUserScriptStateUserScriptParsedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#acbf0e86f862fc22a4522dda65b0eeee5">ARCOMMANDS_Decoder_JumpingSumoDebugUserScriptStateUserScriptParsedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:aef1db98b7bafb761c0d28da4007ae601"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command JumpingSumoDebug.UserScriptState.userScriptParsed  <a href="#aef1db98b7bafb761c0d28da4007ae601">More...</a><br/></td></tr>
 <tr class="separator:aef1db98b7bafb761c0d28da4007ae601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32682121966ef02c68174ac1e7ac7141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a32682121966ef02c68174ac1e7ac7141">ARCOMMANDS_Decoder_SetMiniDronePilotingFlatTrimCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a62cfcc128e16a6a3ac6580b3a7265da8">ARCOMMANDS_Decoder_MiniDronePilotingFlatTrimCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a32682121966ef02c68174ac1e7ac7141"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.FlatTrim  <a href="#a32682121966ef02c68174ac1e7ac7141">More...</a><br/></td></tr>
-<tr class="separator:a32682121966ef02c68174ac1e7ac7141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c21651e790928f4044e541fcbb9cfb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a2c21651e790928f4044e541fcbb9cfb0">ARCOMMANDS_Decoder_SetMiniDronePilotingTakeOffCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a45ebbb3056395cc8911935c725ded290">ARCOMMANDS_Decoder_MiniDronePilotingTakeOffCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a2c21651e790928f4044e541fcbb9cfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.TakeOff  <a href="#a2c21651e790928f4044e541fcbb9cfb0">More...</a><br/></td></tr>
-<tr class="separator:a2c21651e790928f4044e541fcbb9cfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e399991e6b87d86d00aa87a83b76696"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5e399991e6b87d86d00aa87a83b76696">ARCOMMANDS_Decoder_SetMiniDronePilotingPCMDCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac5e2112342f3ea91347da1271de9a853">ARCOMMANDS_Decoder_MiniDronePilotingPCMDCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a5e399991e6b87d86d00aa87a83b76696"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.PCMD  <a href="#a5e399991e6b87d86d00aa87a83b76696">More...</a><br/></td></tr>
-<tr class="separator:a5e399991e6b87d86d00aa87a83b76696"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a4bfb9bc3a5ec0c453294a966d0647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a55a4bfb9bc3a5ec0c453294a966d0647">ARCOMMANDS_Decoder_SetMiniDronePilotingLandingCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a6b062f855853b9d2d5979495aeb98996">ARCOMMANDS_Decoder_MiniDronePilotingLandingCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a55a4bfb9bc3a5ec0c453294a966d0647"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.Landing  <a href="#a55a4bfb9bc3a5ec0c453294a966d0647">More...</a><br/></td></tr>
-<tr class="separator:a55a4bfb9bc3a5ec0c453294a966d0647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20203d3fbfbead0eda618704a80c20e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a20203d3fbfbead0eda618704a80c20e0">ARCOMMANDS_Decoder_SetMiniDronePilotingEmergencyCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a69bc145ea6e3350b2f15102b18f80052">ARCOMMANDS_Decoder_MiniDronePilotingEmergencyCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a20203d3fbfbead0eda618704a80c20e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.Emergency  <a href="#a20203d3fbfbead0eda618704a80c20e0">More...</a><br/></td></tr>
-<tr class="separator:a20203d3fbfbead0eda618704a80c20e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b36b0c66bdbd7785d91ad1f9548d208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6b36b0c66bdbd7785d91ad1f9548d208">ARCOMMANDS_Decoder_SetMiniDronePilotingAutoTakeOffModeCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a3bd36f9cc749b80c35628689606c6385">ARCOMMANDS_Decoder_MiniDronePilotingAutoTakeOffModeCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a6b36b0c66bdbd7785d91ad1f9548d208"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Piloting.AutoTakeOffMode  <a href="#a6b36b0c66bdbd7785d91ad1f9548d208">More...</a><br/></td></tr>
-<tr class="separator:a6b36b0c66bdbd7785d91ad1f9548d208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88559436a9312c0291da24ebdd8b5065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a88559436a9312c0291da24ebdd8b5065">ARCOMMANDS_Decoder_SetMiniDronePilotingStateFlatTrimChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a5b91fb08e0c9c6fa05f078d7ae54a7e4">ARCOMMANDS_Decoder_MiniDronePilotingStateFlatTrimChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a88559436a9312c0291da24ebdd8b5065"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.FlatTrimChanged  <a href="#a88559436a9312c0291da24ebdd8b5065">More...</a><br/></td></tr>
-<tr class="separator:a88559436a9312c0291da24ebdd8b5065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3f6e0e5eb97fc9060f3b7182f4376b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3e3f6e0e5eb97fc9060f3b7182f4376b">ARCOMMANDS_Decoder_SetMiniDronePilotingStateFlyingStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a13fbcca94d26e6357ecf13480df51b57">ARCOMMANDS_Decoder_MiniDronePilotingStateFlyingStateChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a3e3f6e0e5eb97fc9060f3b7182f4376b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.FlyingStateChanged  <a href="#a3e3f6e0e5eb97fc9060f3b7182f4376b">More...</a><br/></td></tr>
-<tr class="separator:a3e3f6e0e5eb97fc9060f3b7182f4376b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af942c852f8c9039c962ca56a0ff77a71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#af942c852f8c9039c962ca56a0ff77a71">ARCOMMANDS_Decoder_SetMiniDronePilotingStateAlertStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac9c91c1fe44cc8e0f7df443a5087a54a">ARCOMMANDS_Decoder_MiniDronePilotingStateAlertStateChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:af942c852f8c9039c962ca56a0ff77a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.AlertStateChanged  <a href="#af942c852f8c9039c962ca56a0ff77a71">More...</a><br/></td></tr>
-<tr class="separator:af942c852f8c9039c962ca56a0ff77a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8218b2f11458a5b7d135e5dfe9dd522c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a8218b2f11458a5b7d135e5dfe9dd522c">ARCOMMANDS_Decoder_SetMiniDronePilotingStateAutoTakeOffModeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac4e1dec3fb0961139f57fa33c47b1571">ARCOMMANDS_Decoder_MiniDronePilotingStateAutoTakeOffModeChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a8218b2f11458a5b7d135e5dfe9dd522c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingState.AutoTakeOffModeChanged  <a href="#a8218b2f11458a5b7d135e5dfe9dd522c">More...</a><br/></td></tr>
-<tr class="separator:a8218b2f11458a5b7d135e5dfe9dd522c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43f60d326c772970af9d2c2f1731b9d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a43f60d326c772970af9d2c2f1731b9d8">ARCOMMANDS_Decoder_SetMiniDroneAnimationsFlipCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a985aaa30588cab3c9e3058c5fa92440b">ARCOMMANDS_Decoder_MiniDroneAnimationsFlipCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a43f60d326c772970af9d2c2f1731b9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Animations.Flip  <a href="#a43f60d326c772970af9d2c2f1731b9d8">More...</a><br/></td></tr>
-<tr class="separator:a43f60d326c772970af9d2c2f1731b9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dbb1d769540a5ca825c92640279d37e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6dbb1d769540a5ca825c92640279d37e">ARCOMMANDS_Decoder_SetMiniDroneAnimationsCapCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ade249da9e12eee45395b957a76a71b7d">ARCOMMANDS_Decoder_MiniDroneAnimationsCapCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a6dbb1d769540a5ca825c92640279d37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Animations.Cap  <a href="#a6dbb1d769540a5ca825c92640279d37e">More...</a><br/></td></tr>
-<tr class="separator:a6dbb1d769540a5ca825c92640279d37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f5adb55ee1e0f9d075b06572163569"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab1f5adb55ee1e0f9d075b06572163569">ARCOMMANDS_Decoder_SetMiniDroneMediaRecordPictureCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#abb0102f08cf24f936e88e4bc16698cbc">ARCOMMANDS_Decoder_MiniDroneMediaRecordPictureCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:ab1f5adb55ee1e0f9d075b06572163569"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.MediaRecord.Picture  <a href="#ab1f5adb55ee1e0f9d075b06572163569">More...</a><br/></td></tr>
-<tr class="separator:ab1f5adb55ee1e0f9d075b06572163569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad87292ab003c0a9fa3ebc23cd8a20101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ad87292ab003c0a9fa3ebc23cd8a20101">ARCOMMANDS_Decoder_SetMiniDroneMediaRecordStatePictureStateChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a2a83a99be853855a4d49be782de8e425">ARCOMMANDS_Decoder_MiniDroneMediaRecordStatePictureStateChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:ad87292ab003c0a9fa3ebc23cd8a20101"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.MediaRecordState.PictureStateChanged  <a href="#ad87292ab003c0a9fa3ebc23cd8a20101">More...</a><br/></td></tr>
-<tr class="separator:ad87292ab003c0a9fa3ebc23cd8a20101"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8608a18edc6a9986ed9c9e3b629b4ffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a8608a18edc6a9986ed9c9e3b629b4ffa">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsMaxAltitudeCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a60b763a412c042b4735b6fa9a97619be">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxAltitudeCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a8608a18edc6a9986ed9c9e3b629b4ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettings.MaxAltitude  <a href="#a8608a18edc6a9986ed9c9e3b629b4ffa">More...</a><br/></td></tr>
-<tr class="separator:a8608a18edc6a9986ed9c9e3b629b4ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac94e48dc88ab5a88f943bbcd28ee2f80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac94e48dc88ab5a88f943bbcd28ee2f80">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsMaxTiltCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a5cb4c9ce993a8ffc165fae6ecbe7afca">ARCOMMANDS_Decoder_MiniDronePilotingSettingsMaxTiltCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:ac94e48dc88ab5a88f943bbcd28ee2f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettings.MaxTilt  <a href="#ac94e48dc88ab5a88f943bbcd28ee2f80">More...</a><br/></td></tr>
-<tr class="separator:ac94e48dc88ab5a88f943bbcd28ee2f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b2c7edad6b339433d9b97708d4c0f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac0b2c7edad6b339433d9b97708d4c0f2">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsStateMaxAltitudeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a1eee7714376488c469e5ae87521e0bc5">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxAltitudeChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:ac0b2c7edad6b339433d9b97708d4c0f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettingsState.MaxAltitudeChanged  <a href="#ac0b2c7edad6b339433d9b97708d4c0f2">More...</a><br/></td></tr>
-<tr class="separator:ac0b2c7edad6b339433d9b97708d4c0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78ce6489160d552b2d4102fe74ff58fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a78ce6489160d552b2d4102fe74ff58fa">ARCOMMANDS_Decoder_SetMiniDronePilotingSettingsStateMaxTiltChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ad42db64a313808d78a5159832a9499bd">ARCOMMANDS_Decoder_MiniDronePilotingSettingsStateMaxTiltChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a78ce6489160d552b2d4102fe74ff58fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.PilotingSettingsState.MaxTiltChanged  <a href="#a78ce6489160d552b2d4102fe74ff58fa">More...</a><br/></td></tr>
-<tr class="separator:a78ce6489160d552b2d4102fe74ff58fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c09928562a4a36bd42eaeaae1cff22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a80c09928562a4a36bd42eaeaae1cff22">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsMaxVerticalSpeedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a70fd6ebb1cc53b233e834a6fa0445711">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxVerticalSpeedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a80c09928562a4a36bd42eaeaae1cff22"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettings.MaxVerticalSpeed  <a href="#a80c09928562a4a36bd42eaeaae1cff22">More...</a><br/></td></tr>
-<tr class="separator:a80c09928562a4a36bd42eaeaae1cff22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a125b65ceaca839708d84ee4f2df6cbb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a125b65ceaca839708d84ee4f2df6cbb5">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsMaxRotationSpeedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ab4b3b1b1e89b0457a43f128750752d4f">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsMaxRotationSpeedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a125b65ceaca839708d84ee4f2df6cbb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettings.MaxRotationSpeed  <a href="#a125b65ceaca839708d84ee4f2df6cbb5">More...</a><br/></td></tr>
-<tr class="separator:a125b65ceaca839708d84ee4f2df6cbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16bf180f97b6544d18a75a5bf16919e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a16bf180f97b6544d18a75a5bf16919e0">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsWheelsCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a6e93c3e237eed2936fb537e396163e54">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsWheelsCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a16bf180f97b6544d18a75a5bf16919e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettings.Wheels  <a href="#a16bf180f97b6544d18a75a5bf16919e0">More...</a><br/></td></tr>
-<tr class="separator:a16bf180f97b6544d18a75a5bf16919e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52adfa4afefb1c0276e6c512903d63fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a52adfa4afefb1c0276e6c512903d63fd">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsStateMaxVerticalSpeedChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a8376a1fe890d933a8702cc2d1a8bbb47">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxVerticalSpeedChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a52adfa4afefb1c0276e6c512903d63fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettingsState.MaxVerticalSpeedChanged  <a href="#a52adfa4afefb1c0276e6c512903d63fd">More...</a><br/></td></tr>
-<tr class="separator:a52adfa4afefb1c0276e6c512903d63fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86003791469d92a72c127973aaec652d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a86003791469d92a72c127973aaec652d">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsStateMaxRotationSpeedChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a730158253f4c5d5a596f9ee474e26b52">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateMaxRotationSpeedChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a86003791469d92a72c127973aaec652d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettingsState.MaxRotationSpeedChanged  <a href="#a86003791469d92a72c127973aaec652d">More...</a><br/></td></tr>
-<tr class="separator:a86003791469d92a72c127973aaec652d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7779f53d1776f2b5be887e809ca57c91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a7779f53d1776f2b5be887e809ca57c91">ARCOMMANDS_Decoder_SetMiniDroneSpeedSettingsStateWheelsChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a434ee651ea48eec962e82d2f16aeb864">ARCOMMANDS_Decoder_MiniDroneSpeedSettingsStateWheelsChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a7779f53d1776f2b5be887e809ca57c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SpeedSettingsState.WheelsChanged  <a href="#a7779f53d1776f2b5be887e809ca57c91">More...</a><br/></td></tr>
-<tr class="separator:a7779f53d1776f2b5be887e809ca57c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1af16526007af43729e408202514613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac1af16526007af43729e408202514613">ARCOMMANDS_Decoder_SetMiniDroneSettingsCutOutModeCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a221f1b14c1c7776e0644044f6d3927ed">ARCOMMANDS_Decoder_MiniDroneSettingsCutOutModeCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:ac1af16526007af43729e408202514613"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.Settings.CutOutMode  <a href="#ac1af16526007af43729e408202514613">More...</a><br/></td></tr>
-<tr class="separator:ac1af16526007af43729e408202514613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ca4cd2c7c5492091949ec3a7ef6e88d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1ca4cd2c7c5492091949ec3a7ef6e88d">ARCOMMANDS_Decoder_SetMiniDroneSettingsStateProductMotorsVersionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a3a1e6d0489c3bbf165ad84af8b03484b">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductMotorsVersionChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a1ca4cd2c7c5492091949ec3a7ef6e88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SettingsState.ProductMotorsVersionChanged  <a href="#a1ca4cd2c7c5492091949ec3a7ef6e88d">More...</a><br/></td></tr>
-<tr class="separator:a1ca4cd2c7c5492091949ec3a7ef6e88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8ca80a6932a0c5e0f523cd6bfbd8b1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab8ca80a6932a0c5e0f523cd6bfbd8b1c">ARCOMMANDS_Decoder_SetMiniDroneSettingsStateProductInertialVersionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#aa62a370c703ad6611f662f6eddd2f3b2">ARCOMMANDS_Decoder_MiniDroneSettingsStateProductInertialVersionChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:ab8ca80a6932a0c5e0f523cd6bfbd8b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SettingsState.ProductInertialVersionChanged  <a href="#ab8ca80a6932a0c5e0f523cd6bfbd8b1c">More...</a><br/></td></tr>
-<tr class="separator:ab8ca80a6932a0c5e0f523cd6bfbd8b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3add743a54b2edf3ffd8362ef850196b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a3add743a54b2edf3ffd8362ef850196b">ARCOMMANDS_Decoder_SetMiniDroneSettingsStateCutOutModeChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a23870d5ab76b119ede6136f48e8c3e96">ARCOMMANDS_Decoder_MiniDroneSettingsStateCutOutModeChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a3add743a54b2edf3ffd8362ef850196b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.SettingsState.CutOutModeChanged  <a href="#a3add743a54b2edf3ffd8362ef850196b">More...</a><br/></td></tr>
-<tr class="separator:a3add743a54b2edf3ffd8362ef850196b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef49311b524aa4b52b27f67adb9793dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aef49311b524aa4b52b27f67adb9793dd">ARCOMMANDS_Decoder_SetMiniDroneFloodControlStateFloodControlChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a1747dbc2208f77bd273dea056d7184ce">ARCOMMANDS_Decoder_MiniDroneFloodControlStateFloodControlChangedCallback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:aef49311b524aa4b52b27f67adb9793dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDrone.FloodControlState.FloodControlChanged  <a href="#aef49311b524aa4b52b27f67adb9793dd">More...</a><br/></td></tr>
-<tr class="separator:aef49311b524aa4b52b27f67adb9793dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1482e7aac7780abba08af100a8397262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a1482e7aac7780abba08af100a8397262">ARCOMMANDS_Decoder_SetMiniDroneDebugDebugTest1Callback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a990df9e99a6a374da20904840ef2a138">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest1Callback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a1482e7aac7780abba08af100a8397262"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDroneDebug.Debug.Test1  <a href="#a1482e7aac7780abba08af100a8397262">More...</a><br/></td></tr>
-<tr class="separator:a1482e7aac7780abba08af100a8397262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb921ff289f818529f2cc28568185af3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#adb921ff289f818529f2cc28568185af3">ARCOMMANDS_Decoder_SetMiniDroneDebugDebugTest2Callback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a74211397605569ef56d3b8c538e8f80c">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest2Callback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:adb921ff289f818529f2cc28568185af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDroneDebug.Debug.Test2  <a href="#adb921ff289f818529f2cc28568185af3">More...</a><br/></td></tr>
-<tr class="separator:adb921ff289f818529f2cc28568185af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13683c500ac1d3bebfb6288a46d8e6b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a13683c500ac1d3bebfb6288a46d8e6b2">ARCOMMANDS_Decoder_SetMiniDroneDebugDebugTest3Callback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a0ed2ff34c0750017ca3a5e323ed6e6cb">ARCOMMANDS_Decoder_MiniDroneDebugDebugTest3Callback_t</a> callback, void *custom)</td></tr>
-<tr class="memdesc:a13683c500ac1d3bebfb6288a46d8e6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command MiniDroneDebug.Debug.Test3  <a href="#a13683c500ac1d3bebfb6288a46d8e6b2">More...</a><br/></td></tr>
-<tr class="separator:a13683c500ac1d3bebfb6288a46d8e6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1b9c2c049e92c494eaa169aaa367d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aee1b9c2c049e92c494eaa169aaa367d2">ARCOMMANDS_Decoder_SetSkyControllerWifiStateWifiListCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a63142b71dbb7be52d4db0a9f3a410f48">ARCOMMANDS_Decoder_SkyControllerWifiStateWifiListCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:aee1b9c2c049e92c494eaa169aaa367d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.WifiState.WifiList  <a href="#aee1b9c2c049e92c494eaa169aaa367d2">More...</a><br/></td></tr>
 <tr class="separator:aee1b9c2c049e92c494eaa169aaa367d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e87149f6ba756326c991982ebb506f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a59e87149f6ba756326c991982ebb506f">ARCOMMANDS_Decoder_SetSkyControllerWifiStateConnexionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ab366a5c73290ea37b3806716205ba424">ARCOMMANDS_Decoder_SkyControllerWifiStateConnexionChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a59e87149f6ba756326c991982ebb506f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.WifiState.ConnexionChanged  <a href="#a59e87149f6ba756326c991982ebb506f">More...</a><br/></td></tr>
 <tr class="separator:a59e87149f6ba756326c991982ebb506f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67fc45354426ff83c7c17f57bcc9869"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ae67fc45354426ff83c7c17f57bcc9869">ARCOMMANDS_Decoder_SetSkyControllerWifiStateWifiAuthChannelListChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#abef8b0cc4b81d59ca130452aff6ab47d">ARCOMMANDS_Decoder_SkyControllerWifiStateWifiAuthChannelListChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ae67fc45354426ff83c7c17f57bcc9869"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.WifiState.WifiAuthChannelListChanged  <a href="#ae67fc45354426ff83c7c17f57bcc9869">More...</a><br/></td></tr>
+<tr class="separator:ae67fc45354426ff83c7c17f57bcc9869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f1aeb3f1e5863abc2c7872b841bc3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a77f1aeb3f1e5863abc2c7872b841bc3c">ARCOMMANDS_Decoder_SetSkyControllerWifiStateAllWifiAuthChannelChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a5372c72ebfb0847f8d393de97daa8df3">ARCOMMANDS_Decoder_SkyControllerWifiStateAllWifiAuthChannelChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a77f1aeb3f1e5863abc2c7872b841bc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.WifiState.AllWifiAuthChannelChanged  <a href="#a77f1aeb3f1e5863abc2c7872b841bc3c">More...</a><br/></td></tr>
+<tr class="separator:a77f1aeb3f1e5863abc2c7872b841bc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30dfd5f7e17baac36d8e573328a1142"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ae30dfd5f7e17baac36d8e573328a1142">ARCOMMANDS_Decoder_SetSkyControllerWifiRequestWifiListCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a9ba4162d62c7c2e0d7caf6be3e6f73bc">ARCOMMANDS_Decoder_SkyControllerWifiRequestWifiListCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:ae30dfd5f7e17baac36d8e573328a1142"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.Wifi.RequestWifiList  <a href="#ae30dfd5f7e17baac36d8e573328a1142">More...</a><br/></td></tr>
 <tr class="separator:ae30dfd5f7e17baac36d8e573328a1142"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1676,6 +1744,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aea4d94793f9e931fd50ba041a7932187"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aea4d94793f9e931fd50ba041a7932187">ARCOMMANDS_Decoder_SetSkyControllerWifiForgetWifiCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a639ba85330a42d43e56ec4b9b32bf3ce">ARCOMMANDS_Decoder_SkyControllerWifiForgetWifiCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:aea4d94793f9e931fd50ba041a7932187"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.Wifi.ForgetWifi  <a href="#aea4d94793f9e931fd50ba041a7932187">More...</a><br/></td></tr>
 <tr class="separator:aea4d94793f9e931fd50ba041a7932187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495da58feef294a78c062e61ec478efb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a495da58feef294a78c062e61ec478efb">ARCOMMANDS_Decoder_SetSkyControllerWifiWifiAuthChannelCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a7f41562e9907b4a754c2961c37250532">ARCOMMANDS_Decoder_SkyControllerWifiWifiAuthChannelCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:a495da58feef294a78c062e61ec478efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.Wifi.WifiAuthChannel  <a href="#a495da58feef294a78c062e61ec478efb">More...</a><br/></td></tr>
+<tr class="separator:a495da58feef294a78c062e61ec478efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a508ef383c407d316a40671971f2f33f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a508ef383c407d316a40671971f2f33f3">ARCOMMANDS_Decoder_SetSkyControllerDeviceRequestDeviceListCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ac3fb600131007639bb1d4bec45af342b">ARCOMMANDS_Decoder_SkyControllerDeviceRequestDeviceListCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a508ef383c407d316a40671971f2f33f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.Device.RequestDeviceList  <a href="#a508ef383c407d316a40671971f2f33f3">More...</a><br/></td></tr>
 <tr class="separator:a508ef383c407d316a40671971f2f33f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1724,12 +1795,18 @@ Functions</h2></td></tr>
 <tr class="memitem:aedd99fa9c5a5b9f179f133a73962c352"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aedd99fa9c5a5b9f179f133a73962c352">ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsAccessPointChannelCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#ab7d876457215f41364a93b3f0627eb86">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsAccessPointChannelCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:aedd99fa9c5a5b9f179f133a73962c352"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.AccessPointSettings.AccessPointChannel  <a href="#aedd99fa9c5a5b9f179f133a73962c352">More...</a><br/></td></tr>
 <tr class="separator:aedd99fa9c5a5b9f179f133a73962c352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede733a4fd14366d06d76a1b7df9c5d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aede733a4fd14366d06d76a1b7df9c5d1">ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsWifiSelectionCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a6ea606a2a83e2b002cbc473aafaf1829">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsWifiSelectionCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:aede733a4fd14366d06d76a1b7df9c5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.AccessPointSettings.WifiSelection  <a href="#aede733a4fd14366d06d76a1b7df9c5d1">More...</a><br/></td></tr>
+<tr class="separator:aede733a4fd14366d06d76a1b7df9c5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70c0345012c40fe2490f859f2b650e92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a70c0345012c40fe2490f859f2b650e92">ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsStateAccessPointSSIDChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a62e0c106e6a578de63cf3f4291a4ef8c">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateAccessPointSSIDChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:a70c0345012c40fe2490f859f2b650e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.AccessPointSettingsState.AccessPointSSIDChanged  <a href="#a70c0345012c40fe2490f859f2b650e92">More...</a><br/></td></tr>
 <tr class="separator:a70c0345012c40fe2490f859f2b650e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6697067e7464c0cc9dc2dde2d56a8e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab6697067e7464c0cc9dc2dde2d56a8e3">ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsStateAccessPointChannelChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a127b19852579fc0890dbe9368a9752f9">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateAccessPointChannelChangedCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:ab6697067e7464c0cc9dc2dde2d56a8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.AccessPointSettingsState.AccessPointChannelChanged  <a href="#ab6697067e7464c0cc9dc2dde2d56a8e3">More...</a><br/></td></tr>
 <tr class="separator:ab6697067e7464c0cc9dc2dde2d56a8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29507224bb5c6fbad6619de25e6e40b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ab29507224bb5c6fbad6619de25e6e40b">ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsStateWifiSelectionChangedCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#afdcf1320cb2af96ab41a9db92324408f">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateWifiSelectionChangedCallback_t</a> callback, void *custom)</td></tr>
+<tr class="memdesc:ab29507224bb5c6fbad6619de25e6e40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.AccessPointSettingsState.WifiSelectionChanged  <a href="#ab29507224bb5c6fbad6619de25e6e40b">More...</a><br/></td></tr>
+<tr class="separator:ab29507224bb5c6fbad6619de25e6e40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abca9e3408248b85643f1c72762a347cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARCOMMANDS__Decoder_8h.html#abca9e3408248b85643f1c72762a347cb">ARCOMMANDS_Decoder_SetSkyControllerCameraResetOrientationCallback</a> (<a class="el" href="ARCOMMANDS__Decoder_8h.html#a4fe21cf76d5ed3e180c999a958983e14">ARCOMMANDS_Decoder_SkyControllerCameraResetOrientationCallback_t</a> callback, void *custom)</td></tr>
 <tr class="memdesc:abca9e3408248b85643f1c72762a347cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback setter for the command SkyController.Camera.ResetOrientation  <a href="#abca9e3408248b85643f1c72762a347cb">More...</a><br/></td></tr>
 <tr class="separator:abca9e3408248b85643f1c72762a347cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5362,6 +5439,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a39ba4eaf80070ab5179718e698c93d0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetCommonGPSControllerPositionForRunCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#ac38df251490fadf126f4bf53f5f3c853">ARCOMMANDS_Decoder_CommonGPSControllerPositionForRunCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command common.GPS.ControllerPositionForRun </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command common.GPS.ControllerPositionForRun </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aef4b8318ed5e99bd18db6029afacf268"></a>
 <div class="memitem">
 <div class="memproto">
@@ -6440,6 +6552,41 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>new callback for the command JumpingSumo.AnimationsState.JumpLoadChanged </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a216e68e8695e68224a7aa347d70adab1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetJumpingSumoAnimationsStateJumpTypeChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#acf897a77f5cb78c06557da8cb9c77e25">ARCOMMANDS_Decoder_JumpingSumoAnimationsStateJumpTypeChangedCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command JumpingSumo.AnimationsState.JumpTypeChanged </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command JumpingSumo.AnimationsState.JumpTypeChanged </td></tr>
     <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
   </table>
   </dd>
@@ -8197,6 +8344,76 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a263a1da016c3a93f9939cf577aa067fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetMiniDroneGPSControllerLatitudeForRunCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6d174ec905f2e0bcc497290708bcfa2d">ARCOMMANDS_Decoder_MiniDroneGPSControllerLatitudeForRunCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command MiniDrone.GPS.ControllerLatitudeForRun </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command MiniDrone.GPS.ControllerLatitudeForRun </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ac171a42d25b9d708e878cee37bd4f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetMiniDroneGPSControllerLongitudeForRunCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#aded3aab27a00e2c2d9061200f7d904ea">ARCOMMANDS_Decoder_MiniDroneGPSControllerLongitudeForRunCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command MiniDrone.GPS.ControllerLongitudeForRun </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command MiniDrone.GPS.ControllerLongitudeForRun </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ab1f5adb55ee1e0f9d075b06572163569"></a>
 <div class="memitem">
 <div class="memproto">
@@ -9247,6 +9464,76 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab29507224bb5c6fbad6619de25e6e40b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsStateWifiSelectionChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#afdcf1320cb2af96ab41a9db92324408f">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsStateWifiSelectionChangedCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command SkyController.AccessPointSettingsState.WifiSelectionChanged </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command SkyController.AccessPointSettingsState.WifiSelectionChanged </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aede733a4fd14366d06d76a1b7df9c5d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetSkyControllerAccessPointSettingsWifiSelectionCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a6ea606a2a83e2b002cbc473aafaf1829">ARCOMMANDS_Decoder_SkyControllerAccessPointSettingsWifiSelectionCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command SkyController.AccessPointSettings.WifiSelection </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command SkyController.AccessPointSettings.WifiSelection </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="abca9e3408248b85643f1c72762a347cb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -9947,6 +10234,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a77f1aeb3f1e5863abc2c7872b841bc3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetSkyControllerWifiStateAllWifiAuthChannelChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a5372c72ebfb0847f8d393de97daa8df3">ARCOMMANDS_Decoder_SkyControllerWifiStateAllWifiAuthChannelChangedCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command SkyController.WifiState.AllWifiAuthChannelChanged </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command SkyController.WifiState.AllWifiAuthChannelChanged </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a59e87149f6ba756326c991982ebb506f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -9975,6 +10297,41 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>new callback for the command SkyController.WifiState.ConnexionChanged </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae67fc45354426ff83c7c17f57bcc9869"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetSkyControllerWifiStateWifiAuthChannelListChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#abef8b0cc4b81d59ca130452aff6ab47d">ARCOMMANDS_Decoder_SkyControllerWifiStateWifiAuthChannelListChangedCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command SkyController.WifiState.WifiAuthChannelListChanged </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command SkyController.WifiState.WifiAuthChannelListChanged </td></tr>
     <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
   </table>
   </dd>
@@ -10017,13 +10374,48 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a495da58feef294a78c062e61ec478efb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARCOMMANDS_Decoder_SetSkyControllerWifiWifiAuthChannelCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARCOMMANDS__Decoder_8h.html#a7f41562e9907b4a754c2961c37250532">ARCOMMANDS_Decoder_SkyControllerWifiWifiAuthChannelCallback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>custom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback setter for the command SkyController.Wifi.WifiAuthChannel </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>new callback for the command SkyController.Wifi.WifiAuthChannel </td></tr>
+    <tr><td class="paramname">custom</td><td>pointer that will be passed to all calls to the callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_ca27a71cd02a4621726d91b44aef999d.html">libARCommands</a></li><li class="navelem"><a class="el" href="dir_85b40e3b0d5185d8123de194465f5096.html">Includes</a></li><li class="navelem"><a class="el" href="dir_22ede77139ba202e6eee02a87cce666f.html">libARCommands</a></li><li class="navelem"><a class="el" href="ARCOMMANDS__Decoder_8h.html">ARCOMMANDS_Decoder.h</a></li>
-    <li class="footer">Generated on Tue Dec 2 2014 11:40:43 for libARCommands by
+    <li class="footer">Generated on Tue Jan 20 2015 15:34:20 for libARCommands by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
