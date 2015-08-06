@@ -125,6 +125,9 @@ typedef void *&#160;</td><td class="memItemRight" valign="bottom"><b>ARUTILS_BLE
 <tr class="memitem:ad4aca37ed99bb2e7564b4cd969472f01"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#ad4aca37ed99bb2e7564b4cd969472f01">ARUTILS_Manager_Ftp_Delete_t</a> )(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath)</td></tr>
 <tr class="memdesc:ad4aca37ed99bb2e7564b4cd969472f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an remote Ftp server file.  <a href="#ad4aca37ed99bb2e7564b4cd969472f01">More...</a><br/></td></tr>
 <tr class="separator:ad4aca37ed99bb2e7564b4cd969472f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38d9fdfe892ead0d87fd3fe9de55d66"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#ae38d9fdfe892ead0d87fd3fe9de55d66">ARUTILS_Manager_Ftp_RemoveDir_t</a> )(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath)</td></tr>
+<tr class="memdesc:ae38d9fdfe892ead0d87fd3fe9de55d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an remote Ftp server directory.  <a href="#ae38d9fdfe892ead0d87fd3fe9de55d66">More...</a><br/></td></tr>
+<tr class="separator:ae38d9fdfe892ead0d87fd3fe9de55d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5768a0a856bfe0c561c7b6dce11dceed"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a5768a0a856bfe0c561c7b6dce11dceed">ARUTILS_Manager_Ftp_Rename_t</a> )(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *oldNamePath, const char *newNamePath)</td></tr>
 <tr class="memdesc:a5768a0a856bfe0c561c7b6dce11dceed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an remote Ftp server file.  <a href="#a5768a0a856bfe0c561c7b6dce11dceed">More...</a><br/></td></tr>
 <tr class="separator:a5768a0a856bfe0c561c7b6dce11dceed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +152,12 @@ Functions</h2></td></tr>
 <tr class="memitem:af52d037de211e5c0083d6eead31fedcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#af52d037de211e5c0083d6eead31fedcb">ARUTILS_Manager_CloseBLEFtp</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager)</td></tr>
 <tr class="memdesc:af52d037de211e5c0083d6eead31fedcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an WifiFtp Connection.  <a href="#af52d037de211e5c0083d6eead31fedcb">More...</a><br/></td></tr>
 <tr class="separator:af52d037de211e5c0083d6eead31fedcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade743ed3a99e3f86064cdec4e460538e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#ade743ed3a99e3f86064cdec4e460538e">ARUTILS_Manager_InitRFCommFtp</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager)</td></tr>
+<tr class="memdesc:ade743ed3a99e3f86064cdec4e460538e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new RFComm FTP Connection.  <a href="#ade743ed3a99e3f86064cdec4e460538e">More...</a><br/></td></tr>
+<tr class="separator:ade743ed3a99e3f86064cdec4e460538e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad016f7d126dea6cc952ebc1f6d92b06a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#ad016f7d126dea6cc952ebc1f6d92b06a">ARUTILS_Manager_CloseRFCommFtp</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager)</td></tr>
+<tr class="memdesc:ad016f7d126dea6cc952ebc1f6d92b06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an RFComm Ftp Connection.  <a href="#ad016f7d126dea6cc952ebc1f6d92b06a">More...</a><br/></td></tr>
+<tr class="separator:ad016f7d126dea6cc952ebc1f6d92b06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb3b1bddb5ea2736f919c4ec83aeba6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#afb3b1bddb5ea2736f919c4ec83aeba6a">ARUTILS_Manager_Ftp_Connection_Disconnect</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager)</td></tr>
 <tr class="memdesc:afb3b1bddb5ea2736f919c4ec83aeba6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect an remote Ftp server connection.  <a href="#afb3b1bddb5ea2736f919c4ec83aeba6a">More...</a><br/></td></tr>
 <tr class="separator:afb3b1bddb5ea2736f919c4ec83aeba6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +188,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a716ffcc957a3b25d853f7cb2bd532c41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a716ffcc957a3b25d853f7cb2bd532c41">ARUTILS_Manager_Ftp_Delete</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath)</td></tr>
 <tr class="memdesc:a716ffcc957a3b25d853f7cb2bd532c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an remote Ftp server file.  <a href="#a716ffcc957a3b25d853f7cb2bd532c41">More...</a><br/></td></tr>
 <tr class="separator:a716ffcc957a3b25d853f7cb2bd532c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7dcf57ae2e0b94abf70fa96a645a5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#aed7dcf57ae2e0b94abf70fa96a645a5a">ARUTILS_Manager_Ftp_RemoveDir</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath)</td></tr>
+<tr class="memdesc:aed7dcf57ae2e0b94abf70fa96a645a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an remote Ftp server directory.  <a href="#aed7dcf57ae2e0b94abf70fa96a645a5a">More...</a><br/></td></tr>
+<tr class="separator:aed7dcf57ae2e0b94abf70fa96a645a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f1f54e0c17df85c55ff158003b977b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a6f1f54e0c17df85c55ff158003b977b5">ARUTILS_Manager_Ftp_Rename</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *oldNamePath, const char *newNamePath)</td></tr>
 <tr class="memdesc:a6f1f54e0c17df85c55ff158003b977b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename an remote Ftp server file.  <a href="#a6f1f54e0c17df85c55ff158003b977b5">More...</a><br/></td></tr>
 <tr class="separator:a6f1f54e0c17df85c55ff158003b977b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -463,6 +475,34 @@ This is an application-provided object, OS Dependant </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="ae38d9fdfe892ead0d87fd3fe9de55d66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(* ARUTILS_Manager_Ftp_RemoveDir_t)(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete an remote Ftp server directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The address of the pointer on the Ftp Manager </td></tr>
+    <tr><td class="paramname">namePath</td><td>The string of the file directory path on the remote Ftp server </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARUTILS_OK. Otherwise, it returns an error number of eARUTILS_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#aef5c8e84706f84d5125d3c662e7af6b3" title="Create a new Ftp Manager. ">ARUTILS_Manager_New</a> () </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5768a0a856bfe0c561c7b6dce11dceed"></a>
 <div class="memitem">
 <div class="memproto">
@@ -564,6 +604,32 @@ This is an application-provided object, OS Dependant </dd></dl>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#a99d3f556cef6b60721a2917fa1b53ad8" title="Create a new BLEFtp Connection. ">ARUTILS_Manager_InitBLEFtp</a> () </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad016f7d126dea6cc952ebc1f6d92b06a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARUTILS_Manager_CloseRFCommFtp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete an RFComm Ftp Connection. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function frees memory </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The address of the pointer on the Ftp Connection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#a4f361d99521edad8a519d5f2231d378e" title="Create a new WifiFtp Connection. ">ARUTILS_Manager_InitWifiFtp</a> () </dd></dl>
 
 </div>
 </div>
@@ -1084,6 +1150,48 @@ This is an application-provided object, OS Dependant </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="aed7dcf57ae2e0b94abf70fa96a645a5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_Manager_Ftp_RemoveDir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>namePath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete an remote Ftp server directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The address of the pointer on the Ftp Manager </td></tr>
+    <tr><td class="paramname">namePath</td><td>The string of the directory name path on the remote Ftp server </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARUTILS_OK. Otherwise, it returns an error number of eARUTILS_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#a4f361d99521edad8a519d5f2231d378e" title="Create a new WifiFtp Connection. ">ARUTILS_Manager_InitWifiFtp</a> (), <a class="el" href="ARUTILS__Manager_8h.html#a99d3f556cef6b60721a2917fa1b53ad8" title="Create a new BLEFtp Connection. ">ARUTILS_Manager_InitBLEFtp</a> () </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6f1f54e0c17df85c55ff158003b977b5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1183,6 +1291,38 @@ This is an application-provided object, OS Dependant </dd></dl>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#af52d037de211e5c0083d6eead31fedcb" title="Delete an WifiFtp Connection. ">ARUTILS_Manager_CloseBLEFtp</a> () </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ade743ed3a99e3f86064cdec4e460538e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_Manager_InitRFCommFtp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new RFComm FTP Connection. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function allocates memory </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The Manager </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns an ARUTILS_OK. Otherwise an error number of eARUTILS_ERROR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#ad016f7d126dea6cc952ebc1f6d92b06a" title="Delete an RFComm Ftp Connection. ">ARUTILS_Manager_CloseRFCommFtp</a> () </dd></dl>
 
 </div>
 </div>
@@ -1289,7 +1429,7 @@ This is an application-provided object, OS Dependant </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_54ad19b610ffd2eeb7cde73613fa1bb6.html">libARUtils</a></li><li class="navelem"><a class="el" href="dir_2551b9a3f9cccc430adf69ec43225b0f.html">Includes</a></li><li class="navelem"><a class="el" href="dir_6aee8488e1c78dff00c51bd7b238b48f.html">libARUtils</a></li><li class="navelem"><a class="el" href="ARUTILS__Manager_8h.html">ARUTILS_Manager.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:17 for libARUtils by
+    <li class="footer">Generated on Thu Aug 6 2015 16:14:34 for libARUtils by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

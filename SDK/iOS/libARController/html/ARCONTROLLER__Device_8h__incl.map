@@ -1,0 +1,15 @@
+<map id="ARCONTROLLER_Device.h" name="ARCONTROLLER_Device.h">
+<area shape="rect" id="node3" href="/Users/d.bertrand/Documents/SDKGerritCompiled/ARSDKBuildUtils/Targets/iOS/Build/Doc/libARSAL/libARSAL.tag$ARSAL__Print_8h.html" title="libARSAL/ARSAL_Print.h" alt="" coords="130,172,302,197"/>
+<area shape="rect" id="node5" href="/Users/d.bertrand/Documents/SDKGerritCompiled/ARSDKBuildUtils/Targets/iOS/Build/Doc/libARSAL/libARSAL.tag$ARSAL__Mutex_8h.html" title="libARSAL/ARSAL_Mutex.h" alt="" coords="376,172,557,197"/>
+<area shape="rect" id="node7" href="$ARCONTROLLER__Error_8h.html" title="libARController errors known. " alt="" coords="1130,512,1355,551"/>
+<area shape="rect" id="node8" href="$ARCONTROLLER__Dictionary_8h_source.html" title="libARController/ARCONTROLLER\l_Dictionary.h" alt="" coords="880,165,1104,204"/>
+<area shape="rect" id="node11" href="$ARCONTROLLER__Feature_8h.html" title="Feature controller allow to send command related of a Feature. " alt="" coords="544,79,768,117"/>
+<area shape="rect" id="node17" href="$ARCONTROLLER__Stream_8h.html" title="ARCONTROLLER_Stream allow to operate ARStream for receive a stream. " alt="" coords="1894,252,2119,291"/>
+<area shape="rect" id="node4" href="/Users/d.bertrand/Documents/SDKGerritCompiled/ARSDKBuildUtils/Targets/iOS/Build/Doc/libARSAL/libARSAL.tag$ARSAL__Time_8h.html" title="libARSAL/ARSAL_Time.h" alt="" coords="129,259,303,284"/>
+<area shape="rect" id="node10" href="$ARCONTROLLER__DICTIONARY__Key_8h.html" title=".h " alt="" coords="930,252,1155,291"/>
+<area shape="rect" id="node13" href="$ARCONTROLLER__Network_8h.html" title="ARCONTROLLER_Network allow to operate an ARNETWORK_Manager for send and receive commands. " alt="" coords="1369,165,1594,204"/>
+<area shape="rect" id="node14" href="/Users/d.bertrand/Documents/SDKGerritCompiled/ARSDKBuildUtils/Targets/iOS/Build/Doc/libARSAL/libARSAL.tag$ARSAL__Thread_8h.html" title="libARSAL/ARSAL_Thread.h" alt="" coords="1280,345,1467,371"/>
+<area shape="rect" id="node20" href="$ARCONTROLLER__Frame_8h.html" title="ARCONTROLLER_Frame. " alt="" coords="2385,512,2610,551"/>
+<area shape="rect" id="node22" href="$ARCONTROLLER__StreamQueue_8h.html" title="ARCONTROLLER_StreamQueue. " alt="" coords="2230,339,2455,377"/>
+<area shape="rect" id="node23" href="$ARCONTROLLER__StreamPool_8h.html" title="ARCONTROLLER_StreamPool. " alt="" coords="2093,425,2318,464"/>
+</map>

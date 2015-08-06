@@ -23,6 +23,7 @@ var ARNETWORK__Manager_8h =
     [ "ARNETWORK_Manager_FlushOutputBuffer", "ARNETWORK__Manager_8h.html#a8767b29d8adb5a76c0e2a072ea8fd925", null ],
     [ "ARNETWORK_Manager_GetEstimatedLatency", "ARNETWORK__Manager_8h.html#a4fe209e3978a247f02ebf23c8f00be6c", null ],
     [ "ARNETWORK_Manager_GetEstimatedMissPercentage", "ARNETWORK__Manager_8h.html#af8ae55795f8d1988f9fb1a5bf7e1ff3b", null ],
+    [ "ARNETWORK_Manager_GetInputDataEventFd", "ARNETWORK__Manager_8h.html#ad83a152e0a52c12ce62d56ca2768c27b", null ],
     [ "ARNETWORK_Manager_New", "ARNETWORK__Manager_8h.html#a50a86539c55dbf2a54f0e22baccdf578", null ],
     [ "ARNETWORK_Manager_ReadData", "ARNETWORK__Manager_8h.html#aa96fd246308dd5f5cb08b762080ff5c6", null ],
     [ "ARNETWORK_Manager_ReadDataWithTimeout", "ARNETWORK__Manager_8h.html#a7bafbab104b1e8612fb421e9ca1dddd8", null ],

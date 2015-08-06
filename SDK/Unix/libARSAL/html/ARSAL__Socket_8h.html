@@ -121,6 +121,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9bbace0fc8cfab34f989863da05f9809"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARSAL__Socket_8h.html#a9bbace0fc8cfab34f989863da05f9809">ARSAL_Socket_Setsockopt</a> (int sockfd, int level, int optname, const void *optval, socklen_t optlen)</td></tr>
 <tr class="memdesc:a9bbace0fc8cfab34f989863da05f9809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the socket options.  <a href="#a9bbace0fc8cfab34f989863da05f9809">More...</a><br/></td></tr>
 <tr class="separator:a9bbace0fc8cfab34f989863da05f9809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810778d5d5b1e90dec948eba2096de95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARSAL__Socket_8h.html#a810778d5d5b1e90dec948eba2096de95">ARSAL_Socket_Getsockopt</a> (int sockfd, int level, int optname, void *optval, socklen_t *optlen)</td></tr>
+<tr class="memdesc:a810778d5d5b1e90dec948eba2096de95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the socket options.  <a href="#a810778d5d5b1e90dec948eba2096de95">More...</a><br/></td></tr>
+<tr class="separator:a810778d5d5b1e90dec948eba2096de95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains headers about socket abstraction layer. </p>
@@ -343,6 +346,68 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">On</td><td>success, a file descriptor for the new socket is returned. On error, -1 is returned, and errno is set appropriately. (See errno.h) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a810778d5d5b1e90dec948eba2096de95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ARSAL_Socket_Getsockopt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sockfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>optname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>optval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">socklen_t *&#160;</td>
+          <td class="paramname"><em>optlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the socket options. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sockfd</td><td>The socket to get options </td></tr>
+    <tr><td class="paramname">level</td><td>the protocol level </td></tr>
+    <tr><td class="paramname">optname</td><td>the option name </td></tr>
+    <tr><td class="paramname">optval</td><td>the option value </td></tr>
+    <tr><td class="paramname">optlen</td><td>the length of the option value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, 0 is returned. Otherwise, -1 is returned, and errno is set appropriately. (See errno.h) </td></tr>
   </table>
   </dd>
 </dl>
@@ -792,7 +857,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_92e87c0011de15a91d727722184b512f.html">libARSAL</a></li><li class="navelem"><a class="el" href="dir_67c5c2751b11b6f00a50550fbe309f24.html">Includes</a></li><li class="navelem"><a class="el" href="dir_7bc5c939eb81e99d7074ea3d1cf8ccd2.html">libARSAL</a></li><li class="navelem"><a class="el" href="ARSAL__Socket_8h.html">ARSAL_Socket.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:16 for libARSAL by
+    <li class="footer">Generated on Thu Aug 6 2015 16:14:31 for libARSAL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

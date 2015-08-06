@@ -84,14 +84,14 @@ Include dependency graph for ARNETWORKAL_Manager.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="ARNETWORKAL__Manager_8h__incl.png" border="0" usemap="#ARNETWORKAL__Manager_8h" alt=""/></div>
 <map name="ARNETWORKAL__Manager_8h" id="ARNETWORKAL__Manager_8h">
-<area shape="rect" id="node2" href="ARNETWORKAL__Error_8h.html" title="libARNetworkAL errors known. " alt="" coords="5,81,232,122"/><area shape="rect" id="node3" href="ARNETWORKAL__Frame_8h.html" title="define the network frame protocol " alt="" coords="256,81,483,122"/></map>
+<area shape="rect" id="node2" href="ARNETWORKAL__Error_8h.html" title="libARNetworkAL errors known. " alt="" coords="5,79,230,117"/><area shape="rect" id="node3" href="ARNETWORKAL__Frame_8h.html" title="define the network frame protocol " alt="" coords="255,79,480,117"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ARNETWORKAL__Manager_8h__dep__incl.png" border="0" usemap="#ARNETWORKAL__Manager_8hdep" alt=""/></div>
 <map name="ARNETWORKAL__Manager_8hdep" id="ARNETWORKAL__Manager_8hdep">
-<area shape="rect" id="node2" href="ARNetworkAL_8h.html" title="Global header for libARNetworkAL. " alt="" coords="44,80,160,107"/></map>
+<area shape="rect" id="node2" href="ARNetworkAL_8h.html" title="Global header for libARNetworkAL. " alt="" coords="45,79,161,104"/></map>
 </div>
 </div>
 <p><a href="ARNETWORKAL__Manager_8h_source.html">Go to the source code of this file.</a></p>
@@ -165,6 +165,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9cd44247144185698226f4d5389799f2"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a9cd44247144185698226f4d5389799f2">ARNETWORKAL_Manager_SetOnDisconnectCallback_t</a> )(<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, <a class="el" href="ARNETWORKAL__Manager_8h.html#a0af13a65c09037a0afe6d58b59375abc">ARNETWORKAL_Manager_OnDisconnect_t</a> onDisconnectCallback, void *customData)</td></tr>
 <tr class="memdesc:a9cd44247144185698226f4d5389799f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">function called on disconnect  <a href="#a9cd44247144185698226f4d5389799f2">More...</a><br/></td></tr>
 <tr class="separator:a9cd44247144185698226f4d5389799f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24773756a1ea6d4f018a9db135eec4bc"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a24773756a1ea6d4f018a9db135eec4bc">ARNETWORKAL_Manager_SetBufferSize_t</a> )(<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int bufferSize)</td></tr>
+<tr class="memdesc:a24773756a1ea6d4f018a9db135eec4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a buffer size.  <a href="#a24773756a1ea6d4f018a9db135eec4bc">More...</a><br/></td></tr>
+<tr class="separator:a24773756a1ea6d4f018a9db135eec4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459670a2117e2378c32430a95cbcd605"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a459670a2117e2378c32430a95cbcd605">ARNETWORKAL_Manager_GetBufferSize_t</a> )(<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int *bufferSize)</td></tr>
+<tr class="memdesc:a459670a2117e2378c32430a95cbcd605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a buffer size.  <a href="#a459670a2117e2378c32430a95cbcd605">More...</a><br/></td></tr>
+<tr class="separator:a459670a2117e2378c32430a95cbcd605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -220,6 +226,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a6e108ec7e6a7073a64bc89ffef290de3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a6e108ec7e6a7073a64bc89ffef290de3">ARNETWORKAL_Manager_SetOnDisconnectCallback</a> (<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, <a class="el" href="ARNETWORKAL__Manager_8h.html#a0af13a65c09037a0afe6d58b59375abc">ARNETWORKAL_Manager_OnDisconnect_t</a> onDisconnectCallback, void *customData)</td></tr>
 <tr class="memdesc:a6e108ec7e6a7073a64bc89ffef290de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the OnDisconnect Callback  <a href="#a6e108ec7e6a7073a64bc89ffef290de3">More...</a><br/></td></tr>
 <tr class="separator:a6e108ec7e6a7073a64bc89ffef290de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c76f17a5816a8be4884be7382212fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a30c76f17a5816a8be4884be7382212fb">ARNETWORKAL_Manager_SetSendBufferSize</a> (<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int bufferSize)</td></tr>
+<tr class="memdesc:a30c76f17a5816a8be4884be7382212fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the send buffer.  <a href="#a30c76f17a5816a8be4884be7382212fb">More...</a><br/></td></tr>
+<tr class="separator:a30c76f17a5816a8be4884be7382212fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef0bac0933032d69290a86e09da5b37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a6ef0bac0933032d69290a86e09da5b37">ARNETWORKAL_Manager_SetRecvBufferSize</a> (<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int bufferSize)</td></tr>
+<tr class="memdesc:a6ef0bac0933032d69290a86e09da5b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size of the revceive buffer.  <a href="#a6ef0bac0933032d69290a86e09da5b37">More...</a><br/></td></tr>
+<tr class="separator:a6ef0bac0933032d69290a86e09da5b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff896e6a3e01d62292e260f1d7ab0a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a3ff896e6a3e01d62292e260f1d7ab0a5">ARNETWORKAL_Manager_GetSendBufferSize</a> (<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int *bufferSize)</td></tr>
+<tr class="memdesc:a3ff896e6a3e01d62292e260f1d7ab0a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the send buffer.  <a href="#a3ff896e6a3e01d62292e260f1d7ab0a5">More...</a><br/></td></tr>
+<tr class="separator:a3ff896e6a3e01d62292e260f1d7ab0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8265a2410f5ad2bfaa77e8a8aebcab27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARNETWORKAL__Manager_8h.html#a8265a2410f5ad2bfaa77e8a8aebcab27">ARNETWORKAL_Manager_GetRecvBufferSize</a> (<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int *bufferSize)</td></tr>
+<tr class="memdesc:a8265a2410f5ad2bfaa77e8a8aebcab27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the receive buffer.  <a href="#a8265a2410f5ad2bfaa77e8a8aebcab27">More...</a><br/></td></tr>
+<tr class="separator:a8265a2410f5ad2bfaa77e8a8aebcab27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>network manager allow to send over network. </p>
@@ -354,6 +372,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a459670a2117e2378c32430a95cbcd605"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>(* ARNETWORKAL_Manager_GetBufferSize_t)(<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int *bufferSize)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a buffer size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The manager </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>Pointer which will hold the requested size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error see <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72" title="libARNetworkAL errors known. ">eARNETWORKAL_ERROR</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a0af13a65c09037a0afe6d58b59375abc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -458,6 +498,28 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A callback return code </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a24773756a1ea6d4f018a9db135eec4bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a>(* ARNETWORKAL_Manager_SetBufferSize_t)(<a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *manager, int bufferSize)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a buffer size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The manager </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>The requested buffer size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error see <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72" title="libARNetworkAL errors known. ">eARNETWORKAL_ERROR</a> </dd></dl>
 
 </div>
 </div>
@@ -760,6 +822,78 @@ ARNETWORKAL_Manager_Receiving_t </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a8265a2410f5ad2bfaa77e8a8aebcab27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a> ARNETWORKAL_Manager_GetRecvBufferSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>bufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the size of the receive buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>pointer on the Manager </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>Pointer which will hold the size of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>see <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72" title="libARNetworkAL errors known. ">eARNETWORKAL_ERROR</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ff896e6a3e01d62292e260f1d7ab0a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a> ARNETWORKAL_Manager_GetSendBufferSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>bufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the size of the send buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>pointer on the Manager </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>Pointer which will hold the size of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>see <a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72" title="libARNetworkAL errors known. ">eARNETWORKAL_ERROR</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a2386c736409629670693edfc6888cda8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -952,6 +1086,78 @@ ARNETWORKAL_Manager_Receiving_t </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a6ef0bac0933032d69290a86e09da5b37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a> ARNETWORKAL_Manager_SetRecvBufferSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the size of the revceive buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>pointer on the Manager </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>requested size for the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ARNETWORKAL_OK if the buffer size was set, otherwise see eARNETWORKAL_ERROR. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a30c76f17a5816a8be4884be7382212fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARNETWORKAL__Error_8h.html#a42c656066e8f907213721cb590ae9e72">eARNETWORKAL_ERROR</a> ARNETWORKAL_Manager_SetSendBufferSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARNETWORKAL__Manager__t.html">ARNETWORKAL_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the size of the send buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>pointer on the Manager </td></tr>
+    <tr><td class="paramname">bufferSize</td><td>requested size for the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ARNETWORKAL_OK if the buffer size was set, otherwise see eARNETWORKAL_ERROR. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a63221512c5959972277dbe7ef72c8264"></a>
 <div class="memitem">
 <div class="memproto">
@@ -983,7 +1189,7 @@ ARNETWORKAL_Manager_Receiving_t </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_1975f0b0fc0ae370d5df6892eb1216fb.html">libARNetworkAL</a></li><li class="navelem"><a class="el" href="dir_924e05a1693af4d38ce401f3f6cdb0ec.html">Includes</a></li><li class="navelem"><a class="el" href="dir_94ebf2e6db3b16cafbbf48f42a8b78d7.html">libARNetworkAL</a></li><li class="navelem"><a class="el" href="ARNETWORKAL__Manager_8h.html">ARNETWORKAL_Manager.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:20 for libARNetworkAL by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:46 for libARNetworkAL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

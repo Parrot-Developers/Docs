@@ -45,6 +45,7 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -111,33 +112,49 @@ $(document).ready(function(){initNavTree('ARDISCOVERY__Discovery_8h_source.html'
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ARDISCOVERY_PRODUCT_ARDRONE = ARDISCOVERY_PRODUCT_NSNETSERVICE,     </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ARDISCOVERY_PRODUCT_JS,                                             </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ARDISCOVERY_PRODUCT_SKYCONTROLLER,                                  </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ARDISCOVERY_PRODUCT_BLESERVICE,                                     </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE = ARDISCOVERY_PRODUCT_BLESERVICE,         </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ARDISCOVERY_PRODUCT_MAX                                             </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} eARDISCOVERY_PRODUCT;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductService(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;uint16_t ARDISCOVERY_getProductID(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* ARDISCOVERY_getProductName(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> ARDISCOVERY_getProductPathName(eARDISCOVERY_PRODUCT product, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromProductID(uint16_t productID);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif // _ARDISCOVERY_DISCOVERY_H_</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ARDISCOVERY_PRODUCT_JS_EVO_LIGHT,                                   </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ARDISCOVERY_PRODUCT_JS_EVO_RACE,                                    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ARDISCOVERY_PRODUCT_BLESERVICE,                                     </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE = ARDISCOVERY_PRODUCT_BLESERVICE,     </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_LIGHT,                            </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_BRICK,                            </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_HYDROFOIL,                        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ARDISCOVERY_PRODUCT_MAX                                             </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} eARDISCOVERY_PRODUCT;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_ARDRONE,       </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_JS,            </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_SKYCONTROLLER, </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_MINIDRONE,     </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_MAX            </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} eARDISCOVERY_PRODUCT_FAMILY;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductService(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;uint16_t ARDISCOVERY_getProductID(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* ARDISCOVERY_getProductName(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> ARDISCOVERY_getProductPathName(eARDISCOVERY_PRODUCT product, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromProductID(uint16_t productID);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;eARDISCOVERY_PRODUCT_FAMILY ARDISCOVERY_getProductFamily(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif // _ARDISCOVERY_DISCOVERY_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0561f4920becdd29ed8091a0bb14ad95.html">libARDiscovery</a></li><li class="navelem"><a class="el" href="dir_feddd2d22c0317c0a0db30ae458f33c6.html">Includes</a></li><li class="navelem"><a class="el" href="dir_9cbcf807f952a6b00a51f9300d013d8e.html">libARDiscovery</a></li><li class="navelem"><b>ARDISCOVERY_Discovery.h</b></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:19 for libARDiscovery by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:47 for libARDiscovery by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

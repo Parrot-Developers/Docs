@@ -5,6 +5,7 @@ var ARMEDIA__Manager_8h =
       [ "ARMEDIA_MANAGER_ALREADY_INITIALIZED", "ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5ad85c16eaf2497f4511416072d6f9fe45", null ],
       [ "ARMEDIA_MANAGER_NOT_INITIALIZED", "ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5a2a3fd4d07e6c6c3dc6e1a69331cb99bd", null ]
     ] ],
+    [ "kARMediaManagerDefaultSkyControllerDateKey", "ARMEDIA__Manager_8h.html#aec87a214e36ef54ee77761254f68e82e", null ],
     [ "kARMediaManagerNotificationAccesDenied", "ARMEDIA__Manager_8h.html#adcb440328ede8d69a3d8ac74b4be745f", null ],
     [ "kARMediaManagerNotificationEndOfMediaAdding", "ARMEDIA__Manager_8h.html#a88bfb2d9b63c4bc34dbe5608ef50f91e", null ],
     [ "kARMediaManagerNotificationInitialized", "ARMEDIA__Manager_8h.html#a4927133abfcf7364bbc157d5a2661b10", null ],

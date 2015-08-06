@@ -85,6 +85,8 @@ $(document).ready(function(){initNavTree('ARUPDATER__Downloader_8h.html','');});
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structARUPDATER__DownloadInformation__t.html">ARUPDATER_DownloadInformation_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structARUPDATER__Manager__BlacklistedFirmware__t.html">ARUPDATER_Manager_BlacklistedFirmware_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -92,6 +94,10 @@ Typedefs</h2></td></tr>
 typedef struct <br class="typebreak"/>
 <a class="el" href="structARUPDATER__DownloadInformation__t.html">ARUPDATER_DownloadInformation_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ARUPDATER_DownloadInformation_t</b></td></tr>
 <tr class="separator:ac87db82ba1f63522e549ce8b67d10e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d47d5fd522bd72c090ecf177cdd122f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d47d5fd522bd72c090ecf177cdd122f"></a>
+typedef struct <br class="typebreak"/>
+<a class="el" href="structARUPDATER__Manager__BlacklistedFirmware__t.html">ARUPDATER_Manager_BlacklistedFirmware_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ARUPDATER_Manager_BlacklistedFirmware_t</b></td></tr>
+<tr class="separator:a2d47d5fd522bd72c090ecf177cdd122f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b9b70b9a92909cf0c0b52ef29825bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57b9b70b9a92909cf0c0b52ef29825bc"></a>
 typedef struct <br class="typebreak"/>
 ARUPDATER_Downloader_t&#160;</td><td class="memItemRight" valign="bottom"><b>ARUPDATER_Downloader_t</b></td></tr>
@@ -145,6 +151,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae22605ad0686fc8a9098e3ccd5a6a490"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUPDATER__Downloader_8h.html#ae22605ad0686fc8a9098e3ccd5a6a490">ARUPDATER_Downloader_ThreadIsRunning</a> (<a class="el" href="ARUPDATER__Manager_8h.html#aaf7225af9b1c1c8dea4ca048ff9d43f1">ARUPDATER_Manager_t</a> *manager, <a class="el" href="ARUPDATER__Error_8h.html#adc224c134b547cff3866150b025d117a">eARUPDATER_ERROR</a> *error)</td></tr>
 <tr class="memdesc:ae22605ad0686fc8a9098e3ccd5a6a490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get if the thread is still running.  <a href="#ae22605ad0686fc8a9098e3ccd5a6a490">More...</a><br/></td></tr>
 <tr class="separator:ae22605ad0686fc8a9098e3ccd5a6a490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9d5f37716c910b978b96079179c746"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUPDATER__Error_8h.html#adc224c134b547cff3866150b025d117a">eARUPDATER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUPDATER__Downloader_8h.html#adb9d5f37716c910b978b96079179c746">ARUPDATER_Downloader_GetBlacklistedFirmwareVersionsSync</a> (<a class="el" href="ARUPDATER__Manager_8h.html#aaf7225af9b1c1c8dea4ca048ff9d43f1">ARUPDATER_Manager_t</a> *manager, int alsoCheckRemote, <a class="el" href="structARUPDATER__Manager__BlacklistedFirmware__t.html">ARUPDATER_Manager_BlacklistedFirmware_t</a> ***blacklistedFirmwares)</td></tr>
+<tr class="memdesc:adb9d5f37716c910b978b96079179c746"><td class="mdescLeft">&#160;</td><td class="mdescRight">get all blacklisted firmware versions  <a href="#adb9d5f37716c910b978b96079179c746">More...</a><br/></td></tr>
+<tr class="separator:adb9d5f37716c910b978b96079179c746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>libARUpdater Downloader header file. </p>
@@ -352,6 +361,49 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUPDATER__Downloader_8h.html#a6c65d8222b8c88259334efc3bc89b404" title="Create an object to download all plf files. ">ARUPDATER_Downloader_New</a> () </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adb9d5f37716c910b978b96079179c746"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARUPDATER__Error_8h.html#adc224c134b547cff3866150b025d117a">eARUPDATER_ERROR</a> ARUPDATER_Downloader_GetBlacklistedFirmwareVersionsSync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARUPDATER__Manager_8h.html#aaf7225af9b1c1c8dea4ca048ff9d43f1">ARUPDATER_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alsoCheckRemote</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structARUPDATER__Manager__BlacklistedFirmware__t.html">ARUPDATER_Manager_BlacklistedFirmware_t</a> ***&#160;</td>
+          <td class="paramname"><em>blacklistedFirmwares</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get all blacklisted firmware versions </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">manager</td><td>: pointer on the manager </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alsoCheckRemote</td><td>: 1 if we should check on the internet for balcklisted version </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">blacklistedFirmwares</td><td>: the list of blacklisted versions </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ARUPDATER_OK if operation went well, a description of the error otherwise </dd></dl>
 
 </div>
 </div>
@@ -627,7 +679,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_451c9dd68210c70f482eb0457440e84b.html">libARUpdater</a></li><li class="navelem"><a class="el" href="dir_aa535e52d32972aeed8460a7e7e601c1.html">Includes</a></li><li class="navelem"><a class="el" href="dir_badbd644701f0c183fa38c63214a18d3.html">libARUpdater</a></li><li class="navelem"><a class="el" href="ARUPDATER__Downloader_8h.html">ARUPDATER_Downloader.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:18 for libARUpdater by
+    <li class="footer">Generated on Thu Aug 6 2015 16:14:34 for libARUpdater by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -5,6 +5,7 @@ var ARSAL__Socket_8h =
     [ "ARSAL_Socket_Close", "ARSAL__Socket_8h.html#aa6a5622aaa72a57a1a89f4f259b9d8ca", null ],
     [ "ARSAL_Socket_Connect", "ARSAL__Socket_8h.html#a8d5f5fa26d0ee0cf59dc47fdb4065fdd", null ],
     [ "ARSAL_Socket_Create", "ARSAL__Socket_8h.html#ad9532f98f64eaec58788a6a37675cb0c", null ],
+    [ "ARSAL_Socket_Getsockopt", "ARSAL__Socket_8h.html#a810778d5d5b1e90dec948eba2096de95", null ],
     [ "ARSAL_Socket_Listen", "ARSAL__Socket_8h.html#abff47f50470ffa31bee8e9215b7d45a9", null ],
     [ "ARSAL_Socket_Readv", "ARSAL__Socket_8h.html#a0cc7d31885dd325552d2745d1d660afd", null ],
     [ "ARSAL_Socket_Recv", "ARSAL__Socket_8h.html#a163ef85a39b5459e316f8168f6810119", null ],

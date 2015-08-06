@@ -10,6 +10,8 @@ var ARMEDIA__Error_8h =
       [ "ARMEDIA_ERROR_ENCAPSULER", "ARMEDIA__Error_8h.html#ae6298e2b26c2f7a8abac6b84b48b36fda1364ffa8086ca205a6112f836672e1b2", null ],
       [ "ARMEDIA_ERROR_ENCAPSULER_WAITING_FOR_IFRAME", "ARMEDIA__Error_8h.html#ae6298e2b26c2f7a8abac6b84b48b36fda1da4801b605c10e34fed805ed6b39202", null ],
       [ "ARMEDIA_ERROR_ENCAPSULER_BAD_CODEC", "ARMEDIA__Error_8h.html#ae6298e2b26c2f7a8abac6b84b48b36fda04c01bde6af5ad9496d84388700fe6bc", null ],
+      [ "ARMEDIA_ERROR_ENCAPSULER_BAD_VIDEO_FRAME", "ARMEDIA__Error_8h.html#ae6298e2b26c2f7a8abac6b84b48b36fda53fb8fd0c2e02dbfcbb582ba86f1e18d", null ],
+      [ "ARMEDIA_ERROR_ENCAPSULER_BAD_VIDEO_SAMPLE", "ARMEDIA__Error_8h.html#ae6298e2b26c2f7a8abac6b84b48b36fdac26da016fb78a0419687daf4c06db73a", null ],
       [ "ARMEDIA_ERROR_ENCAPSULER_FILE_ERROR", "ARMEDIA__Error_8h.html#ae6298e2b26c2f7a8abac6b84b48b36fdaa31a822030de4c6eaa78d21a2ca100a1", null ]
     ] ],
     [ "ARMEDIA_Error_ToString", "ARMEDIA__Error_8h.html#aadfa5dd6448762ae39dc62a3fcbaa58d", null ]

@@ -78,7 +78,7 @@ $(document).ready(function(){initNavTree('ARMedia_8h_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">      notice, this list of conditions and the following disclaimer.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    * Redistributions in binary form must reproduce the above copyright</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">      notice, this list of conditions and the following disclaimer in</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">      the documentation and/or other materials provided with the </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">      the documentation and/or other materials provided with the</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">      distribution.</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    * Neither the name of Parrot nor the names</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">      of its contributors may be used to endorse or promote products</span></div>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('ARMedia_8h_source.html','');});
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED </span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF</span></div>
@@ -107,25 +107,26 @@ $(document).ready(function(){initNavTree('ARMedia_8h_source.html','');});
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifndef _ARMEDIA_H_</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _ARMEDIA_H_</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="codeRef" doxygen="/home/n-brulez/workspace/PUB_SDK/ARSDKBuildUtils/Targets/iOS/Build/Doc/libARSAL/libARSAL.tag:../../libARSAL/html/" href="../../libARSAL/html/ARSAL_8h.html">libARSAL/ARSAL.h</a>&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;<a class="codeRef" doxygen="/Users/d.bertrand/Documents/SDKGerritCompiled/ARSDKBuildUtils/Targets/iOS/Build/Doc/libARSAL/libARSAL.tag:../../libARSAL/html/" href="../../libARSAL/html/ARSAL_8h.html">libARSAL/ARSAL.h</a>&gt;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="ARMEDIA__Error_8h.html">libARMedia/ARMEDIA_Error.h</a>&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;libARMedia/ARMEDIA_VideoAtoms.h&gt;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define ARMEDIA_MP4_EXTENSION   &quot;mp4&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ARMEDIA_JPG_EXTENSION   &quot;jpg&quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define ARMEDIA_JSON_DESCRIPTION_DATE_FMT &quot;%FT%H%M%S%z&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ARMEDIA_JSON_DESCRIPTION_MAXLENGTH (256)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DATETIME_MAXLENGTH (32)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UUID_MAXLENGTH (32+1)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    MEDIA_TYPE_VIDEO = 0,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    MEDIA_TYPE_PHOTO,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    MEDIA_TYPE_MAX</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} eMEDIA_TYPE;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif // _ARMEDIA_H_</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ARMEDIA_MOV_EXTENSION   &quot;mov&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ARMEDIA_JPG_EXTENSION   &quot;jpg&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define ARMEDIA_JSON_DESCRIPTION_DATE_FMT &quot;%FT%H%M%S%z&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ARMEDIA_JSON_DESCRIPTION_MAXLENGTH (256)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DATETIME_MAXLENGTH (32)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UUID_MAXLENGTH (32+1)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    MEDIA_TYPE_VIDEO = 0,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    MEDIA_TYPE_PHOTO,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    MEDIA_TYPE_MAX</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} eMEDIA_TYPE;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // _ARMEDIA_H_</span></div>
 <div class="ttc" id="ARSAL_8h_html"><div class="ttname"><a href="../../libARSAL/html/ARSAL_8h.html">ARSAL.h</a></div></div>
 <div class="ttc" id="ARMEDIA__Error_8h_html"><div class="ttname"><a href="ARMEDIA__Error_8h.html">ARMEDIA_Error.h</a></div><div class="ttdoc">libARMedia errors known. </div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -134,7 +135,7 @@ $(document).ready(function(){initNavTree('ARMedia_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a04567ae5b05c25c98ea84d7c09f4a14.html">libARMedia</a></li><li class="navelem"><a class="el" href="dir_6d8086daaefa48b7de1b203182a982a8.html">Includes</a></li><li class="navelem"><a class="el" href="dir_f206e708ccf3fc714d94e4af70a89237.html">libARMedia</a></li><li class="navelem"><b>ARMedia.h</b></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:23 for libARMedia by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:51 for libARMedia by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -116,19 +116,20 @@ $(document).ready(function(){initNavTree('ARMEDIA__Manager_8h_source.html','');}
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;UIKIT_EXTERN NSString *<span class="keyword">const</span> kARMediaManagerNotificationMediaAdded;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;UIKIT_EXTERN NSString *<span class="keyword">const</span> kARMediaManagerNotificationEndOfMediaAdding;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;UIKIT_EXTERN NSString *<span class="keyword">const</span> kARMediaManagerNotificationAccesDenied;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">@interface </span>ARMediaManager : NSObject</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;+ (ARMediaManager *)sharedInstance;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;- (<a class="code" href="ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5">eARMEDIA_MANAGER_ERROR</a>)initWithProjectIDs:(NSArray *)projectIDs;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;- (<a class="code" href="ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5">eARMEDIA_MANAGER_ERROR</a>)update;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;- (void)addMediaToQueue:(NSString *)mediaPath;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;- (NSDictionary *)getProjectDictionary:(NSString *)project;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;- (BOOL)isUpdated;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (BOOL)isUpdating;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (BOOL)isAdding;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;UIKIT_EXTERN NSString *<span class="keyword">const</span> kARMediaManagerDefaultSkyControllerDateKey;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">@interface </span>ARMediaManager : NSObject</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;+ (ARMediaManager *)sharedInstance;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;- (<a class="code" href="ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5">eARMEDIA_MANAGER_ERROR</a>)initWithProjectIDs:(NSArray *)projectIDs;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (<a class="code" href="ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5">eARMEDIA_MANAGER_ERROR</a>)update;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;- (void)addMediaToQueue:(NSString *)mediaPath;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;- (NSDictionary *)getProjectDictionary:(NSString *)project;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;- (BOOL)isUpdated;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (BOOL)isUpdating;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (BOOL)isAdding;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="ARMEDIA__Manager_8h_html_a4927133abfcf7364bbc157d5a2661b10"><div class="ttname"><a href="ARMEDIA__Manager_8h.html#a4927133abfcf7364bbc157d5a2661b10">kARMediaManagerNotificationInitialized</a></div><div class="ttdeci">UIKIT_EXTERN NSString *const kARMediaManagerNotificationInitialized</div><div class="ttdoc">notification key post. </div><div class="ttdef"><b>Definition:</b> ARMEDIA_Manager.h:54</div></div>
 <div class="ttc" id="ARMEDIA__Manager_8h_html_a022df19c34e1261c8f49fe07b0619df5"><div class="ttname"><a href="ARMEDIA__Manager_8h.html#a022df19c34e1261c8f49fe07b0619df5">eARMEDIA_MANAGER_ERROR</a></div><div class="ttdeci">eARMEDIA_MANAGER_ERROR</div><div class="ttdoc">status return by the callback. </div><div class="ttdef"><b>Definition:</b> ARMEDIA_Manager.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -137,7 +138,7 @@ $(document).ready(function(){initNavTree('ARMEDIA__Manager_8h_source.html','');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a04567ae5b05c25c98ea84d7c09f4a14.html">libARMedia</a></li><li class="navelem"><a class="el" href="dir_6d8086daaefa48b7de1b203182a982a8.html">Includes</a></li><li class="navelem"><a class="el" href="dir_f206e708ccf3fc714d94e4af70a89237.html">libARMedia</a></li><li class="navelem"><a class="el" href="ARMEDIA__Manager_8h.html">ARMEDIA_Manager.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:23 for libARMedia by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:51 for libARMedia by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

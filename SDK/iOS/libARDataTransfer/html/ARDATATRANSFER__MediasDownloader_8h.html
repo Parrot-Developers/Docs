@@ -89,7 +89,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ARDATATRANSFER__MediasDownloader_8h__dep__incl.png" border="0" usemap="#ARDATATRANSFER__MediasDownloader_8hdep" alt=""/></div>
 <map name="ARDATATRANSFER__MediasDownloader_8hdep" id="ARDATATRANSFER__MediasDownloader_8hdep">
-<area shape="rect" id="node2" href="ARDataTransfer_8h.html" title="libARDataTransfer header file. Global include file for ARDataTransfer_Manager, ARDataTransfer_DataDow..." alt="" coords="80,80,208,107"/></map>
+<area shape="rect" id="node2" href="ARDataTransfer_8h.html" title="libARDataTransfer header file. Global include file for ARDataTransfer_Manager, ARDataTransfer_DataDow..." alt="" coords="80,79,207,104"/></map>
 </div>
 </div>
 <p><a href="ARDATATRANSFER__MediasDownloader_8h_source.html">Go to the source code of this file.</a></p>
@@ -126,6 +126,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aed0825d08643dce10ae13d29a1176a2c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#aed0825d08643dce10ae13d29a1176a2c">ARDATATRANSFER_MediasDownloader_MediaDownloadCompletionCallback_t</a> )(void *arg, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td></tr>
 <tr class="memdesc:aed0825d08643dce10ae13d29a1176a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion callback of the Media download.  <a href="#aed0825d08643dce10ae13d29a1176a2c">More...</a><br/></td></tr>
 <tr class="separator:aed0825d08643dce10ae13d29a1176a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6315d85bb26b787549081e0156d944e3"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a6315d85bb26b787549081e0156d944e3">ARDATATRANSFER_MediasDownloader_DeleteMediaCallback_t</a> )(void *arg, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td></tr>
+<tr class="memdesc:a6315d85bb26b787549081e0156d944e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completion callback of the Media delete.  <a href="#a6315d85bb26b787549081e0156d944e3">More...</a><br/></td></tr>
+<tr class="separator:a6315d85bb26b787549081e0156d944e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -147,9 +150,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aef6de6bdad0a0926347c0539180bf7bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#aef6de6bdad0a0926347c0539180bf7bb">ARDATATRANSFER_MediasDownloader_CancelGetAvailableMedias</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager)</td></tr>
 <tr class="memdesc:aef6de6bdad0a0926347c0539180bf7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a cancel to the get media list function.  <a href="#aef6de6bdad0a0926347c0539180bf7bb">More...</a><br/></td></tr>
 <tr class="separator:aef6de6bdad0a0926347c0539180bf7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17da58afe6d5262d2332971dd2565a6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a17da58afe6d5262d2332971dd2565a6a">ARDATATRANSFER_MediasDownloader_DeleteMedia</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media)</td></tr>
-<tr class="memdesc:a17da58afe6d5262d2332971dd2565a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the media form the Device.  <a href="#a17da58afe6d5262d2332971dd2565a6a">More...</a><br/></td></tr>
-<tr class="separator:a17da58afe6d5262d2332971dd2565a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a44aca054c024f2af2f5f72b6790429"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a5a44aca054c024f2af2f5f72b6790429">ARDATATRANSFER_MediasDownloader_ResetGetAvailableMedias</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager)</td></tr>
+<tr class="memdesc:a5a44aca054c024f2af2f5f72b6790429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a reset to the get media list function.  <a href="#a5a44aca054c024f2af2f5f72b6790429">More...</a><br/></td></tr>
+<tr class="separator:a5a44aca054c024f2af2f5f72b6790429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef0a9ff5f1adced0d991eed7f3fd82c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a6ef0a9ff5f1adced0d991eed7f3fd82c">ARDATATRANSFER_MediasDownloader_DeleteMedia</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media, <a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a6315d85bb26b787549081e0156d944e3">ARDATATRANSFER_MediasDownloader_DeleteMediaCallback_t</a> deleteMediaCallBack, void *deleteMediaArg)</td></tr>
+<tr class="memdesc:a6ef0a9ff5f1adced0d991eed7f3fd82c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the media form the Device.  <a href="#a6ef0a9ff5f1adced0d991eed7f3fd82c">More...</a><br/></td></tr>
+<tr class="separator:a6ef0a9ff5f1adced0d991eed7f3fd82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed7b6d909be0863794c807ddbee909c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a4ed7b6d909be0863794c807ddbee909c">ARDATATRANSFER_MediasDownloader_AddMediaToQueue</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media, <a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a68111bd51b5983ef5713cd59bb3d3a22">ARDATATRANSFER_MediasDownloader_MediaDownloadProgressCallback_t</a> progressCallback, void *progressArg, <a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#aed0825d08643dce10ae13d29a1176a2c">ARDATATRANSFER_MediasDownloader_MediaDownloadCompletionCallback_t</a> completionCallback, void *completionArg)</td></tr>
 <tr class="memdesc:a4ed7b6d909be0863794c807ddbee909c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a media to the download process queue.  <a href="#a4ed7b6d909be0863794c807ddbee909c">More...</a><br/></td></tr>
 <tr class="separator:a4ed7b6d909be0863794c807ddbee909c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +165,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae8af3f8ad1b3bf25d522157c942901de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#ae8af3f8ad1b3bf25d522157c942901de">ARDATATRANSFER_MediasDownloader_CancelQueueThread</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager)</td></tr>
 <tr class="memdesc:ae8af3f8ad1b3bf25d522157c942901de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a cancel to the medias downloader process queue.  <a href="#ae8af3f8ad1b3bf25d522157c942901de">More...</a><br/></td></tr>
 <tr class="separator:ae8af3f8ad1b3bf25d522157c942901de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45abb5f5d99921ad7458d37a59391077"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a45abb5f5d99921ad7458d37a59391077">ARDATATRANSFER_MediasDownloader_GetThumbnail</a> (<a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *manager, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media)</td></tr>
+<tr class="memdesc:a45abb5f5d99921ad7458d37a59391077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the media thumbnail from the device FTP server.  <a href="#a45abb5f5d99921ad7458d37a59391077">More...</a><br/></td></tr>
+<tr class="separator:a45abb5f5d99921ad7458d37a59391077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>libARDataTransfer MediasDownloader header file. </p>
@@ -246,6 +255,29 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd>ARDATATRANSFER_MediasDownloader_GetAvailableMedias () </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6315d85bb26b787549081e0156d944e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* ARDATATRANSFER_MediasDownloader_DeleteMediaCallback_t)(void *arg, <a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *media, <a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> error)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Completion callback of the Media delete. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The pointer of the user custom argument </td></tr>
+    <tr><td class="paramname">media</td><td>The media to be deleted </td></tr>
+    <tr><td class="paramname">error</td><td>The error status to indicate the media deleted status </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd>ARDATATRANSFER_MediasDownloader_ThreadRun () </dd></dl>
 
 </div>
 </div>
@@ -460,7 +492,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a17da58afe6d5262d2332971dd2565a6a"></a>
+<a class="anchor" id="a6ef0a9ff5f1adced0d991eed7f3fd82c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -474,7 +506,19 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *&#160;</td>
-          <td class="paramname"><em>media</em>&#160;</td>
+          <td class="paramname"><em>media</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a6315d85bb26b787549081e0156d944e3">ARDATATRANSFER_MediasDownloader_DeleteMediaCallback_t</a>&#160;</td>
+          <td class="paramname"><em>deleteMediaCallBack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>deleteMediaArg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -651,6 +695,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a45abb5f5d99921ad7458d37a59391077"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> ARDATATRANSFER_MediasDownloader_GetThumbnail </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structARDATATRANSFER__Media__t.html">ARDATATRANSFER_Media_t</a> *&#160;</td>
+          <td class="paramname"><em>media</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the media thumbnail from the device FTP server. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function allocates memory </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The address of the pointer on the ARDataTransfer Manager </td></tr>
+    <tr><td class="paramname">media</td><td>The media for which the thumbnail is requested </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARDATATRANSFER_OK. Otherwise, it returns an error number of eARDATATRANSFER_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd></dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a24ab91c8b9862a2b44da535ad864f0b7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -746,13 +833,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5a44aca054c024f2af2f5f72b6790429"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARDATATRANSFER__Error_8h.html#a86f86cf7a76ba02c98207b3c32dd55b2">eARDATATRANSFER_ERROR</a> ARDATATRANSFER_MediasDownloader_ResetGetAvailableMedias </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ARDATATRANSFER__Manager_8h.html#a9f306b0ac4427eaa316cabfa653cc6f5">ARDATATRANSFER_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a reset to the get media list function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The pointer of the ARDataTransfer Manager </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARDATATRANSFER_OK. Otherwise, it returns an error number of eARDATATRANSFER_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#a12af6af2f9028edfc2d8aef7ec2c69d1" title="Get the medias count available form the Device. ">ARDATATRANSFER_MediasDownloader_GetAvailableMediasSync</a> (), <a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html#aedb4024f4c3cb6c099f3f9e78992f160" title="Get the medias list available form the Device. ">ARDATATRANSFER_MediasDownloader_GetAvailableMediasAsync</a> () </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_49d2c554729fcb1068799c53759f0caa.html">libARDataTransfer</a></li><li class="navelem"><a class="el" href="dir_9c1a37b948d4bb566f8c3921dbcc8b33.html">Includes</a></li><li class="navelem"><a class="el" href="dir_0f92e55b9add51c19f4a6ea268bdc6c7.html">libARDataTransfer</a></li><li class="navelem"><a class="el" href="ARDATATRANSFER__MediasDownloader_8h.html">ARDATATRANSFER_MediasDownloader.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:23 for libARDataTransfer by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:51 for libARDataTransfer by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

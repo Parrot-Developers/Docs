@@ -1,7 +1,8 @@
 var ARMAVLINK__MissionItemUtils_8h =
 [
     [ "ARMAVLINK_MissionItemUtils_CreateMavlinkChangeSpeedMissionItem", "ARMAVLINK__MissionItemUtils_8h.html#ae25070c6446aef3fd191c5dfd06fe2a5", null ],
-    [ "ARMAVLINK_MissionItemUtils_CreateMavlinkCreatePanorama", "ARMAVLINK__MissionItemUtils_8h.html#a791ccf6632cced6d9225f706ab642bef", null ],
+    [ "ARMAVLINK_MissionItemUtils_CreateMavlinkCreatePanorama", "ARMAVLINK__MissionItemUtils_8h.html#ac5c6a3eb360038aad347cae312c6c68f", null ],
+    [ "ARMAVLINK_MissionItemUtils_CreateMavlinkDelay", "ARMAVLINK__MissionItemUtils_8h.html#a022f29f07ee6ce3424d1f03d735fd211", null ],
     [ "ARMAVLINK_MissionItemUtils_CreateMavlinkImageStartCapture", "ARMAVLINK__MissionItemUtils_8h.html#a5eb6afc30b88e4df0d4fb7b00df4a3b3", null ],
     [ "ARMAVLINK_MissionItemUtils_CreateMavlinkImageStopCapture", "ARMAVLINK__MissionItemUtils_8h.html#aa2ceba5949f68170bc4831aac16526eb", null ],
     [ "ARMAVLINK_MissionItemUtils_CreateMavlinkLandMissionItem", "ARMAVLINK__MissionItemUtils_8h.html#aae977222002ee04ebb964f324f732dab", null ],

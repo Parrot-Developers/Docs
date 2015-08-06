@@ -140,34 +140,37 @@ $(document).ready(function(){initNavTree('ARSAL__BLEManager_8h_source.html','');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a> disconnectionSem;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a> discoverServicesSem;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a> discoverCharacteristicsSem;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a> configurationSem;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">@property</span> (nonatomic, assign) id &lt;ARSALBLEManagerDelegate&gt; delegate;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">@property</span> (nonatomic, retain) CBPeripheral *activePeripheral;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">@property</span> (nonatomic, retain) NSMutableArray *characteristicsNotifications;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;DECLARE_SINGLETON_FOR_CLASS(<a class="code" href="interfaceARSAL__BLEManager.html">ARSAL_BLEManager</a>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;- (eARSAL_ERROR)connectToPeripheral:(CBPeripheral *)peripheral withCentralManager:(<a class="code" href="interfaceARSAL__CentralManager.html">ARSAL_CentralManager</a> *)centralManager;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;- (void)disconnectPeripheral:(CBPeripheral *)peripheral withCentralManager:(<a class="code" href="interfaceARSAL__CentralManager.html">ARSAL_CentralManager</a> *)centralManager;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;- (eARSAL_ERROR)discoverNetworkServices:(NSArray *)servicesUUIDs;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (eARSAL_ERROR)discoverNetworkCharacteristics:(NSArray *)characteristicsUUIDs forService:(CBService *)service;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (eARSAL_ERROR)setNotificationCharacteristic:(CBCharacteristic *)characteristic;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (BOOL)writeData:(NSData *)data toCharacteristic:(CBCharacteristic *)characteristic;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (BOOL)isPeripheralConnected;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (void)registerNotificationCharacteristics:(NSArray *)characteristicsArray toKey:(NSString*)readCharacteristicsKey;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (BOOL)unregisterNotificationCharacteristics:(NSString*)readCharacteristicsKey;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;- (BOOL)cancelReadNotification:(NSString *)readCharacteristicsKey;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;- (eARSAL_ERROR)readNotificationData:(NSMutableArray *)notificationArray maxCount:(<span class="keywordtype">int</span>)maxCount timeout:(NSNumber *)timeout toKey:(NSString *)readCharacteristicsKey;   </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;- (void)readData:(CBCharacteristic *)characteristic;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;- (void)unlock;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (void)reset;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a> writeCharacteristicSem;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a> configurationSem;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">@property</span> (nonatomic, assign) id &lt;ARSALBLEManagerDelegate&gt; delegate;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">@property</span> (nonatomic, retain) CBPeripheral *activePeripheral;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">@property</span> (nonatomic, retain) NSMutableArray *characteristicsNotifications;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;DECLARE_SINGLETON_FOR_CLASS(<a class="code" href="interfaceARSAL__BLEManager.html">ARSAL_BLEManager</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;- (eARSAL_ERROR)connectToPeripheral:(CBPeripheral *)peripheral withCentralManager:(<a class="code" href="interfaceARSAL__CentralManager.html">ARSAL_CentralManager</a> *)centralManager;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;- (void)disconnectPeripheral:(CBPeripheral *)peripheral withCentralManager:(<a class="code" href="interfaceARSAL__CentralManager.html">ARSAL_CentralManager</a> *)centralManager;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (eARSAL_ERROR)discoverNetworkServices:(NSArray *)servicesUUIDs;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (eARSAL_ERROR)discoverNetworkCharacteristics:(NSArray *)characteristicsUUIDs forService:(CBService *)service;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (eARSAL_ERROR)setNotificationCharacteristic:(CBCharacteristic *)characteristic;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (BOOL)writeData:(NSData *)data toCharacteristic:(CBCharacteristic *)characteristic;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (eARSAL_ERROR)writeDataWithResponse:(NSData *)data toCharacteristic:(CBCharacteristic *)characteristic;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (BOOL)isPeripheralConnected;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;- (void)registerNotificationCharacteristics:(NSArray *)characteristicsArray toKey:(NSString*)readCharacteristicsKey;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;- (BOOL)unregisterNotificationCharacteristics:(NSString*)readCharacteristicsKey;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;- (BOOL)cancelReadNotification:(NSString *)readCharacteristicsKey;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;- (BOOL)resetReadNotification:(NSString *)readCharacteristicsKey;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (eARSAL_ERROR)readNotificationData:(NSMutableArray *)notificationArray maxCount:(<span class="keywordtype">int</span>)maxCount timeout:(NSNumber *)timeout toKey:(NSString *)readCharacteristicsKey;   </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;- (void)readData:(CBCharacteristic *)characteristic;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;- (void)unlock;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (void)reset;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif </span></div>
 <div class="ttc" id="protocolARSALBLEManagerDelegate-p_html"><div class="ttname"><a href="protocolARSALBLEManagerDelegate-p.html">ARSALBLEManagerDelegate-p</a></div><div class="ttdef"><b>Definition:</b> ARSAL_BLEManager.h:70</div></div>
 <div class="ttc" id="ARSAL__Sem_8h_html_a74eaf25f9acaab7ff185cb3c30ffda1c"><div class="ttname"><a href="ARSAL__Sem_8h.html#a74eaf25f9acaab7ff185cb3c30ffda1c">ARSAL_Sem_t</a></div><div class="ttdeci">void * ARSAL_Sem_t</div><div class="ttdoc">Define a semaphore type. </div><div class="ttdef"><b>Definition:</b> ARSAL_Sem.h:45</div></div>
 <div class="ttc" id="interfaceARSAL__CentralManager_html"><div class="ttname"><a href="interfaceARSAL__CentralManager.html">ARSAL_CentralManager</a></div><div class="ttdef"><b>Definition:</b> ARSAL_CentralManager.h:40</div></div>
@@ -186,7 +189,7 @@ $(document).ready(function(){initNavTree('ARSAL__BLEManager_8h_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_92e87c0011de15a91d727722184b512f.html">libARSAL</a></li><li class="navelem"><a class="el" href="dir_67c5c2751b11b6f00a50550fbe309f24.html">Includes</a></li><li class="navelem"><a class="el" href="dir_7bc5c939eb81e99d7074ea3d1cf8ccd2.html">libARSAL</a></li><li class="navelem"><a class="el" href="ARSAL__BLEManager_8h.html">ARSAL_BLEManager.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:18 for libARSAL by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:45 for libARSAL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

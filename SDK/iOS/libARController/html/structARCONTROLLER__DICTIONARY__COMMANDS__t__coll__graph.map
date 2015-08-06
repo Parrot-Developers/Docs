@@ -1,0 +1,5 @@
+<map id="ARCONTROLLER_DICTIONARY_COMMANDS_t" name="ARCONTROLLER_DICTIONARY_COMMANDS_t">
+<area shape="rect" id="node2" href="$structARCONTROLLER__DICTIONARY__ELEMENT__t.html" title="Dictionary element to storing the commands element. " alt="" coords="5,205,226,244"/>
+<area shape="rect" id="node3" href="$structARCONTROLLER__DICTIONARY__ARG__t.html" title="Dictionary element to storing the commands arguments coming from the device. " alt="" coords="5,105,226,144"/>
+<area shape="rect" id="node4" href="$unionARCONTROLLER__DICTIONARY__VALUE__t.html" title="Value Type. " alt="" coords="5,5,226,44"/>
+</map>

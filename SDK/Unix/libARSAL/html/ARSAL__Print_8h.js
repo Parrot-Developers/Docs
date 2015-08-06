@@ -12,6 +12,9 @@ var ARSAL__Print_8h =
       [ "ARSAL_PRINT_VERBOSE", "ARSAL__Print_8h.html#a76835f8946e9e2b870de3a5a41a84012a99d9519861ccff40a955ce46fab4007d", null ],
       [ "ARSAL_PRINT_MAX", "ARSAL__Print_8h.html#a76835f8946e9e2b870de3a5a41a84012af6ec229aa2174e9322fe114eeef694b9", null ]
     ] ],
+    [ "ARSAL_Print_GetLevelDescription", "ARSAL__Print_8h.html#a0bd899e35b9e8f948d47e12bbc894d5e", null ],
+    [ "ARSAL_Print_GetMinimumLevel", "ARSAL__Print_8h.html#a3d566a6973c10575f8f48bb1886ddb6c", null ],
     [ "ARSAL_Print_PrintRaw", "ARSAL__Print_8h.html#af62fa8015a667e0da424af447a7d2ca6", null ],
-    [ "ARSAL_Print_SetCallback", "ARSAL__Print_8h.html#a90419690c4af56e8290190f8d5c43181", null ]
+    [ "ARSAL_Print_SetCallback", "ARSAL__Print_8h.html#a90419690c4af56e8290190f8d5c43181", null ],
+    [ "ARSAL_Print_SetMinimumLevel", "ARSAL__Print_8h.html#a7fb90a4574c3756eb0329679c459dfd3", null ]
 ];

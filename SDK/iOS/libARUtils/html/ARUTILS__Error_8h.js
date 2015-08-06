@@ -26,7 +26,8 @@ var ARUTILS__Error_8h =
       [ "ARUTILS_ERROR_HTTP_RESUME", "ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43fa528ed003c0c670eeeed01ddcc1ac7e72", null ],
       [ "ARUTILS_ERROR_HTTP_CANCELED", "ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43fa97f4bdde41a70a7f93b74ac8d610ef59", null ],
       [ "ARUTILS_ERROR_BLE_FAILED", "ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43faecaebbd2056a0732c2d09e94ebf999f7", null ],
-      [ "ARUTILS_ERROR_NETWORK_TYPE", "ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43fa8075c13e8aaf12344b3f58be84b0e634", null ]
+      [ "ARUTILS_ERROR_NETWORK_TYPE", "ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43fa8075c13e8aaf12344b3f58be84b0e634", null ],
+      [ "ARUTILS_ERROR_RFCOMM_FAILED", "ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43fa074587f3a7bdeebf7faef6e35881343b", null ]
     ] ],
     [ "ARUTILS_Error_ToString", "ARUTILS__Error_8h.html#ac8608304df76cfb1ccdb14c2a15a7f6c", null ]
 ];

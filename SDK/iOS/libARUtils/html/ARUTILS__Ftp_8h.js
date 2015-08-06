@@ -24,6 +24,7 @@ var ARUTILS__Ftp_8h =
     [ "ARUTILS_WifiFtp_IsCanceled", "ARUTILS__Ftp_8h.html#a54684cc45541f7c38d53179c302f4018", null ],
     [ "ARUTILS_WifiFtp_List", "ARUTILS__Ftp_8h.html#aa18e4ae5719c49ac2d50793b55062eea", null ],
     [ "ARUTILS_WifiFtp_Put", "ARUTILS__Ftp_8h.html#ad32c544611c4fff67b41255a31f65b13", null ],
+    [ "ARUTILS_WifiFtp_RemoveDir", "ARUTILS__Ftp_8h.html#acfa0fa1a8da9797265fbd37e70988700", null ],
     [ "ARUTILS_WifiFtp_Rename", "ARUTILS__Ftp_8h.html#ae65d12e65a098dac388eca67fd23e7e7", null ],
     [ "ARUTILS_WifiFtp_Size", "ARUTILS__Ftp_8h.html#a84dd48781c39e28a942cf6ed72490aa7", null ]
 ];

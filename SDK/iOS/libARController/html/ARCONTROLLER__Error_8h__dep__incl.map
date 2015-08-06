@@ -1,0 +1,10 @@
+<map id="ARCONTROLLER_Error.h" name="ARCONTROLLER_Error.h">
+<area shape="rect" id="node2" href="$ARController_8h.html" title="Global header for libARController. " alt="" coords="249,519,357,544"/>
+<area shape="rect" id="node3" href="$ARCONTROLLER__Device_8h.html" title="Device controller allow to drive a device. " alt="" coords="208,445,398,471"/>
+<area shape="rect" id="node4" href="$ARCONTROLLER__Dictionary_8h_source.html" title="ARCONTROLLER_Dictionary.h" alt="" coords="43,299,251,324"/>
+<area shape="rect" id="node5" href="$ARCONTROLLER__Feature_8h.html" title="Feature controller allow to send command related of a Feature. " alt="" coords="376,372,571,397"/>
+<area shape="rect" id="node6" href="$ARCONTROLLER__Network_8h.html" title="ARCONTROLLER_Network allow to operate an ARNETWORK_Manager for send and receive commands. " alt="" coords="526,299,725,324"/>
+<area shape="rect" id="node7" href="$ARCONTROLLER__Stream_8h.html" title="ARCONTROLLER_Stream allow to operate ARStream for receive a stream. " alt="" coords="308,225,500,251"/>
+<area shape="rect" id="node8" href="$ARCONTROLLER__StreamPool_8h.html" title="ARCONTROLLER_StreamPool. " alt="" coords="268,79,487,104"/>
+<area shape="rect" id="node9" href="$ARCONTROLLER__StreamQueue_8h.html" title="ARCONTROLLER_StreamQueue. " alt="" coords="254,152,487,177"/>
+</map>

@@ -97,9 +97,6 @@ Functions</h2></td></tr>
 <tr class="memitem:afa784d45684fe81cf196b1b48c0d45b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUPDATER__Manager_8h.html#afa784d45684fe81cf196b1b48c0d45b2">ARUPDATER_Manager_PlfVersionIsUpToDate</a> (<a class="el" href="ARUPDATER__Manager_8h.html#aaf7225af9b1c1c8dea4ca048ff9d43f1">ARUPDATER_Manager_t</a> *manager, const char *const rootFolder, eARDISCOVERY_PRODUCT product, int version, int edition, int extension, const char *localVersionBuffer, int bufferSize, <a class="el" href="ARUPDATER__Error_8h.html#adc224c134b547cff3866150b025d117a">eARUPDATER_ERROR</a> *error)</td></tr>
 <tr class="memdesc:afa784d45684fe81cf196b1b48c0d45b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the version of a given plf file  <a href="#afa784d45684fe81cf196b1b48c0d45b2">More...</a><br/></td></tr>
 <tr class="separator:afa784d45684fe81cf196b1b48c0d45b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc52167dba248c87bf8416f1b8248972"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUPDATER__Manager_8h.html#abc52167dba248c87bf8416f1b8248972">ARUPDATER_Manager_PlfVersionIsBlacklisted</a> (eARDISCOVERY_PRODUCT product, int version, int edition, int extension)</td></tr>
-<tr class="memdesc:abc52167dba248c87bf8416f1b8248972"><td class="mdescLeft">&#160;</td><td class="mdescRight">get if a given plf file is black listed  <a href="#abc52167dba248c87bf8416f1b8248972">More...</a><br/></td></tr>
-<tr class="separator:abc52167dba248c87bf8416f1b8248972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>libARUpdater Manager header file. </p>
@@ -172,56 +169,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer on the new ARUpdater Manager </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUPDATER__Manager_8h.html#ae6dccc627b9025d1472e976badf48c41" title="Delete an ARUpdater Manager. ">ARUPDATER_Manager_Delete</a> () </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="abc52167dba248c87bf8416f1b8248972"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ARUPDATER_Manager_PlfVersionIsBlacklisted </td>
-          <td>(</td>
-          <td class="paramtype">eARDISCOVERY_PRODUCT&#160;</td>
-          <td class="paramname"><em>product</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>version</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>edition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>extension</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>get if a given plf file is black listed </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">product</td><td>: the plf of the product to be tested </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">version</td><td>: the version of the remote plf </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">edition</td><td>: the edition of the remote plf </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">extension</td><td>: the extension of the remote plf </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 if the version is black listed </dd></dl>
 
 </div>
 </div>
@@ -316,7 +263,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_451c9dd68210c70f482eb0457440e84b.html">libARUpdater</a></li><li class="navelem"><a class="el" href="dir_aa535e52d32972aeed8460a7e7e601c1.html">Includes</a></li><li class="navelem"><a class="el" href="dir_badbd644701f0c183fa38c63214a18d3.html">libARUpdater</a></li><li class="navelem"><a class="el" href="ARUPDATER__Manager_8h.html">ARUPDATER_Manager.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:18 for libARUpdater by
+    <li class="footer">Generated on Thu Aug 6 2015 16:14:34 for libARUpdater by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

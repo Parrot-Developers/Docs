@@ -79,14 +79,14 @@ Include dependency graph for ARUTILS_FileSystem.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="ARUTILS__FileSystem_8h__incl.png" border="0" usemap="#ARUTILS__FileSystem_8h" alt=""/></div>
 <map name="ARUTILS__FileSystem_8h" id="ARUTILS__FileSystem_8h">
-<area shape="rect" id="node2" href="ARUTILS__Error_8h.html" title="libARUtils error header, This file contains all error of ARUTILS " alt="" coords="15,81,157,122"/></map>
+<area shape="rect" id="node2" href="ARUTILS__Error_8h.html" title="libARUtils error header, This file contains all error of ARUTILS " alt="" coords="17,79,156,117"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ARUTILS__FileSystem_8h__dep__incl.png" border="0" usemap="#ARUTILS__FileSystem_8hdep" alt=""/></div>
 <map name="ARUTILS__FileSystem_8hdep" id="ARUTILS__FileSystem_8hdep">
-<area shape="rect" id="node2" href="ARUtils_8h.html" title="libARUtils header file. Global include file. " alt="" coords="47,80,125,107"/></map>
+<area shape="rect" id="node2" href="ARUtils_8h.html" title="libARUtils header file. Global include file. " alt="" coords="48,79,125,104"/></map>
 </div>
 </div>
 <p><a href="ARUTILS__FileSystem_8h_source.html">Go to the source code of this file.</a></p>
@@ -99,6 +99,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae46374c90feab353d314faf709046b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__FileSystem_8h.html#ae46374c90feab353d314faf709046b9e">ARUTILS_FileSystem_IsExist</a> (const char *namePath)</td></tr>
+<tr class="memdesc:ae46374c90feab353d314faf709046b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if local file system file or directory exist.  <a href="#ae46374c90feab353d314faf709046b9e">More...</a><br/></td></tr>
+<tr class="separator:ae46374c90feab353d314faf709046b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a6bc212e0df6eaa33f97c1554691054"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__FileSystem_8h.html#a4a6bc212e0df6eaa33f97c1554691054">ARUTILS_FileSystem_GetFileSize</a> (const char *namePath, uint32_t *size)</td></tr>
 <tr class="memdesc:a4a6bc212e0df6eaa33f97c1554691054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local file system file size in bytes.  <a href="#a4a6bc212e0df6eaa33f97c1554691054">More...</a><br/></td></tr>
 <tr class="separator:a4a6bc212e0df6eaa33f97c1554691054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,6 +223,38 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae46374c90feab353d314faf709046b9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_FileSystem_IsExist </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>namePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if local file system file or directory exist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">namePath</td><td>The string name path </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>The size of the file if success </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARUTILS_OK, ARUTILS_ERROR_FILE_NOT_FOUND if it not exist. Otherwise, it returns an error number of eARUTILS_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd></dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a25f9e7f411c682715ba24e81c8172d6c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -330,7 +365,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_54ad19b610ffd2eeb7cde73613fa1bb6.html">libARUtils</a></li><li class="navelem"><a class="el" href="dir_2551b9a3f9cccc430adf69ec43225b0f.html">Includes</a></li><li class="navelem"><a class="el" href="dir_6aee8488e1c78dff00c51bd7b238b48f.html">libARUtils</a></li><li class="navelem"><a class="el" href="ARUTILS__FileSystem_8h.html">ARUTILS_FileSystem.h</a></li>
-    <li class="footer">Generated on Tue Jan 20 2015 15:34:22 for libARUtils by
+    <li class="footer">Generated on Thu Aug 6 2015 16:17:50 for libARUtils by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
