@@ -1,0 +1,134 @@
+\section{ARDiscovery protocol}
+
+The \ARCode{ARDiscovery} library is separated in two parts: Discovery, and Connection. The Discovery part is in charge of discovering the devices on the network (for Wifi products) or nearby (for BLE Products), while the Connection part is responsible for negociating the connection parameters (which are used by the \ARCode{ARNetworkAL} library, among others)
+
+\subsection{Discovery}
+
+\subsubsection{Wifi}
+
+The ARSDK Wifi Products use the \href{https://en.wikipedia.org/wiki/Multicast_DNS}{MDNS} protocol to advertise themselves on the wifi network. You can use any compatible implementation (Apple Bonjour, Avahi, Android NSDManager...) to discover the products.
+
+The service types for the different products are:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+  \hline
+  Product Name & Service Type \\
+  \hline
+  \hline
+  Bebop Drone & \ARCode{._arsdk-0901._udp} \\
+  \hline
+  Jumping Sumo & \ARCode{._arsdk-0902._udp} \\
+  \hline
+  SkyController & \ARCode{._arsdk-0903._udp} \\
+  \hline
+  Jumping Night & \ARCode{._arsdk-0905._udp} \\
+  \hline
+  Jumping Race & \ARCode{._arsdk-0906._udp} \\
+  \hline
+\end{tabular}
+\caption{MDNS Service type for the Wifi Products}
+\end{table}
+
+These identifiers can be found in the \\
+\ARFile{libARDiscovery}{Sources/ARDISCOVERY_Discovery.c} file.
+
+
+You can find the following information from the MDNS Service:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline
+  Information & Source & Description \\
+  \hline
+  \hline
+  Name & Service Name & Display name of the product \\
+  \hline
+  IP & Service resolution & IP address of the product \\
+  \hline
+  Port & Service port & Discovery Connection port \\
+  \hline
+  Extras & Service TxtData & A json string containing extra informations \\
+   & & (currently contains the product serial number) \\
+  \hline
+\end{tabular}
+\caption{Informations available in the MDNS service}
+\end{table}
+
+\newpage
+
+\subsubsection{BLE}
+
+To identify ARSDK BLE Products, you need to get the product Advertising Data. You can use any BLE-Compliant implementation to do this (bluez, Apple CoreBluetooth, Android BluetoothAdapter...).
+
+
+In the manufacturer specific data part of the advertising data, the first 6 bytes should be the following:
+\begin{itemize}
+\item{Vendor ID (2 bytes) : \ARCode{0x0043} (Parrot Bluetooth ID)}
+\item{USB Vendor ID (2 bytes) : \ARCode{0x19cf} (Parrot USB ID)}
+\item{USB Product ID (2 bytes) : Depends on product}
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+  \hline
+  Product Name & USB Product ID \\
+  \hline
+  \hline
+  Rolling Spider & \ARCode{0x0900} \\
+  \hline
+  Airborne Night & \ARCode{0x0907} \\
+  \hline
+  Airborne Cargo & \ARCode{0x0909} \\
+  \hline
+  Hydrofoil & \ARCode{0x090a} \\
+  \hline
+\end{tabular}
+\caption{USB Product IDs of BLE Products}
+\end{table}
+
+These identifiers can be found in the \\
+\ARFile{libARDiscovery}{Sources/ARDISCOVERY_Discovery.c} file.
+
+\newpage
+
+\subsection{Connection}
+
+\subsubsection{Wifi}
+
+For wifi products, further negociation is needed: this is done over a TCP socket, using the MSND Service port.
+
+To negociate the connection, connect a socket to this TCP port, and send a JSON string containing the following informations:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline
+  Key & Mandatory & Description \\
+  \hline
+  \hline
+  \ARCode{d2c_port} & Yes & The UDP port you will use to read data \\
+  \hline
+  \ARCode{controller_type} & Yes & The type of the controller \\
+   & & (e.g. ``Phone'', ``Tablet''...) \\
+  \hline
+  \ARCode{controller_name} & Yes & The name of the controller \\
+   & & (e.g. Application name) \\
+  \hline
+  \ARCode{device_id} & No & The product serial number \\
+  \hline
+\end{tabular}
+\caption{Available keys for connection JSON}
+\end{table}
+
+Here is an example of a valid connection JSON string:\\
+\ARString{\{``d2c_port'':43210, ``controller_type'':``Phone'',\\
+``controller_name'':``com.example.arsdkapp''\}}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

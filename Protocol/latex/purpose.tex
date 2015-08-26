@@ -1,0 +1,50 @@
+\addcontentsline{toc}{section}{Purpose of this document}
+\section*{Purpose of this document}
+
+This document describes the binary protocols used by the ARSDK 3, and specifically by the \ARCode{ARNetworkAL}, \ARCode{ARNetwork}, \ARCode{ARDiscovery}, \ARCode{ARStream} and \ARCode{ARCommands} libraries.
+
+
+This document is made for people who want to implement an ARSDK-compatible framework, without reading all the ARSDK source code and trying to figure out ``how it works''
+
+\addcontentsline{toc}{section}{Conventions}
+\section*{Conventions}
+
+In this document, products are referred by their network connection type, rather by their name, so the Bebop Drone and Jumping Sumo (and variants) are ``Wifi products'', while the Rolling Spider (and variants) is a ``BLE product''. If something is specific to a given product, its name will be written directly.
+
+The connection is done between a controller (the computer, phone, tablet ...) and a device (the Bebop Drone, Rolling Spider ...). In the libraries, some objects are called ``c2d'' or ``d2c'', these notations means ``controller to device'' and ``device to controller'', respectively.
+
+Inside the ARSDK, the products are sometimes called with other names than the actual product name. Here is a simple list of ARSDK alternative names for real names, which should help when reading the ARSDK source code:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+  \hline
+  Real Name & Alternatives \\
+  \hline
+  \hline
+  Bebop Drone & ARDrone, ARDrone 3 \\
+  \hline
+  Jumping Sumo & JS \\
+  \hline
+  Rolling Spider & MiniDrone, RS \\
+  \hline
+  SkyController & SC \\
+  \hline
+  Airborne Night & MiniDroneEvoLight \\
+  \hline
+  Airborne Cargo & MiniDroneEvoBrick \\
+  \hline
+  Hydrofoil & MiniDroneEvoHydrofoil \\
+  \hline
+  Jumping Night & JSEvoLight \\
+  \hline
+  Jumping Race & JSEvoRace \\
+  \hline
+\end{tabular}
+\caption{Name correspondance between product names and ARSDK internal names}
+\end{table}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
