@@ -1,0 +1,452 @@
+\section{ARNetwork protocol}
+
+Each product has its own \ARCode{ARNetwork} configuration. This configuration defines the number, type and direction of multiple buffers. For BLE products, each buffer is mapped on a characteristic, for wifi product, the buffer ids are sent inside the \ARCode{ARNetworkAL} packets.
+
+
+\subsection{Definition of a Buffer}
+
+From an external point of view, a buffer is a fifo which will be duplicated on the remote end. Each buffer has 8 parameters. Some of these parameters are for internal use only, while some have an effect on the binary data transmitted on network. The parameters are:
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+  \hline
+  Parameter & Type & Description \\
+  \hline
+  \hline
+  \ARCode{ID} & \ARCode{int} & The ID of the buffer\\
+            & & ([0-255] for wifi, [0-31] for BLE)\\
+  \hline
+  \ARCode{dataType} & \ARCode{eARNETWORKAL_FRAME_TYPE} & The type of the buffer\\
+            & & This type will be sent in the \ARCode{ARNetworkAL} frames.\\
+  \hline
+  \ARCode{sendingWaitTimeMs} & \ARCode{int} & Deprecated (use 0)\\
+  \ARCode{ackTimeoutMs} & \ARCode{int} & Time (in milliseconds) before considering a frame lost\\
+            & & (Only used for acknowledged buffers)\\
+  \hline
+  \ARCode{numberOfRetry} & \ARCode{int} & Number of retries before considering a frame lost\\
+            & & (Only used for acknowledged buffers)\\
+  \hline
+  \ARCode{numberOfCell} & \ARCode{int32_t} & Size of the internal fifos\\
+  \hline
+  \ARCode{dataCopyMaxSize} & \ARCode{int32_t} & Maximum size of an element in the fifo\\
+  \hline
+  \ARCode{isOverwriting} & \ARCode{int} & Boolean value indicating what to do when\\
+            & & data is received while the fifo is full\\
+  \hline
+\end{tabular}
+}
+\caption{Parameters for an \ARCode{ARNetwork} buffer}
+\end{table}
+
+
+The full configuration parameters for \ARCode{ARNetwork} buffers can be found in\\
+\ARFile{libARNetwork}{Includes/libARNetwork/ARNETWORK_IOBufferParam.h}.
+
+Each buffer is unidirectional (i.e. can be used to send or receive data, not both), but it is possible to have two buffers (one in each direction) sharing the same ID. Buffers are thus separated in the ``sending'' and ``receiving'' buffers list for each product.
+
+On these parameters, only \ARCode{ID} and \ARCode{dataType} are actually sent on network. The other ones only dictate the \ARCode{ARNetwork} internal behavior for these buffers. External implementations should follow this behavior too.
+
+In reception buffers, the \ARCode{dataCopyMaxSize} parameter indicates the maximum size of data (excluding \ARCode{ARNetworkAL} header) that can be read by the library. If a buffer is defined with a \ARCode{dataCopyMaxSize} of 128 in the product, then it will be unable to read a data of 129 or more bytes.
+
+For emission buffers, the \ARCode{isOverwriting} parameter dictates whether trying to send a data while the sending fifo is full will do a drop of an old data, or a refusal of the new data. For reception buffers, it has almost the same effects, except that refused acknowledged data are NOT acknowledged to the sender (so the sender might retry them later, when the buffer is no longer full).
+
+For BLE Networks, the \ARCode{ID} is converted to a characteristic number by adding \ARCode{0xf000}.
+
+
+\subsection{Internal buffers}
+
+
+Regardless of the network type, the buffer with ID 0 to 9 are reserved for \ARCode{ARNetwork} internal use. The current implementation uses buffers 0 and 1 to implement a ping with the following protocol:
+\begin{itemize}
+\item{Send a \ARCode{struct timespec} of the current time to buffer 0}
+\item{Wait for reception of the same \ARCode{struct timespec} on buffer 1}
+\item{Calculate the difference to estimate the ping}
+\end{itemize}
+
+For this to work, the remote end should immediately send the data on buffer 1 when something is received on buffer 0. If the remote does not implement it, then the estimated latency will always be 1sec, with no further effect on the product. (TL;DR : It is not mandatory for a custom implementation to do this)
+
+This function is \textbf{disabled} on BLE networks, to avoid sending useless packets.
+
+Buffers from 2 to 9 are reserved for future use.
+
+\subsection{Acknowledge buffers}
+
+Acknowledge buffers are automatically created by \ARCode{ARNetwork} for each buffer (regardless of their type) with the following configuration:\\
+\texttt{\{\\
+    .ID = baseId + 128; // (+16 for BLE)\\
+    .dataType = ARNETWORKAL\_FRAME\_TYPE\_ACK;\\
+    .sendingWaitTimeMs = 0; // Deprecated\\
+    .ackTimeoutMs = 0; // Unused\\
+    .numberOfRetries = 0; // Unused\\
+    .numberOfCell = 1; // Never more than one ack at a time\\
+    .dataCopyMaxSize = 1; // One byte of data: the sequence number\\
+    .isOverwriting = 0; // Useless by design: there is only one ack waiting at a time\\
+\}}
+
+Acknowledge buffers of sending buffers are added to the receiving buffers list, while acknowledge buffers for receiving buffers are added to the sending buffers list.
+
+\subsection{Per device buffers}
+
+\subsubsection{Bebop Drone \& SkyController}
+
+The Bebop Drone and the SkyController share the same buffer configuration:
+
+\subsubsection*{Controller to Device buffers}
+\begin{itemize}
+\item{
+    Non ack data (periodic commands for piloting and camera orientation).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 10}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 2; // PCMD + Camera}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 1; // Periodic data: most recent is better}\\
+    \texttt{\}}
+  }
+\item{
+    Ack data (Events, settings ...).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 11}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = 5;}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\item{
+    Emergency data (Emergency command only).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 12}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = -1; // Infinite}\\
+    \texttt{  .numberOfCell = 1;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\item{
+    ARStream video acks.\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 13}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 1000; // Enough space ...}\\
+    \texttt{  .dataCopyMaxSize = 18; // Size of an ack packet}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\end{itemize}
+
+
+\subsubsection*{Device to Controller buffers}
+\begin{itemize}
+\item{
+    Non ack data (periodic reports from the device).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 127}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 1; // Periodic data: most recent is better}\\
+    \texttt{\}}
+}
+\item{
+    Ack data (Events, settings ...).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 126}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = 5;}\\
+    \texttt{  .numberOfCell = 256;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\item{
+    ARStream video data.\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 125}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
+    \texttt{                  // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .dataCopyMaxSize = <arstream\_fragment\_size>;}\\
+    \texttt{                     // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\end{itemize}
+
+\newpage
+
+\subsubsection{Jumping Sumo, Jumping Night \& Jumping Race}
+
+The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer configuration:
+
+\subsubsection*{Controller to Device buffers}
+\begin{itemize}
+\item{
+    Non ack data (periodic commands for piloting).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 10}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 1;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 1; // Periodic data: most recent is better}\\
+    \texttt{\}}
+}
+\item{
+    Ack data (Events, settings ...).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 11}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = 5;}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\item{
+    ARStream video acks.\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 13}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 1000; // Enough space ...}\\
+    \texttt{  .dataCopyMaxSize = 18; // Size of an ack packet}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\item{
+    ARStream audio data. (Only for newer models)\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 15}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
+    \texttt{                  // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .dataCopyMaxSize = <arstream\_fragment\_size>;}\\
+    \texttt{                     // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\item{
+    ARStream audio acks. (Only for newer models)\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 14}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 1000; // Enough space ...}\\
+    \texttt{  .dataCopyMaxSize = 18; // Size of an ack packet}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\end{itemize}
+
+\subsubsection*{Device to Controller buffers}
+\begin{itemize}
+\item{
+    Non ack data (periodic reports from the device).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 127}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 1; // Periodic data: most recent is better}\\
+    \texttt{\}}
+}
+\item{
+    Ack data (Events, settings ...).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 126}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = 5;}\\
+    \texttt{  .numberOfCell = 256;}\\
+    \texttt{  .dataCopyMaxSize = 128;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\item{
+    ARStream video data.\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 125}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
+    \texttt{                  // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .dataCopyMaxSize = <arstream\_fragment\_size>;}\\
+    \texttt{                     // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\item{
+    ARStream audio acks. (Only for newer models)\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 123}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 1000; // Enough space ...}\\
+    \texttt{  .dataCopyMaxSize = 18; // Size of an ack packet}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\item{
+    ARStream audio data. (Only for newer models)\\
+    This buffers transports \ARCode{ARStream} data.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 124}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
+    \texttt{                  // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .dataCopyMaxSize = <arstream\_fragment\_size>;}\\
+    \texttt{                     // Read from ARDiscovery.Discovery part !}\\
+    \texttt{  .isOverwriting = 1; // New is always better!}\\
+    \texttt{\}}
+}
+\end{itemize}
+
+\newpage
+
+\subsubsection{Rolling Spider, Hydrofoil, Airborne Night \& Airborne Cargo}
+
+The Rolling Spider, the Hydrofoil, the Airborne Night and the Airborne Cargo share the same buffer configuration:
+\subsubsection*{Controller to Device buffers}
+\begin{itemize}
+\item{
+    Non ack data (periodic commands for piloting).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 10}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 1;}\\
+    \texttt{  .dataCopyMaxSize = 18; // Maximum size of data on a ble characteristic with a 2 byte header}\\
+    \texttt{  .isOverwriting = 1; // Periodic data: most recent is better}\\
+    \texttt{\}}
+  }
+\item{
+    Ack data (Events, settings ...).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 11}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = 5;}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 18;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\item{
+    Emergency data (Emergency command only).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 12}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = -1; // Infinite}\\
+    \texttt{  .numberOfCell = 1;}\\
+    \texttt{  .dataCopyMaxSize = 18;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\end{itemize}
+
+
+\subsubsection*{Device to Controller buffers}
+\begin{itemize}
+\item{
+    Non ack data (periodic reports from the device).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 15}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 0; // Unused}\\
+    \texttt{  .numberOfRetries = 0; // Unused}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 18;}\\
+    \texttt{  .isOverwriting = 1; // Periodic data: most recent is better}\\
+    \texttt{\}}
+}
+\item{
+    Ack data (Events, settings ...).\\
+    This buffers transports \ARCode{ARCommands}.\\
+    \texttt{\{}\\
+    \texttt{  .ID = 14}\\
+    \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .ackTimeoutMs = 150;}\\
+    \texttt{  .numberOfRetries = 5;}\\
+    \texttt{  .numberOfCell = 20;}\\
+    \texttt{  .dataCopyMaxSize = 18;}\\
+    \texttt{  .isOverwriting = 0; // Events should not be dropped}\\
+    \texttt{\}}
+}
+\end{itemize}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,216 @@
+\section{ARCommands protocol}
+
+The \ARCode{ARCommand} library is a simple codec for sending binary data on the network.
+
+\subsection{Command identifier}
+
+The command is identified by its first 4 bytes:
+\begin{itemize}
+\item{Project or Feature ID (1 byte)}
+\item{Class ID in the project/feature (1 byte)}
+\item{Command ID in the class (2 bytes)}
+\end{itemize}
+
+In this document, commands are noted in the \ARCode{Project.Class.Command} notation. For example, the \ARCode{PCMD} command, in class \ARCode{Piloting} for project \ARCode{ARDrone3} is \ARCode{ARDrone3.Piloting.PCMD}.
+
+\subsection{Command arguments}
+
+The command arguments are directly packed after the command ID. Multi-bytes values are sent in little endian to avoid bytes swap in the product.
+
+Here is a list of the supported argument types:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline
+  Type & Size (bytes) & Description \\
+  \hline
+  \hline
+  u8 & 1 & unsigned 8bit value \\
+  i8 & 1 & signed 8bit value \\
+  \hline
+  u16 & 2 & unsigned 16bit value \\
+  i16 & 2 & signed 16bit value \\
+  \hline
+  u32 & 4 & unsigned 32bit value \\
+  i32 & 4 & signed 32bit value \\
+  \hline
+  u64 & 8 & unsigned 64bit value \\
+  i64 & 8 & signed 64bit value \\
+  \hline
+  float & 4 & IEEE-754 single precision \\
+  double & 8 & IEEE-754 double precision \\
+  \hline
+  string & * & Null terminated string (C-String) \\
+       & & (Variable size)\\
+  \hline
+  enum & 4 & Per command defined enum \\
+       & & Coded as i32 on network \\
+  \hline
+\end{tabular}
+\caption{Supported types for \ARCode{ARCommand} arguments}
+\end{table}
+
+\subsection{Commands definition}
+
+Commands are defined in xml files. All the source code of the \ARCode{ARCommands} library is generated from these files.
+
+The current xml files can be found in the \href{https://github.com/Parrot-Developers/libARCommands/tree/master/Xml}{\ARCode{<SDK>/libARCommands/Xml}} directory.
+
+In this directory, each \ARCode{.xml} file correspond to a project or a feature. Each product only understand a given list of features. Here is a list of features implemented per product:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+  \hline
+  Product & Features \\
+  \hline
+  \hline
+  Bebop Drone & ARDrone3, Common \\
+  \hline
+  Jumping Sumo & JumpingSumo, Common \\
+  \hline
+  Rolling Spider & MiniDrone, Common \\
+  \hline
+  SkyController & SkyController \\
+  \hline
+  Airborne Night & MiniDrone, Common \\
+  \hline
+  Airborne Cargo & MiniDrone, Common \\
+  \hline
+  Hydrofoil & MiniDrone, Common \\
+  \hline
+  Jumping Night & JumpingSumo, Common \\
+  \hline
+  Jumping Race & JumpingSumo, Common \\
+  \hline
+\end{tabular}
+\caption{Features implemented by each product}
+\end{table}
+
+Note that implementing a features means that at least a subset of the feature is useful for the product, not that all commands in the feature are actually implemented!
+
+Also note that the \ARCode{xxx_debug.xml} files contain debug commands that should be avoided. These commands can change from one version to another without notice, and can have unwanted behavior.
+
+\subsubsection{The SkyController case}
+
+The SkyController implements its own set of commands, even for common ones, as it can be connected to another device. When a SkyController is connected to a Bebop Drone, it will forward all \ARCode{ARDrone3.X.Y} and \ARCode{Common.Z.W} commands to the Bebop Drone, and will forward to the controller all the data coming from the Bebop (including the \ARCode{ARStream} data.
+
+\subsection{Command attributes}
+
+While not tied to the \ARCode{ARCommand} codec, certain commands can have other xml attributes, namely \ARCode{buffer}, \ARCode{timeout} and \ARCode{listtype}. These attributes are given as hints for an implementer on how the command is intended to be used.
+
+\subsubsection{buffer}
+
+The value of this attribute can be either \ARCode{NON_ACK}, \ARCode{ACK} or \ARCode{HIGH_PRIO}, defaulting to \ARCode{ACK} if not given. It gives a hint about the destination buffer for the command.
+
+For the Bebop Drone, the \ARCode{NON_ACK} buffers are 10 (c2d) and 127 (d2c), the \ARCode{ACK} buffers are 11 (c2d) and 126 (d2c), and the \ARCode{HIGH_PRIO} buffer is the 12 (c2d).
+
+This is only a hint, and the product will decode any \ARCode{ARCommand} on any \ARCode{ARNetwork} buffer, as long as the buffer is not used for \ARCode{ARStream}.
+
+\subsubsection{timeout}
+
+The value of this attribute can be either \ARCode{POP}, \ARCode{RETRY} or \ARCode{FLUSH}, defaulting to \ARCode{POP} if not given.
+
+For acknowledged data, if a timeout happens (after the retries from \ARCode{ARNetwork}), there is three possible answers:
+\begin{itemize}
+\item{POP: Pop the data from the fifo, and continue with the next data (default).}
+\item{RETRY: Retry the data. This leads to infinite retries of the current data.}
+\item{FLUSH: Flush the entire \ARCode{ARNetwork} buffer. This can be useful if the next data depends on the current one.}
+\end{itemize}
+
+This information has no effect on non acknowledged data.
+
+\subsubsection{listtype}
+
+The value of this attribute can be either \ARCode{NONE}, \ARCode{LIST} or \ARCode{MAP}, defaulting to \ARCode{NONE} if not given.
+
+\ARCode{LIST} commands are sent multiple times, and a list of all the received value should be created. The \ARCode{ARController} library uses a hash map with a locally generated integer key to emulate this.
+
+\ARCode{MAP} commands are sent multiple times, and their first argument should be used as a key in a map of received values.
+
+In both cases, clearing the map/list before requesting the data is the responsibility of the receiver, unless stated otherwise in a specific command implementation.
+
+\subsection{Commands list}
+
+Listing all the commands in this document would be too long. The format used in the \ARCode{.xml} files is designed to be human readable, with inline comments about every commands and arguments.
+
+Some of the important commands are listed below.
+
+\subsubsection{\ARCode{Common.Settings.AllSettings} \&\\\ARCode{Common.Common.AllStates}}
+
+Normally, the product will send state and settings updates on the go. To synchronize them, you will have to request a full snapshot of the settings and the states of the product during the initialization.
+
+When receiving these commands, the product will send all its settings (or states), then it will send a final command, saying that all the settings or state were sent.
+
+The SkyController uses the \ARCode{SkyController.Settings.AllSettings} and \ARCode{SkyController.Common.AllStates} commands instead.
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|}
+  \hline
+  Request & Final answer \\
+  \hline
+  \hline
+  \ARCode{Common.Settings.AllSettings} & \ARCode{Common.SettingsState.AllSettingsChanged} \\
+  \hline
+  \ARCode{Common.Common.AllStates} & \ARCode{Common.CommonState.AllStatesChanged} \\
+  \hline
+  \hline
+  \ARCode{SkyController.Settings.AllSettings} & \ARCode{SkyController.SettingsState.AllSettingsChanged} \\
+  \hline
+  \ARCode{SkyController.Common.AllStates} & \ARCode{SkyController.CommonState.AllStatesChanged} \\
+  \hline
+\end{tabular}
+}
+\caption{Final command for each Settings/State request}
+\end{table}
+
+\subsubsection{\ARCode{Common.Common.CurrentDate} \&\\\ARCode{Common.Common.CurrentTime}}
+
+These commands set the date/time on the product, which in turn is set into the media and PUD (for \ARCode{ARDrone Academy} files.
+
+The argument to these commands is an \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO-8601} formatted string, with the following formatters:
+\begin{itemize}
+\item{\ARCode{"yyyy-MM-dd"} for \ARCode{Common.Common.CurrentDate}. Ex: \ARCode{2015-08-27}.}
+\item{\ARCode{"'T'HHmmssZZZ"} for \ARCode{Common.Common.CurrentTime}. Ex: \ARCode{T101527+0200}.}
+\end{itemize}
+
+For compatibility purposes, you should always sent both commands to the product, not juste the \ARCode{Common.Common.CurrentDate} one. The order is irrelevant on newer firmwares, but older ones need the \ARCode{Common.Common.CurrentTime} to be sent after.
+
+Note that you should generate both strings from a single timestamp to avoid any loop error at midnight.
+
+\subsubsection{\ARCode{ARDrone3.MediaStreaming.VideoEnable} \&\\\ARCode{JumpingSumo.MediaStreaming.VideoEnable}}
+
+These commands will enable or disable the video streaming from the product. When connecting, the streaming is disabled (which lets a high bandwidth to transfer all the data needed by the \ARCode{Common.Settings.AllSettings} and \ARCode{Common.Common.AllStates} commands). You should enable the video only when needed (when you actually display it !).
+
+In FreeFlight, the video is also disabled in the following cases:
+\begin{itemize}
+\item{When the user browses the internal memory of the drone.}
+\item{When the user downloads media from the drone.}
+\item{When the user sends an update file to the drone.}
+\end{itemize}
+
+
+\subsection{Using the ARCommandsParser to generate your own code}
+
+The code generator is split into a parser, and a generator part. The parser is written in Python, and can be found in the \ARCode{ARSDKBuildUtils} repository:
+\ARFile{ARSDKBuildUtils}{Utils/Python/ARCommandsParser.py}
+
+It defines a \ARCode{parseAllProjects} function, which takes 4 arguments:
+\begin{itemize}
+\item{projects: A list of strings, list of the projects to parse. If this list contains the ``all'' string, then all projects are parsed, regardless of the content of the other elements.}
+\item{pathToARCommands: The path to the \ARCode{ARCommands} library root (not the \ARCode{Xml} directory !)}
+\item{genDebug: if True, then the \ARCode{xxx_debug.xml} files are also parsed. Defaults to False. Should not be used}
+\item{mergeDebugProjectsInReleaseProjetcs: if True, then the debug commands will be merged with the release commands in single projects instead of being in separated debug projets. Defaults to False. Should not be used}
+\end{itemize}
+
+And returns a list of \ARCode{ARProject} objects. This class (and all other internally used class) are fairly straightforward to understand, and thus are not described in depth here.
+
+A simple example of iterating on all commands can be seen at lines 519-554 of \ARFile{libARCommands}{Xml/generateLibARCommands.py}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

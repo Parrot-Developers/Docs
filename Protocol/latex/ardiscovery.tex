@@ -38,6 +38,7 @@ These identifiers can be found in the \\
 You can find the following information from the MDNS Service:
 \begin{table}[h]
 \centering
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|}
   \hline
   Information & Source & Description \\
@@ -53,6 +54,7 @@ You can find the following information from the MDNS Service:
    & & (currently contains the product serial number) \\
   \hline
 \end{tabular}
+}
 \caption{Informations available in the MDNS service}
 \end{table}
 
@@ -103,6 +105,7 @@ For wifi products, further negociation is needed: this is done over a TCP socket
 To negociate the connection, connect a socket to this TCP port, and send a JSON string containing the following informations:
 \begin{table}[h]
 \centering
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|}
   \hline
   Key & Mandatory & Description \\
@@ -119,14 +122,70 @@ To negociate the connection, connect a socket to this TCP port, and send a JSON 
   \ARCode{device_id} & No & The product serial number \\
   \hline
 \end{tabular}
+}
 \caption{Available keys for connection JSON}
 \end{table}
 
 Here is an example of a valid connection JSON string:\\
-\ARString{\{``d2c_port'':43210, ``controller_type'':``Phone'',\\
-``controller_name'':``com.example.arsdkapp''\}}
+\texttt{\{ "d2c\_port":43210, "controller\_type":"Phone", \\
+"controller\_name":"com.example.arsdkapp" \}}
 
 
+The \ARCode{``device_id''} field is useful when reconnecting to a product: If a product receives a connection request with the \ARCode{``device_id''} field, the connection will only be accepted if it matches the product serial number.
+
+\newpage
+
+The device will answer a connection request with anoter JSON string sent on the same TCP socket. This response JSON string can contain the following informations:
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|}
+  \hline
+  Key & Mandatory & Description \\
+  \hline
+  \hline
+  \ARCode{status} & Yes & If different from 0, it means that the \\
+   & & connection is refused (see below) \\
+  \hline
+  \ARCode{c2d_port} & Yes & The UDP port you will send data to \\
+   & & (If the connection is refused, this value will be 0) \\
+  \hline
+  \ARCode{arstream_fragment} & No & The size of \ARCode{ARStream} fragments \\
+  \ARCode{_size} & & \\
+  \hline
+  \ARCode{arstream_fragment} & No & The maximum number of \ARCode{ARStream} fragments \\
+  \ARCode{_maximum_number} & & per video frame. \\
+  \hline
+  \ARCode{arstream_max_} & No & The maximum time between ARStream ACKs \\
+  \ARCode{ack_interval} & & \\
+  \hline
+  \ARCode{c2d_update_port} & Yes & The FTP port for updating the product \\
+  \hline
+  \ARCode{c2d_user_port} & No & Another FTP port for other uses \\
+  \hline
+  \ARCode{skycontroller} & SC only & The SkyController version \\
+  \ARCode{_version} & & \\
+  \hline
+\end{tabular}
+}
+\caption{Available keys for connection answer JSON}
+\end{table}
+
+
+Here is an example of a valid connection answer JSON string:\\
+\texttt{\{ "status":0, "c2d\_port":54321, \\
+"arstream\_fragment\_size":65000, \\
+"arstream\_fragment\_maximum\_number":4, \\
+"arstream\_max\_ack\_interval":-1, "c2d\_update\_port":51, \\
+"c2d\_user\_port":61 \}}
+
+If the \ARCode{status} field is not 0, then it is an \ARCode{eARDISCOVERY_ERROR} enum value. These values can be found in the\\
+\ARFile{libARDiscovery}{Includes/libARDiscovery/ARDISCOVERY_Error.h} file.
+
+\subsubsection{BLE}
+
+There is no Connection part for BLE products. Just use your BLE adapter methods to connect to the device. Product pairing is not required for BLE connectivity.
 
 %%% Local Variables:
 %%% mode: latex

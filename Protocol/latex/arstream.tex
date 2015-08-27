@@ -1,0 +1,68 @@
+\section{ARStream protocol}
+
+
+The \ARCode{ARStream} library is designed to send and receive arbitraty binary streams using \ARCode{ARNetwork} as its network back-end. It is used to transport live audio and video data between the product and the controller.
+
+The \ARCode{ARStream} library used an acknowledge system on Bebop Drone firmwares before 2.0.17, while the Jumping Sumo never used them. This feature won't be used on newer firmwares (for all products), so implementing it is optionnal for an \ARCode{ARStream} compatible library.
+
+
+The \ARCode{ARStream} library is not designed to be used on BLE networks.
+
+\subsection{Terminology}
+
+\ARCode{ARStream} was designed to transport video data, thus the terms used in this documentation will match some video terms.
+
+The input of \ARCode{ARStream} is a \ARCode{frame}. A \ARCode{frame} can be a single video frame (for video streams), or multiple audio samples joined togeter (for audio streams). Each frame is also tagged as an \ARCode{FLUSH_FRAME} or not.
+
+\ARCode{FLUSH_FRAMES} are mapped on I-Frames for \ARCode{h.264} stream (e.g. on Bebop Drone). It is always set for \ARCode{MJPEG} (e.g. Jumping Sumo) and audio streams, as these do not have the I-Frame/P-Frame difference.
+
+\subsection{Data}
+
+When sending a \ARCode{frame}, it may be divised in multiple \ARCode{fragments} on the network. The size and the maximum number of fragments are negociated during the ARDiscovery Connection part.
+
+The data sent to \ARCode{ARNetwork} consists of a packed header followed by the \ARCode{fragment}.
+
+The header format is:
+\begin{itemize}
+\item{\ARCode{frameNumber} (2 bytes): Identifier of the frame, if two fragments have the same frame number, they belong to the same frame. This counter loops every $2^{16}$ frames.}
+\item{\ARCode{frameFlags} (1 byte): A bitfield indicating flags for the frame. Currenlty only support the \ARCode{FLUSH_FRAME} flag in bit 0.}
+\item{\ARCode{fragmentNumber} (1 byte): The index of the current fragment in the frame.}
+\item{\ARCode{fragmentsPerFrame} (1 byte): The total number of fragments in the frame.}
+\end{itemize}
+
+The size of the data is not specified, as it can be derived from the size of the \ARCode{ARNetwork} data. The offset is not specified as the library consider that the $N^{th}$ fragment should go at index $arstream\_fragment\_size*N$ (i.e. the library uses only full size fragments, except for the last one which can be shorter).
+
+Fragments can be received in any order, or even multiple time each. All implementations should accept these cases and keep working. (i.e. do not append data to the output buffer without reading the header!)
+
+A frame is considered as complete once we receive all of its fragments. If we receive a fragment for frame $N+1$ while the frame $N$ is not complete, then we discard the $N^{th}$ frame and start working on the new one.
+
+\ARCode{FLUSH_FRAME}s are frames that can be immediately decoded. To reduce latency, \ARCode{FLUSH_FRAME}s should flush any other waiting frame from the pipeline (including any fifo between \ARCode{ARStream} and a video decoder). This behavior is also implemented on the \ARCode{ARStream} sender on the product: if a new \ARCode{FLUSH_FRAME} is available, but some previous frame were not sent, these frames are flushed and the new one is sent instead.
+
+\subsection{Acknowledges}
+
+\emph{\ARCode{ARStream} acks are deprecated and are no longer enabled on most products. The description here is only for compatibility with older Bebop Drone firmwares.}
+
+\ARCode{ARStream} ack policy is controlled by the \ARCode{arstream_max_ack_interval} parameter, negociated during the \ARCode{ARDiscovery} Connection. Most product will send a value of $-1$, which means that no acks are to be sent.
+Possible values are:
+\begin{itemize}
+\item{$-1$ (or other negative value): No ack at all}
+\item{$0$: No periodic acks, but send ack when receiving a \ARCode{fragment}}
+\item{$>0$: Maximum time (in ms) between two acks. Typically this is done by having a thread sending periodic acks. To keep ack latency as low as possible, keep also sending acks when receiving a \ARCode{fragment}.}
+\end{itemize}
+
+The Acknowledge packet has the following format (packed in memory, so no gap inside the structure):
+\begin{itemize}
+\item{\ARCode{frameNumber} (2 bytes): Id of the frame (must match the current sending frame).}
+\item{\ARCode{highPacketsAck} (8 bytes): Bitfield for the upper 64 fragments of the frame.}
+\item{\ARCode{lowPacketsAck} (8 bytes): Bitfield for the lower 64 fragments of the frame.}
+\end{itemize}
+
+To acknowledge a fragment, the corresponding byte in the 128bits bitfield is set, when all fragments bits are set, then the full frame is acknowledged. This structure limits the maximum number of fragments to 128, but the current frimwares only use 4 at most.
+
+When sending a full ack, it may be useful to set all the bits (even the ones for unused fragment numbers) in the bitfield. This allow the \ARCode{ARStream} late-ack algorithm to work.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
