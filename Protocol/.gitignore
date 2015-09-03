@@ -1,0 +1,8 @@
+*.toc
+latex/*.pdf
+*.log
+*.out
+*.aux
+*~
+
+_region_.tex
