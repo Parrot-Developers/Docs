@@ -6,7 +6,7 @@ The \ARCode{ARDiscovery} library is separated in two parts: Discovery, and Conne
 
 \subsubsection{Wifi}
 
-The ARSDK Wifi Products use the \href{https://en.wikipedia.org/wiki/Multicast_DNS}{MDNS} protocol to advertise themselves on the wifi network. You can use any compatible implementation (Apple Bonjour, Avahi, Android NSDManager...) to discover the products.
+The ARSDK Wifi Products use the \href{https://en.wikipedia.org/wiki/Multicast_DNS}{mDNS} protocol to advertise themselves on the wifi network. You can use any compatible implementation (Apple Bonjour, Avahi, Android NSDManager...) to discover the products.
 
 The service types for the different products are:
 
@@ -28,14 +28,14 @@ The service types for the different products are:
   Jumping Race & \ARCode{._arsdk-0906._udp} \\
   \hline
 \end{tabular}
-\caption{MDNS Service type for the Wifi Products}
+\caption{mDNS Service type for the Wifi Products}
 \end{table}
 
 These identifiers can be found in the \\
 \ARFile{libARDiscovery}{Sources/ARDISCOVERY_Discovery.c} file.
 
 
-You can find the following information from the MDNS Service:
+You can find the following information from the mDNS Service:
 \begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
@@ -55,7 +55,7 @@ You can find the following information from the MDNS Service:
   \hline
 \end{tabular}
 }
-\caption{Informations available in the MDNS service}
+\caption{Informations available in the mDNS service}
 \end{table}
 
 \newpage
@@ -100,7 +100,7 @@ These identifiers can be found in the \\
 
 \subsubsection{Wifi}
 
-For wifi products, further negociation is needed: this is done over a TCP socket, using the MSND Service port.
+For wifi products, further negociation is needed: this is done over a TCP socket, using the mDNS Service port.
 
 To negociate the connection, connect a socket to this TCP port, and send a JSON string containing the following informations:
 \begin{table}[h]
@@ -135,7 +135,7 @@ The \ARCode{``device_id''} field is useful when reconnecting to a product: If a 
 
 \newpage
 
-The device will answer a connection request with anoter JSON string sent on the same TCP socket. This response JSON string can contain the following informations:
+The device will answer a connection request with anoter JSON string sent on the same TCP socket. This response JSON string can contain the following information:
 
 \begin{table}[h]
 \centering

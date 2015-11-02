@@ -35,7 +35,7 @@ The full list of data types can be found in the\\
 \ARFile{libARNetworkAL}{Include/libARNetworkAL/ARNETWORKAL_Frame.h} file.
 
 
-To acknowledge a data, simply send back a \ARCode{frame} with the Ack data type, a buffer ID of \ARCode{128+Data_Buffer_ID}, and the data sequence number as the data.\\
+To acknowledge data, simply send back a \ARCode{frame} with the Ack data type, a buffer ID of \ARCode{128+Data_Buffer_ID}, and the data sequence number as the data.\\
 E.g. : To acknowledge the \ARCode{frame} \ARCode{"(hex) 04 0b 42 0b000000 12345678"}, you will need to send a \ARCode{frame} like \ARCode{"(hex) 01 8b 01 08000000 42"}
 
 \subsubsection{Target Buffer IDs}
@@ -58,7 +58,7 @@ Each buffer has its own independant sequence number, which should be increased o
 
 \subsubsection{Multiple \ARCode{frames} in one \ARCode{packet}}
 
-The \ARCode{packet} \ARCode{"(hex)01ba270800000042020bc30b00000012345678"} can be splitted in the follwing way:\
+The \ARCode{packet} \ARCode{"(hex)01ba270800000042020bc30b00000012345678"} can be split in the follwing way:\
 \begin{itemize}
 \item{Read the type of the first \ARCode{frame}: \ARCode(0x01), or Ack}
 \item{Read the buffer id of the first \ARCode{frame}: \ARCode(0xba)}
@@ -67,7 +67,7 @@ The \ARCode{packet} \ARCode{"(hex)01ba270800000042020bc30b00000012345678"} can b
 \item{Since there is remaining data in the buffer, start again the process for a second frame}
 \end{itemize}
 
-For this exmample, we have an ack for buffer \ARCode{0x0a}, sequence number \ARCode{0x42}, and a non acknowelged data for buffer \ARCode{0x0b}, with content \ARCode{0x78563412}.
+For this exmample, we have an ack for buffer \ARCode{0x0a}, sequence number \ARCode{0x42}, and non acknowelged data for buffer \ARCode{0x0b}, with content \ARCode{0x78563412}.
 
 
 The \ARCode{ARNetworkAL/ARNetwork} libraries should never send ill-formed packets (i.e. every packet you receive consists of [1..N] \ARCode{frames}, without garbage data at the end. These libraries are ill-formed packets resistant: Before reading a \ARCode{frame}, we make sure that there is at least 7 bytes of data remaining in the buffer, before reading data, we make sure that there is at least \ARCode{data_size - 7} bytes of data in the buffer, and so on.
@@ -95,14 +95,14 @@ The \ARCode{ARNetworkAL} library supports 4 types of data:
 \item{Ack(1): Acknowledgment of previously received data} 
 \item{Data(2): Normal data (no ack requested)}
 \item{Low latency data(3): Treated as normal data on the network, but are given higher priority internally}
-\item{Data with ack(4): Data requesting an ack. The receiver must send an ack for this data !}
+\item{Data with ack(4): Data requesting an ack. The receiver must send an ack for this data unit!}
 \end{itemize}
 
 The full list of data types can be found in the\\
 \ARFile{libARNetworkAL}{Include/libARNetworkAL/ARNETWORKAL_Frame.h} file.
 
 
-To acknowledge a data, simply send back a \ARCode{frame} with the Ack data type, to the characteristic of id \ARCode{16+characteristic_id}, and the data sequence number as the data.\\
+To acknowledge a data unit, simply send back a \ARCode{frame} with the Ack data type, to the characteristic of id \ARCode{16+characteristic_id}, and the data sequence number as the data.\\
 E.g. : To acknowledge the \ARCode{frame} \ARCode{"(hex) 04 42 12345678"} in characteristic \ARCode{0xf00a}, you will need to send a \ARCode{frame} like \ARCode{"(hex) 01 01 42"} in characteristic \ARCode{0xf01a}.
 
 \subsubsection{Characteristic IDs}
@@ -121,7 +121,7 @@ Characteristics are separated into three sections:
 \item{[16; 31]: Acknowledges.}
 \end{itemize}
 
-By convention, the Controller to Product characteristics start a 10 and grow up, while the Product to Controller characteristics start at 15 an go down. A characteristic can be used for two-way communication, but that is not advised (and not used on products).
+By convention, the Controller to Product characteristics start a 10 and grow upward, while the Product to Controller characteristics start at 15 an grow downward. A characteristic can be used for two-way communication, but that is not advised (and not used on products).
 
 
 The two characteristics for ftp-like transmission (using \ARCode{ARDataTransfer} library) are \ARCode{0xfd23} and \ARCode{0xfd53}.
@@ -129,7 +129,7 @@ The two characteristics for ftp-like transmission (using \ARCode{ARDataTransfer}
 
 \subsubsection{Sequence number}
 
-Each characteristic has its own independant sequence number, which should be increased on new data send, but not on retries. The \ARCode{ARNetwork} library will ignore out of order and duplicate data, but will still send Acks for them if requested. If the back-gap in sequence number is too high (we use 10 in \ARCode{ARNetwork} library), then the \ARCode{frame} is not considered out of order, and instead is accepted as the new reference sequence number.
+Each characteristic has its own independent sequence number, which should be increased on new data send, but not on retries. The \ARCode{ARNetwork} library will ignore out of order and duplicate data, but will still send Acks for them if requested. If the back-gap in sequence number is too high (we use 10 in \ARCode{ARNetwork} library), then the \ARCode{frame} is not considered out of order, and instead is accepted as the new reference sequence number.
 
 %%% Local Variables:
 %%% mode: latex
