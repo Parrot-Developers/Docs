@@ -1,5 +1,5 @@
 *.toc
-latex/*.pdf
+latex/main.pdf
 *.log
 *.out
 *.aux
