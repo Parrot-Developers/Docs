@@ -20,7 +20,9 @@ From an external point of view, a buffer is a fifo which will be duplicated on t
   \ARCode{dataType} & \ARCode{eARNETWORKAL_FRAME_TYPE} & The type of the buffer\\
             & & This type will be sent in the \ARCode{ARNetworkAL} frames.\\
   \hline
-  \ARCode{sendingWaitTimeMs} & \ARCode{int} & Deprecated (use 0)\\
+  \ARCode{sendingWaitTimeMs} & \ARCode{int} & Minimum time between two sends\\
+            & & (Usually 0, but can be useful to avoid data bursts on network)\\
+  \hline
   \ARCode{ackTimeoutMs} & \ARCode{int} & Time (in milliseconds) before considering a frame lost\\
             & & (Only used for acknowledged buffers)\\
   \hline
@@ -76,7 +78,7 @@ Acknowledge buffers are automatically created by \ARCode{ARNetwork} for each buf
 \texttt{\{\\
     .ID = baseId + 128; // (+16 for BLE)\\
     .dataType = ARNETWORKAL\_FRAME\_TYPE\_ACK;\\
-    .sendingWaitTimeMs = 0; // Deprecated\\
+    .sendingWaitTimeMs = 0; // Do not wait between data\\
     .ackTimeoutMs = 0; // Unused\\
     .numberOfRetries = 0; // Unused\\
     .numberOfCell = 1; // Never more than one ack at a time\\
@@ -100,7 +102,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 10}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 2; // PCMD + Camera}\\
@@ -114,7 +116,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 11}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = 5;}\\
     \texttt{  .numberOfCell = 20;}\\
@@ -128,7 +130,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 12}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = -1; // Infinite}\\
     \texttt{  .numberOfCell = 1;}\\
@@ -142,7 +144,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 13}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 1000; // Enough space ...}\\
@@ -161,7 +163,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 127}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 20; // Avoid data bursts}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 20;}\\
@@ -175,7 +177,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 126}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = 5;}\\
     \texttt{  .numberOfCell = 256;}\\
@@ -189,7 +191,7 @@ The Bebop Drone and the SkyController share the same buffer configuration:
     \texttt{\{}\\
     \texttt{  .ID = 125}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
@@ -215,7 +217,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 10}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 1;}\\
@@ -229,7 +231,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 11}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = 5;}\\
     \texttt{  .numberOfCell = 20;}\\
@@ -243,7 +245,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 13}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 1000; // Enough space ...}\\
@@ -257,7 +259,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 15}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
@@ -273,7 +275,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 14}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 1000; // Enough space ...}\\
@@ -291,7 +293,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 127}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 20; // Avoid data bursts}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 20;}\\
@@ -305,7 +307,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 126}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = 5;}\\
     \texttt{  .numberOfCell = 256;}\\
@@ -319,7 +321,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 125}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
@@ -335,7 +337,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 123}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 1000; // Enough space ...}\\
@@ -349,7 +351,7 @@ The Jumping Sumo, the Jumping Night and the Jumping Race share the same buffer c
     \texttt{\{}\\
     \texttt{  .ID = 124}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_LOW\_LATENCY;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = <arstream\_fragment\_maximum\_number>*2;}\\
@@ -374,7 +376,7 @@ The Rolling Spider, the Hydrofoil, the Airborne Night and the Airborne Cargo sha
     \texttt{\{}\\
     \texttt{  .ID = 10}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 1;}\\
@@ -388,7 +390,7 @@ The Rolling Spider, the Hydrofoil, the Airborne Night and the Airborne Cargo sha
     \texttt{\{}\\
     \texttt{  .ID = 11}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = 5;}\\
     \texttt{  .numberOfCell = 20;}\\
@@ -402,7 +404,7 @@ The Rolling Spider, the Hydrofoil, the Airborne Night and the Airborne Cargo sha
     \texttt{\{}\\
     \texttt{  .ID = 12}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = -1; // Infinite}\\
     \texttt{  .numberOfCell = 1;}\\
@@ -421,7 +423,7 @@ The Rolling Spider, the Hydrofoil, the Airborne Night and the Airborne Cargo sha
     \texttt{\{}\\
     \texttt{  .ID = 15}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 20; // Avoid data bursts}\\
     \texttt{  .ackTimeoutMs = 0; // Unused}\\
     \texttt{  .numberOfRetries = 0; // Unused}\\
     \texttt{  .numberOfCell = 20;}\\
@@ -435,7 +437,7 @@ The Rolling Spider, the Hydrofoil, the Airborne Night and the Airborne Cargo sha
     \texttt{\{}\\
     \texttt{  .ID = 14}\\
     \texttt{  .dataType = ARNETWORKAL\_FRAME\_TYPE\_DATA\_WITH\_ACK;}\\
-    \texttt{  .sendingWaitTimeMs = 0; // Deprecated}\\
+    \texttt{  .sendingWaitTimeMs = 0; // Do not wait between data}\\
     \texttt{  .ackTimeoutMs = 150;}\\
     \texttt{  .numberOfRetries = 5;}\\
     \texttt{  .numberOfCell = 20;}\\
