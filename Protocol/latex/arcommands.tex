@@ -170,15 +170,15 @@ The SkyController uses the \ARCode{SkyController.Settings.AllSettings} and \ARCo
 
 These commands set the date/time on the product, which in turn is set into the media and PUD (for \ARCode{ARDrone Academy} files).
 
-The argument to these commands is an \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO-8601} formatted string, with the following formatters:
+The argument to these commands is an \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO-8601} formatted string, with the following format:
 \begin{itemize}
 \item{\ARCode{"yyyy-MM-dd"} for \ARCode{Common.Common.CurrentDate}. Ex: \ARCode{2015-08-27}.}
 \item{\ARCode{"'T'HHmmssZZZ"} for \ARCode{Common.Common.CurrentTime}. Ex: \ARCode{T101527+0200}.}
 \end{itemize}
 
-For compatibility purposes, you should always sent both commands to the product, not juste the \ARCode{Common.Common.CurrentDate} one. The order is irrelevant on newer firmwares, but older ones need the \ARCode{Common.Common.CurrentTime} to be sent after.
+For compatibility purposes, you should always sent both commands to the product, not just the \ARCode{Common.Common.CurrentDate} one. The order is irrelevant on newer firmwares, but older ones need the \ARCode{Common.Common.CurrentTime} to be sent after.
 
-Note that you should generate both strings from a single timestamp to avoid any loop error at midnight.
+Note that you should generate both strings from a single time-stamp to avoid any loop error at midnight.
 
 \subsubsection{\ARCode{ARDrone3.MediaStreaming.VideoEnable} \&\\\ARCode{JumpingSumo.MediaStreaming.VideoEnable}}
 
@@ -202,7 +202,7 @@ It defines a \ARCode{parseAllProjects} function, which takes 4 arguments:
 \item{projects: A list of strings, list of the projects to parse. If this list contains the ``all'' string, then all projects are parsed, regardless of the content of the other elements.}
 \item{pathToARCommands: The path to the \ARCode{ARCommands} library root (not the \ARCode{Xml} directory !)}
 \item{genDebug: if True, then the \ARCode{xxx_debug.xml} files are also parsed. Defaults to False. Should not be used}
-\item{mergeDebugProjectsInReleaseProjetcs: if True, then the debug commands will be merged with the release commands in single projects instead of being in separated debug projets. Defaults to False. Should not be used}
+\item{mergeDebugProjectsInReleaseProjetcs: if True, then the debug commands will be merged with the release commands in single projects instead of being in separated debug projects. Defaults to False. Should not be used}
 \end{itemize}
 
 And returns a list of \ARCode{ARProject} objects. This class (and all other internally used class) are fairly straightforward to understand, and thus are not described in depth here.

@@ -47,7 +47,7 @@ Inside the ARSDK, the products are sometimes called with other names than the ac
 \addcontentsline{toc}{subsection}{Data endianness}
 \subsection*{Data endianness}
 
-For the \ARCode{ARNetwork}, \ARCode{ARNetworkAL}, \ARCode{ARStream} and \ARCode{ARCommands} library, all the data are sent on network in LITTLE\_ENDIAN byte order. This is done because most of the devices actually are in LITTLE\_ENDIAN mode, and thus avoids a lot of byteswapping.
+For the \ARCode{ARNetwork}, \ARCode{ARNetworkAL}, \ARCode{ARStream} and \ARCode{ARCommands} library, all the data are sent on network in LITTLE\_ENDIAN byte order. This is done because most of the devices actually are in LITTLE\_ENDIAN mode, and thus avoids a lot of byte swapping.
 
 The \ARCode{ARSAL} library provides conversion macros (similar to the \ARCode{htonl()}-family) in the\\
 \ARFile{libARSAL}{Includes/libARSAL/ARSAL_Endianness.h} file.

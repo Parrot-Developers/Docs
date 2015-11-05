@@ -1,6 +1,6 @@
 \section{ARDiscovery protocol}
 
-The \ARCode{ARDiscovery} library is separated in two parts: Discovery, and Connection. The Discovery part is in charge of discovering the devices on the network (for Wifi products) or nearby (for BLE Products), while the Connection part is responsible for negociating the connection parameters (which are used by the \ARCode{ARNetworkAL} library, among others)
+The \ARCode{ARDiscovery} library is separated in two parts: Discovery, and Connection. The Discovery part is in charge of discovering the devices on the network (for Wifi products) or nearby (for BLE Products), while the Connection part is responsible for negotiating the connection parameters (which are used by the \ARCode{ARNetworkAL} library, among others)
 
 \subsection{Discovery}
 
@@ -50,12 +50,12 @@ You can find the following information from the mDNS Service:
   \hline
   Port & Service port & Discovery Connection port \\
   \hline
-  Extras & Service TxtData & A json string containing extra informations \\
+  Extras & Service TxtData & A json string containing extra information \\
    & & (currently contains the product serial number) \\
   \hline
 \end{tabular}
 }
-\caption{Informations available in the mDNS service}
+\caption{Information available in the mDNS service}
 \end{table}
 
 \newpage
@@ -100,9 +100,9 @@ These identifiers can be found in the \\
 
 \subsubsection{Wifi}
 
-For wifi products, further negociation is needed: this is done over a TCP socket, using the mDNS Service port.
+For wifi products, further negotiation is needed: this is done over a TCP socket, using the mDNS Service port.
 
-To negociate the connection, connect a socket to this TCP port, and send a JSON string containing the following informations:
+To negotiate the connection, connect a socket to this TCP port, and send a JSON string containing the following information:
 \begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
@@ -135,7 +135,7 @@ The \ARCode{"device_id"} field is useful when reconnecting to a product: If a pr
 
 \newpage
 
-The device will answer a connection request with anoter JSON string sent on the same TCP socket. This response JSON string can contain the following information:
+The device will answer a connection request with another JSON string sent on the same TCP socket. This response JSON string can contain the following information:
 
 \begin{table}[h]
 \centering

@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{fancyhdr}
 
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{5}
@@ -11,7 +12,11 @@
 
 \input{commands.tex}
 
-
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{ARSDK Protocols}
+\lhead{\includegraphics[width=5cm]{logo}}
+\cfoot{\thepage}
 
 \begin{document}
 
