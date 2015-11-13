@@ -8,6 +8,7 @@ var ARDATATRANSFER__Downloader_8h =
     ] ],
     [ "ARDATATRANSFER_Downloader_CancelThread", "ARDATATRANSFER__Downloader_8h.html#a19372a207bd39aa39da7d55819273423", null ],
     [ "ARDATATRANSFER_Downloader_Delete", "ARDATATRANSFER__Downloader_8h.html#aaf528668f8279d346584278e6852fb0d", null ],
+    [ "ARDATATRANSFER_Downloader_GetSize", "ARDATATRANSFER__Downloader_8h.html#a7158f5410146f76f694f96d5f52d52d9", null ],
     [ "ARDATATRANSFER_Downloader_New", "ARDATATRANSFER__Downloader_8h.html#a0f631a95b4a26d52ad61dff50c7eddde", null ],
     [ "ARDATATRANSFER_Downloader_ThreadRun", "ARDATATRANSFER__Downloader_8h.html#a2ebe2c5ed7798ea2d6ffc39534ed49ee", null ]
 ];

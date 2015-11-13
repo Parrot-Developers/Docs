@@ -13,5 +13,6 @@ var structARUTILS__Manager__t =
     [ "ftpList", "structARUTILS__Manager__t.html#af23c98cbcff4241359c5282de39f362e", null ],
     [ "ftpPut", "structARUTILS__Manager__t.html#aa8beea55f2b8eafe1277cfa83942cb74", null ],
     [ "ftpRemoveDir", "structARUTILS__Manager__t.html#ad03e51b3fdf01f51c44a5e1bba1108c9", null ],
-    [ "ftpRename", "structARUTILS__Manager__t.html#a0020057f85025d5036e48704549d095b", null ]
+    [ "ftpRename", "structARUTILS__Manager__t.html#a0020057f85025d5036e48704549d095b", null ],
+    [ "ftpSize", "structARUTILS__Manager__t.html#a6916eded8c9f66f54a9407f0b2941588", null ]
 ];

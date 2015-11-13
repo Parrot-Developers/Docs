@@ -113,6 +113,9 @@ typedef void *&#160;</td><td class="memItemRight" valign="bottom"><b>ARUTILS_BLE
 <tr class="memitem:a226f115144e806f81e7aec35cb9102d4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a226f115144e806f81e7aec35cb9102d4">ARUTILS_Manager_Ftp_List_t</a> )(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, char **resultList, uint32_t *resultListLen)</td></tr>
 <tr class="memdesc:a226f115144e806f81e7aec35cb9102d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute Ftp List command to retrieve directory content.  <a href="#a226f115144e806f81e7aec35cb9102d4">More...</a><br/></td></tr>
 <tr class="separator:a226f115144e806f81e7aec35cb9102d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97731bcf07d55d1db8ce1b96b3fc62eb"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a97731bcf07d55d1db8ce1b96b3fc62eb">ARUTILS_Manager_Ftp_Size_t</a> )(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, double *fileSize)</td></tr>
+<tr class="memdesc:a97731bcf07d55d1db8ce1b96b3fc62eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute Ftp Size command to retrieve file size.  <a href="#a97731bcf07d55d1db8ce1b96b3fc62eb">More...</a><br/></td></tr>
+<tr class="separator:a97731bcf07d55d1db8ce1b96b3fc62eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af45239849c7008d51cd19b05a03922c1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#af45239849c7008d51cd19b05a03922c1">ARUTILS_Manager_Get_WithBuffer_t</a> )(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, uint8_t **data, uint32_t *dataLen, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg)</td></tr>
 <tr class="memdesc:af45239849c7008d51cd19b05a03922c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an remote Ftp server file.  <a href="#af45239849c7008d51cd19b05a03922c1">More...</a><br/></td></tr>
 <tr class="separator:af45239849c7008d51cd19b05a03922c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +179,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab15bfa464e48f33a1b7e33f651646f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#ab15bfa464e48f33a1b7e33f651646f83">ARUTILS_Manager_Ftp_List</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, char **resultList, uint32_t *resultListLen)</td></tr>
 <tr class="memdesc:ab15bfa464e48f33a1b7e33f651646f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute Ftp List command to retrieve directory content.  <a href="#ab15bfa464e48f33a1b7e33f651646f83">More...</a><br/></td></tr>
 <tr class="separator:ab15bfa464e48f33a1b7e33f651646f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13afe223bb5d1f4d69f0a36ffa819c59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a13afe223bb5d1f4d69f0a36ffa819c59">ARUTILS_Manager_Ftp_Size</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, double *fileSize)</td></tr>
+<tr class="memdesc:a13afe223bb5d1f4d69f0a36ffa819c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute Ftp Size command to retrieve file size.  <a href="#a13afe223bb5d1f4d69f0a36ffa819c59">More...</a><br/></td></tr>
+<tr class="separator:a13afe223bb5d1f4d69f0a36ffa819c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c87f891a98a5a7ac2758fc8fab7c767"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ARUTILS__Manager_8h.html#a4c87f891a98a5a7ac2758fc8fab7c767">ARUTILS_Manager_Ftp_Get_WithBuffer</a> (<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, uint8_t **data, uint32_t *dataLen, <a class="el" href="ARUTILS__Ftp_8h.html#ae44ac93e3a0f1f249b3656eed8dc1dcc">ARUTILS_Ftp_ProgressCallback_t</a> progressCallback, void *progressArg)</td></tr>
 <tr class="memdesc:a4c87f891a98a5a7ac2758fc8fab7c767"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an remote Ftp server file.  <a href="#a4c87f891a98a5a7ac2758fc8fab7c767">More...</a><br/></td></tr>
 <tr class="separator:a4c87f891a98a5a7ac2758fc8fab7c767"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -529,6 +535,36 @@ This is an application-provided object, OS Dependant </dd></dl>
   </dd>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd>ARUTILS_WifiFtp_NewConnection () </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a97731bcf07d55d1db8ce1b96b3fc62eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a>(* ARUTILS_Manager_Ftp_Size_t)(<a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *manager, const char *namePath, double *fileSize)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute Ftp Size command to retrieve file size. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function allocates memory </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The address of the pointer on the Ftp Manager </td></tr>
+    <tr><td class="paramname">namePath</td><td>The string of the directory path on the remote Ftp server </td></tr>
+    <tr><td class="paramname">fileSize</td><td>The returned file size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARUTILS_OK. Otherwise, it returns an error number of eARUTILS_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#a4f361d99521edad8a519d5f2231d378e" title="Create a new WifiFtp Connection. ">ARUTILS_Manager_InitWifiFtp</a> (), <a class="el" href="ARUTILS__Manager_8h.html#a99d3f556cef6b60721a2917fa1b53ad8" title="Create a new BLEFtp Connection. ">ARUTILS_Manager_InitBLEFtp</a> () </dd></dl>
 
 </div>
 </div>
@@ -1241,6 +1277,56 @@ This is an application-provided object, OS Dependant </dd></dl>
 
 </div>
 </div>
+<a class="anchor" id="a13afe223bb5d1f4d69f0a36ffa819c59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ARUTILS__Error_8h.html#a81b04857c8ef56e7a291b795dd4de43f">eARUTILS_ERROR</a> ARUTILS_Manager_Ftp_Size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARUTILS__Manager__t.html">ARUTILS_Manager_t</a> *&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>namePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>fileSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute Ftp Size command to retrieve file size. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This function allocates memory </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>The address of the pointer on the Ftp Manager </td></tr>
+    <tr><td class="paramname">namePath</td><td>The string of the directory path on the remote Ftp server </td></tr>
+    <tr><td class="paramname">fileSize</td><td>The returned file size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">On</td><td>success, returns ARUTILS_OK. Otherwise, it returns an error number of eARUTILS_ERROR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="ARUTILS__Manager_8h.html#a4f361d99521edad8a519d5f2231d378e" title="Create a new WifiFtp Connection. ">ARUTILS_Manager_InitWifiFtp</a> (), <a class="el" href="ARUTILS__Manager_8h.html#a99d3f556cef6b60721a2917fa1b53ad8" title="Create a new BLEFtp Connection. ">ARUTILS_Manager_InitBLEFtp</a> () </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a99d3f556cef6b60721a2917fa1b53ad8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1429,7 +1515,7 @@ This is an application-provided object, OS Dependant </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_54ad19b610ffd2eeb7cde73613fa1bb6.html">libARUtils</a></li><li class="navelem"><a class="el" href="dir_2551b9a3f9cccc430adf69ec43225b0f.html">Includes</a></li><li class="navelem"><a class="el" href="dir_6aee8488e1c78dff00c51bd7b238b48f.html">libARUtils</a></li><li class="navelem"><a class="el" href="ARUTILS__Manager_8h.html">ARUTILS_Manager.h</a></li>
-    <li class="footer">Generated on Thu Aug 6 2015 16:14:34 for libARUtils by
+    <li class="footer">Generated on Fri Nov 13 2015 17:08:31 for libARUtils by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

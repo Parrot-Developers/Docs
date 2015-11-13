@@ -24,6 +24,9 @@ var NAVTREE =
     [ "libARSAL Documentation", "../../libARSAL/html/index.html", null ],
     [ "libARNetworkAL Documentation", "../../libARNetworkAL/html/index.html", null ],
     [ "libARNetwork Documentation", "../../libARNetwork/html/index.html", null ],
+    [ "Data Structures", null, [
+      [ "Data Structures", "annotated.html", "annotated" ]
+    ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [

@@ -11,16 +11,11 @@ var NAVTREE =
       [ "Debug and toString function", "index.html#ARC_tostring_sec", null ]
     ] ],
     [ "libARSAL Documentation", "../../libARSAL/html/index.html", null ],
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ],
-        [ "Typedefs", "globals_type.html", "globals_type" ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", "globals_eval" ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -28,16 +23,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ARCOMMANDS__Decoder_8h.html",
-"ARCOMMANDS__Decoder_8h.html#a55a4bfb9bc3a5ec0c453294a966d0647",
-"ARCOMMANDS__Decoder_8h.html#aae0644cdacadcd899aa7d4f6dacc0791",
-"ARCOMMANDS__Filter_8h.html#a128efad9584fe2148814812ed05b2260",
-"ARCOMMANDS__Filter_8h.html#a8adf8eb0c9c3eeeb329a244011076e94",
-"ARCOMMANDS__Generator_8h.html#a04331592290fb245e3807aefd9ebaccc",
-"ARCOMMANDS__Generator_8h.html#abc4814759c58013bd17c306ae0f74142",
-"ARCOMMANDS__Types_8h.html#a4170b76db1bd844330c6f0638cb21a25af82afdf30649a695cb67d05a90f6bb20",
-"ARCOMMANDS__Types_8h.html#a8de83bd865854768f37348ed5eab384c",
-"ARCOMMANDS__Types_8h.html#ae673d12730aa406c8a48e95e8a71129dae54eefbad3a9608812ad947ce433b83d"
+"ARCOMMANDS__Version_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

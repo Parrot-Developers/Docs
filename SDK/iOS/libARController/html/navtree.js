@@ -3,7 +3,6 @@ var NAVTREE =
   [ "libARController", "index.html", [
     [ "libARSAL Documentation", "../../libARSAL/html/index.html", null ],
     [ "libARNetworkAL Documentation", "../../libARNetworkAL/html/index.html", null ],
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Data Fields", "functions.html", [
@@ -14,12 +13,11 @@ var NAVTREE =
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", "globals_vars" ],
-        [ "Typedefs", "globals_type.html", "globals_type" ],
+        [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", "globals_eval" ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -28,11 +26,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ARCONTROLLER__DICTIONARY__Key_8h.html",
-"ARCONTROLLER__Error_8h.html#a9f4333b24ef305244d2f1fbcc86b1048a889a6ee592e1666d4e652b2dd79fc378",
-"ARCONTROLLER__Feature_8h.html#a5acaa2daff12942d10dd4f79dc5aafb3",
-"ARCONTROLLER__Feature_8h.html#acc07945a5a9c019b77f5a4cdfa7168fd",
-"structARCONTROLLER__FEATURE__ARDrone3__t.html#a97d746abdbe32baad11c922b735ebdd2"
+"ARCONTROLLER__Dictionary_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
