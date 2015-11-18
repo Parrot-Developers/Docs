@@ -151,22 +151,21 @@ $(document).ready(function(){initNavTree('ARDISCOVERY__Device_8h_source.html',''
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#a579a742c784c86ad2c3f288c1c93abd9">ARDISCOVERY_Device_InitNetworkConfiguration</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *discoveryDevice, <a class="code" href="structARDISCOVERY__NetworkConfiguration__t.html">ARDISCOVERY_NetworkConfiguration_t</a> *networkConfiguration);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">/***********************</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> * -- Wifi part --</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"> ***********************/</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#a5bb26084dd2f2de53a5ec57074128133">ARDISCOVERY_Device_InitWifi</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *device, eARDISCOVERY_PRODUCT product, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keywordtype">char</span> *address, <span class="keywordtype">int</span> port);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#abbfdc6835ec0b6c191166af6289ca1d0">ARDISCOVERY_Device_WifiAddConnectionCallbacks</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *device, ARDISCOVERY_Device_ConnectionJsonCallback_t sendJsonCallback, ARDISCOVERY_Device_ConnectionJsonCallback_t receiveJsonCallback, <span class="keywordtype">void</span> *customData);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">/***********************</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"> * -- BLE part --</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"> ***********************/</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#ace6278eacc78fd8208af2259bbea135c">ARDISCOVERY_Device_InitBLE</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *device, eARDISCOVERY_PRODUCT product, ARNETWORKAL_BLEDeviceManager_t bleDeviceManager, ARNETWORKAL_BLEDevice_t bleDevice);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#endif // _ARDISCOVERY_DEVICE_H_</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">/***********************</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"> * -- Wifi part --</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment"> ***********************/</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#a5bb26084dd2f2de53a5ec57074128133">ARDISCOVERY_Device_InitWifi</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *device, eARDISCOVERY_PRODUCT product, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keyword">const</span> <span class="keywordtype">char</span> *address, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#abbfdc6835ec0b6c191166af6289ca1d0">ARDISCOVERY_Device_WifiAddConnectionCallbacks</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *device, ARDISCOVERY_Device_ConnectionJsonCallback_t sendJsonCallback, ARDISCOVERY_Device_ConnectionJsonCallback_t receiveJsonCallback, <span class="keywordtype">void</span> *customData);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">/***********************</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment"> * -- BLE part --</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment"> ***********************/</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;eARDISCOVERY_ERROR <a class="code" href="ARDISCOVERY__Device_8h.html#ace6278eacc78fd8208af2259bbea135c">ARDISCOVERY_Device_InitBLE</a> (<a class="code" href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a> *device, eARDISCOVERY_PRODUCT product, ARNETWORKAL_BLEDeviceManager_t bleDeviceManager, ARNETWORKAL_BLEDevice_t bleDevice);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif // _ARDISCOVERY_DEVICE_H_</span></div>
 <div class="ttc" id="ARDISCOVERY__Device_8h_html_abbfdc6835ec0b6c191166af6289ca1d0"><div class="ttname"><a href="ARDISCOVERY__Device_8h.html#abbfdc6835ec0b6c191166af6289ca1d0">ARDISCOVERY_Device_WifiAddConnectionCallbacks</a></div><div class="ttdeci">eARDISCOVERY_ERROR ARDISCOVERY_Device_WifiAddConnectionCallbacks(ARDISCOVERY_Device_t *device, ARDISCOVERY_Device_ConnectionJsonCallback_t sendJsonCallback, ARDISCOVERY_Device_ConnectionJsonCallback_t receiveJsonCallback, void *customData)</div><div class="ttdoc">Add connection callbacks to a wifi device. </div></div>
 <div class="ttc" id="structARDISCOVERY__Device__t_html"><div class="ttname"><a href="structARDISCOVERY__Device__t.html">ARDISCOVERY_Device_t</a></div><div class="ttdoc">DiscoveryDevice contains the informations of a device discovered. </div><div class="ttdef"><b>Definition:</b> ARDISCOVERY_Device.h:87</div></div>
 <div class="ttc" id="ARDISCOVERY__Device_8h_html_a02c6572a4aeb6ef310b6967aceb2aab6"><div class="ttname"><a href="ARDISCOVERY__Device_8h.html#a02c6572a4aeb6ef310b6967aceb2aab6">ARDISCOVERY_Device_NewByCopy</a></div><div class="ttdeci">ARDISCOVERY_Device_t * ARDISCOVERY_Device_NewByCopy(ARDISCOVERY_Device_t *deviceToCopy, eARDISCOVERY_ERROR *error)</div><div class="ttdoc">Copy a Discovery Device. </div></div>
@@ -191,7 +190,7 @@ $(document).ready(function(){initNavTree('ARDISCOVERY__Device_8h_source.html',''
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0561f4920becdd29ed8091a0bb14ad95.html">libARDiscovery</a></li><li class="navelem"><a class="el" href="dir_feddd2d22c0317c0a0db30ae458f33c6.html">Includes</a></li><li class="navelem"><a class="el" href="dir_9cbcf807f952a6b00a51f9300d013d8e.html">libARDiscovery</a></li><li class="navelem"><a class="el" href="ARDISCOVERY__Device_8h.html">ARDISCOVERY_Device.h</a></li>
-    <li class="footer">Generated on Fri Nov 13 2015 17:20:04 for libARDiscovery by
+    <li class="footer">Generated on Wed Nov 18 2015 17:46:40 for libARDiscovery by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

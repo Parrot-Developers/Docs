@@ -69,34 +69,34 @@ $(document).ready(function(){initNavTree('ARDISCOVERY__Discovery_8h_source.html'
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    Copyright (C) 2014 Parrot SA</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  Copyright (C) 2014 Parrot SA</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    Redistribution and use in source and binary forms, with or without</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">    modification, are permitted provided that the following conditions</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">    are met:</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    * Redistributions of source code must retain the above copyright</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">      notice, this list of conditions and the following disclaimer.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    * Redistributions in binary form must reproduce the above copyright</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">      notice, this list of conditions and the following disclaimer in</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">      the documentation and/or other materials provided with the </span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">      distribution.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    * Neither the name of Parrot nor the names</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">      of its contributors may be used to endorse or promote products</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">      derived from this software without specific prior written</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">      permission.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  are met:</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  * Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  notice, this list of conditions and the following disclaimer in</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  the documentation and/or other materials provided with the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  distribution.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  * Neither the name of Parrot nor the names</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  of its contributors may be used to endorse or promote products</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  derived from this software without specific prior written</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  permission.</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">    OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED </span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">  OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">  OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">  SUCH DAMAGE.</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef _ARDISCOVERY_DISCOVERY_H_</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _ARDISCOVERY_DISCOVERY_H_</span></div>
@@ -114,47 +114,48 @@ $(document).ready(function(){initNavTree('ARDISCOVERY__Discovery_8h_source.html'
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    ARDISCOVERY_PRODUCT_SKYCONTROLLER,                                  </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ARDISCOVERY_PRODUCT_JS_EVO_LIGHT,                                   </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ARDISCOVERY_PRODUCT_JS_EVO_RACE,                                    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ARDISCOVERY_PRODUCT_BLESERVICE,                                     </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE = ARDISCOVERY_PRODUCT_BLESERVICE,     </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_LIGHT,                            </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_BRICK,                            </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_HYDROFOIL,                        </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ARDISCOVERY_PRODUCT_MAX                                             </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;} eARDISCOVERY_PRODUCT;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_ARDRONE,       </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_JS,            </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_SKYCONTROLLER, </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_MINIDRONE,     </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_MAX            </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;} eARDISCOVERY_PRODUCT_FAMILY;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductService(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;uint16_t ARDISCOVERY_getProductID(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* ARDISCOVERY_getProductName(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> ARDISCOVERY_getProductPathName(eARDISCOVERY_PRODUCT product, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> length);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromProductID(uint16_t productID);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;eARDISCOVERY_PRODUCT_FAMILY ARDISCOVERY_getProductFamily(eARDISCOVERY_PRODUCT product);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif // _ARDISCOVERY_DISCOVERY_H_</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    ARDISCOVERY_PRODUCT_BEBOP_2,                                        </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ARDISCOVERY_PRODUCT_BLESERVICE,                                     </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE = ARDISCOVERY_PRODUCT_BLESERVICE,     </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_LIGHT,                            </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_BRICK,                            </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ARDISCOVERY_PRODUCT_MINIDRONE_EVO_HYDROFOIL,                        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ARDISCOVERY_PRODUCT_MAX                                             </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;} eARDISCOVERY_PRODUCT;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_ARDRONE,       </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_JS,            </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_SKYCONTROLLER, </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_MINIDRONE,     </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ARDISCOVERY_PRODUCT_FAMILY_MAX            </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} eARDISCOVERY_PRODUCT_FAMILY;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductService(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;uint16_t ARDISCOVERY_getProductID(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* ARDISCOVERY_getProductName(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> ARDISCOVERY_getProductPathName(eARDISCOVERY_PRODUCT product, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> length);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromName(<span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;eARDISCOVERY_PRODUCT ARDISCOVERY_getProductFromProductID(uint16_t productID);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;eARDISCOVERY_PRODUCT_FAMILY ARDISCOVERY_getProductFamily(eARDISCOVERY_PRODUCT product);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif // _ARDISCOVERY_DISCOVERY_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0561f4920becdd29ed8091a0bb14ad95.html">libARDiscovery</a></li><li class="navelem"><a class="el" href="dir_feddd2d22c0317c0a0db30ae458f33c6.html">Includes</a></li><li class="navelem"><a class="el" href="dir_9cbcf807f952a6b00a51f9300d013d8e.html">libARDiscovery</a></li><li class="navelem"><b>ARDISCOVERY_Discovery.h</b></li>
-    <li class="footer">Generated on Fri Nov 13 2015 17:20:04 for libARDiscovery by
+    <li class="footer">Generated on Wed Nov 18 2015 17:46:40 for libARDiscovery by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
