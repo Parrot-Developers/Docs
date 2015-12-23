@@ -5,7 +5,7 @@ This is the documentation repo. You can here find all the documentation needed t
 
 Installation 
 -----------
-All the documentation to install and build the SDK is [here](https://github.com/ARDroneSDK3/Docs/blob/master/Installation/INSTALL)
+All the documentation to install and build the SDK is [here](https://github.com/ARDroneSDK3/Docs/blob/master/Installation/INSTALL.md)
 
 Documentation
 -------------
