@@ -1,0 +1,113 @@
+\section{SkyController specific features}
+
+This section describes some features specific to the SkyController, and completely inexistant in other Android devices. Almost all of these features are using binaries and scripts to work, and are not wrapped into Java APIs.
+
+\subsection{Gamepad modes}
+
+The SkyController gamepad can be configured into two modes: a compatibility mode, which use the top-left joystick as a mouse, and a full-gamepad mode which uses the top-left joystick as the DPAD controls.
+
+\subsubsection{Compatibility mode}
+
+This is the default mode when booting, or after exiting FreeFlight. In this mode, the top-left joystick is used a a mouse, for compatibility with apps not designed for DPAD navigation.
+
+This mode uses the left joystick as the DPAD, with the TakeOff button having the DPAD\_CENTER fallback function. The back and home (settings, on black SkyControllers) are mapped to either L2/R2 (with Back/Home as fallbacks) when an HDMI screen is plugged, or L1/R1 (without fallbacks) when no HDMI screen is plugged. This is a protection to avoid exiting an application without a screen. The return-to-home button has a fallback to the APP\_SWITCH feature.
+
+Fallback functions are triggered only if the running application did not handle (i.e. return \ARCode{true} in the \ARCode{dispatchKeyEvent()} function) the primary event, so by handling all primary event, you can prevent fallbacks features to be triggered.
+
+\subsubsection{Full gamepad mode}
+
+This mode is used by the FreeFlight app, and can be used by any application which supports a full DPAD navigation. In this mode, the top-left joystick is used as a DPAD, and the joystick click has the DPAD\_CENTER fallback function.
+
+Contrary to the compatibility mode, this mode home (settings, on black SkyControllers) and back buttons behavior does not change when a screen is plugged or not : the back button is always mapped to L2 (with BACK fallback), and the home/settings is mapped to R1 (without fallback). Other mappings (and axis numbering) will differ between the two modes.
+
+\subsubsection{Changing the mode}
+
+Changing the mode is done through the \ARCode{atmegCheckUpdate} script, which is in the SkyController PATH. This script has many uses which are not covered by this document, but the mode switch command works in the following way:
+
+\begin{itemize}
+\item \ARCode{atmegCheckUpdate mode FREEFLIGHT} : put the gamepad in full gamepad mode (the mode used by FreeFlight)
+\item \ARCode{atmegCheckUpdate mode HOME_SCREEN} : put the gamepad in compatibility mode, as if a screen is currently plugged
+\item \ARCode{atmegCheckUpdate mode HOME_NOSCREEN} : put the gamepad in compatibility mode, as if a no screen is present
+\end{itemize}
+
+\emph{Note: When in \ARCode{HOME_XXX} mode, the mode will automatically whange its screen settings on HDMI hotplug/unplug events}
+
+\subsection{Screen detection}
+
+The presence of an HDMI screen is indicated by the \ARCode{hw.external_screen} system property. A value of $"1"$ means that an external screen is plugged, any other value means that no screen is plugged.
+
+\newpage
+\subsection{SkyController configuration}
+
+The SkyController system configuration is done through a system similar to the Android property system. Accessing this configuration is done through the \ARCode{SCConfig} binary. Main commands are:
+
+\begin{itemize}
+\item \ARCode{SCConfig dump} : Dumps the current config in stdout.
+\item \ARCode{SCConfig set KEY VALUE} : Sets the config KEY to the value VALUE
+\item \ARCode{SCConfig remove KEY} : Remove the config KEY, if present
+\item \ARCode{SCConfig get KEY [DEFAULT]} : Get the value associated with KEY. \\
+If KEY is not present, then DEFAULT will be returned (or an empty string if DEFAULT is not provided)
+\end{itemize}
+
+\emph{Note: Using a bad configuration might disable the wifi on the SkyController. Before changing the configuration, you should make a copy of the previous configuration, and switch back to this copy if anything fails}
+
+\emph{Note: The configuration is stored in the \ARCode{/data/skycontroller/config} file. You should NOT modify this file directly. The \ARCode{SCConfig} tool handles concurrent access and file locking.}
+
+\subsubsection{Common configuration keys}
+
+Here is a list of the common configuration keys:
+
+\ARConfig{KEEP_FF_RUNNING}
+
+This config key should always be $"0"$. A different value means that a system daemon will try to restart FreeFlight when it's not running. FreeFlight sets this value to $"1"$ when starting, and resets it to $"0"$ when exiting properly.
+
+\ARConfig{WIFI_BAND}
+
+The requested band of the access point. $"0"$ means 2.4GHz, $"1"$ means 5GHz, other values have undefined behavior.
+
+\emph{Note: This key is only applied when the \ARCode{WIFI_REQUEST_APPLY_SETTINGS} is set to $"1"$}
+
+\ARConfig{WIFI_CHANNEL}
+
+The requested channel of the access point, within the selected band. If an invalid band/channel combination is given, the system will select a default one.
+
+\emph{Note: This key is only applied when the \ARCode{WIFI_REQUEST_APPLY_SETTINGS} is set to $"1"$}
+
+\ARConfig{WIFI_COUNTRY}
+
+The requested country for all wifi (both access point and long range). This setting changes both the Tx powers and the valid channels/bands. Value is a 2 character country code (e.g. $"US"$, $"FR"$, ...). Putting an unknown country code will set the SkyController wifi to an universal mode (low power, few channels available).
+
+\emph{Note: This key is only applied when the \ARCode{WIFI_REQUEST_APPLY_SETTINGS} is set to $"1"$}
+
+\emph{Note: Changing the country will lead to a long range wifi disconnection as the wireless driver needs to be reloaded in order to change the regulatory domain.}
+
+\emph{Note: Some SkyController are locked to a specific country, and chaning this key won't have any effect on these devices. The \ARCode{WIFI_COUNTRY_APPLIED} will always reflect the actual applied country.}
+
+\ARConfig{WIFI_SSID}
+
+The SSID of the SkyController's AP. The value will be filtered (stripping invalid characters, shortening if necessary) by the system before being applied, but values should be strings of less than 32 charactes. It should be matched by the following regexp: \ARCode{"^[-_a-zA-Z0-9]{1,32}\$"}.
+
+\emph{Note: This key is only applied when the \ARCode{WIFI_REQUEST_APPLY_SETTINGS} is set to $"1"$}
+
+\ARConfig{WIFI_REQUEST_UPDATE_SETTINGS}
+
+Set this key to $"1"$ to apply all pending \ARCode{WIFI_XXX} configuration. Almost all configuration changes will triger an access point stop/start, thus disconnecting any connected device.
+
+This key will be set back to $"0"$ by the system after application.
+
+\ARConfig{WIFI_XXX_APPLIED}
+
+These keys shows the applied wifi settings.
+\begin{itemize}
+\item \ARCode{WIFI_APPLIED_CTL} : The power domain applied for the current wifi country.
+\item \ARCode{WIFI_APPLIED_REG_DOMAIN} : The regulatory domain applied for the current wifi country.
+\item \ARCode{WIFI_COUNTRY_APPLIED} : The actual wifi country.
+\item \ARCode{WIFI_SSID_APPLIED} : The actual access point SSID.
+\item \ARCode{WIFI_BAND_APPLIED} : The actual access point band.
+\item \ARCode{WIFI_CHANNEL_APPLIED} : The actual access point channel.
+\end{itemize}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

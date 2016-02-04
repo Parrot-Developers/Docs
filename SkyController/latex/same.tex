@@ -1,0 +1,26 @@
+\section{Fully integrated features}
+
+Some of the SkyController features are fully integrated into the Android API. Here is a list of such features.
+
+\subsection{Wifi}
+
+The \emph{long range} wifi (\ARCode{wlan0}) is managed through the Android WifiManager interface (as you would manage the WiFi on a phone or tablet), except for the country selection.
+
+Country is persistent across reboots and updates, so you should almost never have to change it. \emph{Note that some SkyController are locked to a given country due to regulations.}
+
+\subsection{Sensors}
+
+The SkyController GPS sensor is fully integrated into the Android APIs. The same goes for the Accelerometer, Gyroscope and Magnetometer sensors. The Orientation sensor is used as the sensor fusion result and should be used if your app requires the attitude or the heading of the SkyController.
+
+\emph{Note : The SkyController magnetometer calibration status is avaible through the \ARCode{accuracy} field of the Magnetometer and Orientation SensorEvents. The precise measurement of the calibration use a custom protocol that is likely to change between versions and is not discussed here.}
+
+\subsection{Gamepad}
+
+The SkyController joysticks and buttons are seen as a USB gamepad, sending MotionEvents and KeyEvents to the applications. You can use it as any other USB gamepad on Android.
+
+One of the gamepad axis will actually be an image of the battery voltage, and is detailed in the next section.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

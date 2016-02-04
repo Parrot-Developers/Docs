@@ -1,0 +1,21 @@
+\section{Non-fully integrated features}
+
+This section presents some of the features that exists on Android phones and on the SkyController, but for which the SkyController API differs from the Android API.
+
+\subsection{Battery level}
+
+The battery level is \emph{not} integrated into the Android system, and thus can not be requested through the standard API. It is transmitted to the application as the last axis of the gamepad.
+
+To convert from the axis value to the battery voltage, you can use the following equation:\\
+\ARCode{float voltage = (float) (((battery + 1) * 1.25) * 1.6) + 9;}\\
+Where \ARCode{battery} is the axis value. To further convert the voltage into a percentage, we use the following equation:\\
+\ARCode{int percent = 100 - (int)(-14.52759414 * Math.pow(voltage, 3)}\\
+\ARCode{    + 543.15310727 * Math.pow(voltage, 2)}\\
+\ARCode{    - 6801.85740495 * voltage}\\
+\ARCode{    + 28532.85560624);} \\
+Which is then saturated between $0$ and $100$.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

@@ -1,0 +1,38 @@
+\section{Advanced setup}
+
+\textbf{This section presents some advanced thing you can do with the SkyController system. {\color{red}\emph{These manipulations should only be used if you understand what you're doing, as errors can transform your SkyController into an expensive paperweight!}}}
+
+\subsection{Root access}
+
+The SkyController Android version is based on Android 4.2.2. It is a \textit{userdebug} build, meaning that root acces is available. In the same way, it means that the \ARCode{/system} partition can be remounted as read-write.
+
+\textbf{Warning: abusing root acces can totally brick the device, do not modify any file in /system unless you EXACTLY understand what you're doing!!!}
+
+\subsection{Uninstalling FreeFlight}
+
+FreeFlight is installed as a system application, and thus can not be deleted without root access.
+
+With root access and the \ARCode{/system} partition remonted as read-write, you can close the FreeFlight app, and uninstall it by deleting the \ARCode{/system/app/ARFreeFlight.apk} file. After doing this, you should reboot the SkyController.
+
+\subsection{Forced update}
+
+All the \ARCode{/system} partition is rewritten during an update, so updating the SkyController will reinstall FreeFlight if you uninstalled it previously. \emph{Note that the data partition is left untouched during update process, so your app won't be deleted during an update}.
+
+Should you want to reinstall FreeFlight, you can force the SkyController to update from a USB drive, with the version currently installed (downgrading is not supported and can cause issues during boot !). To do this, connect to your SkyController in a root adb shell, then type the command \ARCode{pinst_trigger}. The following lines should be printed as a response:
+
+\texttt{shell@android:/ \# pinst\_trigger \\
+sysfs\_read\_int on ubi1:-1 mtd\_num=2 \\
+ubi\_attach on mtd1 : 3 \\
+ubi\_get\_vol\_name on ubi3:1 alt\_boot \\
+ubi\_rename\_boot on ubi3 updater -> 0 \\
+ubi\_detach on ubi3 : 0}
+
+If any other text is printed, it means that the command did not work (ar you sure you launched it in a root shell ?).
+
+After running this, reboot the SkyController with a USB drive containing the update file (\ARCode{nap_update.plf}) plugged into the USB port. Note that the SkyController will keep booting in update mode until it successfully find an update file on the USB drive, so it won't be usable between the \ARCode{pinst_trigger} call and the actual update.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

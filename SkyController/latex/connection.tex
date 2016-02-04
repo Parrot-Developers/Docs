@@ -1,0 +1,45 @@
+\section{Handling ARSDK connections}
+
+\subsection{Connecting to a drone}
+
+Connection to a drone is done in the same was as on any other Android device. Any app working on phones/tablet should work on the SkyController, as long as the UI is adapted to the DPAD navigation and the screen size.
+
+\subsection{Connecting to a tablet/smartphone}
+
+The actual code to handle incoming connections is part of the FreeFlight application embedded on SkyControllers. The code is not open-sourced, but it is implemented using components avaible in the ARSDK.
+
+\subsubsection{Publishing a mDNS service}
+
+To be discoverable on the network, the application should publish a mDNS service with the proper type (\ARCode{_arsdk-0903._udp.local}).
+
+\subsubsection{Accepting incoming ARSDK connections}
+
+To accept a connection, the application should have an instance of an \ARCode{ARDISCOVERY_Connection} object, running the \ARCode{ARDISCOVERY_Connection_DeviceListeningLoop()} method. This discover server will then negociate connection as would a drone do. A complete rundown of the \ARCode{ARDiscovery} protocol is available in the \href{http://developer.parrot.com//docs/bebop/ARSDK_Protocols.pdf}{ARSDK protocols documentation}.
+
+\subsubsection{Creating the ARNetwork instances}
+
+The ARNetwork instance can be created with the parameters from the Discovery phase. The instance is then used in the same way as a client instance (the ARNetwork protocol is peer to peer).
+
+\subsubsection{Routing commands}
+
+The minimum routing rules for the commands are the following:
+
+\begin{itemize}
+\item All \ARCode{ARCommands} received from the drone must be sent to the tablet (if present)
+\item All \ARCode{ARCommands} received from the tablet must be sent to the drone (if present), except for the SkyController.X.Y commands (see \ARCode{ARCOMMANDS_Filter})
+\end{itemize}
+
+\emph{Note: In order to grab the \ARCode{ARCommands}, you can't use the \ARCode{ARController} API, as it hides this part of the protocol.}
+
+\subsubsection{Routing video}
+
+Routing an \ARCode{ARStream1} stream is done in the same way as routing the commands: All stream packets received from the drone are sent to the tablet (at the \ARCode{ARNetwork} level).
+
+Routing an \ARCode{ARStream2} stream is done by using the \ARCode{libARStream2} library, and specifically the \ARCode{resender}-related functions. You can find informations about this API in the following file:\\
+\ARFile{libARStream2}{Includes/libARStream2/arstream2_stream_receiver.h}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

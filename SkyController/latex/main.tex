@@ -1,0 +1,72 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{1em}
+
+\input{commands.tex}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Developing on the SkyController}
+\lhead{\includegraphics[width=5cm]{logo}}
+\cfoot{\thepage}
+
+\begin{document}
+
+\includepdf[pages={1}]{cover.pdf}
+
+\title{Developing applications for the SkyController}
+\author{Parrot SA}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{purpose.tex}
+
+\newpage
+
+\input{setup.tex}
+
+\newpage
+
+\input{advanced.tex}
+
+\newpage
+
+\input{same.tex}
+
+\newpage
+
+\input{changed.tex}
+
+\newpage
+
+\input{new.tex}
+
+\newpage
+
+\input{connection.tex}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

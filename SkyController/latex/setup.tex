@@ -1,0 +1,39 @@
+\section{Environment setup}
+
+\subsection{Requirements}
+
+In order to develop for the Parrot SkyController, you need a working Android development environment, able to deploy application on Android 4.2.2 targets.
+
+A good understanding of adb shell commands can also be useful, as a lot of the SkyController configuration is done by stand-alone programs and shell scripts, and not by a Java API.
+
+\subsection{Configuring ADB}
+
+The SkyController has a micro-usb port, which is used both for device flashing (\textit{not covered in this document}) and for adb access. When starting the SkyController, you \textbf{must} unplug the micro-usb cable, else it will start in flashing mode and won't be usable for development.
+
+The SkyController USB vendor ID is \ARCode{0x0525}, and must be added to your \ARCode{adb_usb.ini} file. On Linux (and other Unix-likes, like Mac OSx), this file is located in the \ARCode{~/.android/} directory.
+
+After adding the USB vendor ID to the \ARCode{adb_usb.ini} file, you should restart your adb server (\ARCode{adb kill-server; adb start-server}). At this point, you should be able to see the SkyController in the list of adb devices.
+
+\subsection{Adding peripherals}
+
+By default, the SkyController supports a wide range of HDMI screens and USB peripherals. For ease of development, using an HDMI screen and a USB mouse is advised. Some touch screens with USB interface might also work.
+
+Of course you can also work with the built-in controls and no display, but it might be more difficult for you to start developing in this setup.
+
+\subsection{Stopping FreeFlight on the SkyController}
+
+By default, the SkyController launches FreeFlight at start-up.
+
+In order to stop FreeFlight, the easiest solution is to use an HDMI screen, and to leave the FreeFlight app by using the Back button and clicking OK on the confirmation dialog. By doing this, FreeFlight will a) reset the gamepad mode to the default one (more on that later) and b) stop the system daemon from restarting it. If FreeFlight is force-killed (or crashes), a system daemon will restart it automatically.
+
+You can also completely uninstall FreeFlight from the SkyController, but you will need to force-update the SkyController to reinstall the app (\emph{i.e. you can't install an APK from the Play Store, they're not exactly the same application !})
+
+\subsection{Ready to develop}
+
+If you can see your SkyController on adb, and you have properly closed FreeFlight, you're ready to start!
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
