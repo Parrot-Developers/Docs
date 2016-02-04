@@ -2,6 +2,62 @@
 
 This section describes some features specific to the SkyController, and completely inexistant in other Android devices. Almost all of these features are using binaries and scripts to work, and are not wrapped into Java APIs.
 
+\subsection{LEDs control}
+
+The SkyController has 16 leds, divided into 4 visual banks:
+\begin{itemize}
+\item 1 red led for the record indicator. Id: 0
+\item 1 red and 4 while leds for the wifi indicator. The red led shares the leftmost position with a white led. Ids: 1 (red), 2,3,4,5 (white)
+\item 1 red and 4 while leds for the local battery indicator. The red led shares the leftmost position with a white led. Ids: 6 (red), 7,8,9,10 (white)
+\item 1 red and 4 while leds for the drone battery indicator. The red led shares the leftmost position with a white led. Ids: 11 (red), 12,13,14,15 (white)
+\end{itemize}
+
+A command to the LED driver will update the 16 leds at once, and it is not possible to read the current LED state from the driver, so your application will have to save the requested state in order to allow toggles of individual leds. If blinking is required, it should be implemented in your application (i.e. toggle a led every N sec).
+
+The system does not drive any led, all indicators should be updated from within your application (as FreeFlight does).
+
+\newpage
+\subsubsection{LED protocol}
+
+The LED driver is connected through an SPI interface, driven by GPIOs. The \ARCode{/sys/class/gpio/gpio<xx>/value} files are writeable by everyone, so you don't need root access to use the leds.
+
+Here is a table of the 4 GPIOs numbers and names:
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+  \hline
+  GPIO Nr & Usage \\
+  \hline
+  \hline
+  55 & SPI Clock \\
+  \hline
+  56 & Latch signal \\
+  \hline
+  57 & Blank signal \\
+  \hline
+  58 & SPI MOSI \\
+  \hline
+\end{tabular}
+\end{table}
+
+Here is a pseudocode representing a send to the driver:\\
+\begin{lstlisting}[frame=single]
+set_leds (boolean leds[16]) {
+    for (i=0; i<16; i++) {
+        SPI_MOSI = leds[i];
+        SPI_CLOCK = 1;
+        SPI_CLOCK = 0;
+    }
+    BLANK = 1;
+    LATCH = 1;
+    LATCH = 0;
+    BLANK = 0;
+}
+\end{lstlisting}
+
+The \ARCode{/system/xbin/setleds} script gives an example of how to use the driver. This script will light the leds whose IDs are given as command line arguments.
+
+
 \subsection{Gamepad modes}
 
 The SkyController gamepad can be configured into two modes: a compatibility mode, which use the top-left joystick as a mouse, and a full-gamepad mode which uses the top-left joystick as the DPAD controls.
