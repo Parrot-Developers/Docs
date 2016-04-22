@@ -1,7 +1,0 @@
-<map id="ARSTREAM_Error.h" name="ARSTREAM_Error.h">
-<area shape="rect" id="node2" href="$ARStream_8h.html" title="Global header for libARStream. " alt="" coords="246,152,340,177"/>
-<area shape="rect" id="node3" href="$ARSTREAM__Reader_8h.html" title="Stream reader on network. " alt="" coords="30,79,186,104"/>
-<area shape="rect" id="node4" href="$ARSTREAM__Reader2_8h.html" title="Stream reader on network (v2) " alt="" coords="211,79,376,104"/>
-<area shape="rect" id="node5" href="$ARSTREAM__Sender_8h.html" title="Stream sender over network. " alt="" coords="399,79,555,104"/>
-<area shape="rect" id="node6" href="$ARSTREAM__Sender2_8h.html" title="Stream sender over network (v2) " alt="" coords="579,79,744,104"/>
-</map>

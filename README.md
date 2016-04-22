@@ -5,11 +5,13 @@ This is the documentation repo. You can here find all the documentation needed t
 
 Installation 
 -----------
-All the documentation to install and build the SDK is [here](https://github.com/ARDroneSDK3/Docs/blob/master/Installation/INSTALL.md)
+All the documentation to install and build the SDK is [here](http://developer.parrot.com/docs/bebop/?objective_c#go-deeper)
 
 Documentation
 -------------
-All the SDK documentation is provided in [the SDK directory](https://github.com/ARDroneSDK3/Docs/tree/master/SDK).
+The SDK documentation is provided [here](http://developer.parrot.com/docs/bebop). It is focused on the Bebop but easily usable for other products.
+There is also a [documentation for the SkyController](http://developer.parrot.com/docs/skycontroller/).
+If you have any question, feel free to ask them on [our forum](http://forum.developer.parrot.com/).
 
 Samples
 ---------

@@ -1,5 +1,0 @@
-<map id="ARCONTROLLER_StreamQueue.h" name="ARCONTROLLER_StreamQueue.h">
-<area shape="rect" id="node2" href="$ARCONTROLLER__Stream_8h.html" title="ARCONTROLLER_Stream allow to operate ARStream for receive a stream. " alt="" coords="25,79,218,104"/>
-<area shape="rect" id="node3" href="$ARCONTROLLER__Network_8h.html" title="ARCONTROLLER_Network allow to operate an ARNETWORK_Manager for send and receive commands. " alt="" coords="22,152,221,177"/>
-<area shape="rect" id="node4" href="$ARController_8h.html" title="Global header for libARController. " alt="" coords="68,225,176,251"/>
-</map>
